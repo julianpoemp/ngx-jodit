@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/ngx-jodit",
+  "sourceRoot": "libs/ngx-jodit/src",
+  "prefix": "jodit",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/ngx-jodit"],
+      "options": {
+        "project": "libs/ngx-jodit/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/ngx-jodit/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/ngx-jodit/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ngx-jodit"],
+      "options": {
+        "jestConfig": "libs/ngx-jodit/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/ngx-jodit/src/**/*.ts",
+          "libs/ngx-jodit/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
