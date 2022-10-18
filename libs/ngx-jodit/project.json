@@ -2,7 +2,7 @@
   "projectType": "library",
   "root": "libs/ngx-jodit",
   "sourceRoot": "libs/ngx-jodit/src",
-  "prefix": "jodit",
+  "prefix": "ngx",
   "targets": {
     "build": {
       "executor": "@nrwl/angular:ng-packagr-lite",
