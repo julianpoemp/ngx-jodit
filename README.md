@@ -2,7 +2,7 @@
 
 Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 12.
 
-<a href="">Demo</a>
+<a href="https://julianpoemp.github.io/ngx-jodit/">Demo</a>
 
 ## Options
 
