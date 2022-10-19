@@ -12,7 +12,7 @@ All <a href="https://xdsoft.net/jodit/docs/classes/config.Config.html">options</
 
 <ol>
   <li><code>npm install ngx-jodit --save</code></li>
-  <li>Add <code>node_modules/jodit/build/jodit.min.css</code> to your app's assets in angular.json (or project.json for
+  <li>Add <code>node_modules/jodit/build/jodit.min.css</code> to your app's styles in angular.json (or project.json for
     Nx)
   </li>
   <li>Add <code>NgxJoditModule</code> to the <code>imports</code> array in your app.module.ts</li>

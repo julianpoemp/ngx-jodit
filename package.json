@@ -8,6 +8,7 @@
     "start": "nx serve",
     "build": "nx build",
     "build:lib": "nx build ngx-jodit && cp -f ./README.md ./dist/libs/ngx-jodit/README.md",
+    "build:docs": "nx build demo && mv -f ./dist/apps/demo/* ./docs",
     "test": "nx test"
   },
   "private": true,
