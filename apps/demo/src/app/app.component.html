@@ -1,1 +1,116 @@
-<ngx-jodit></ngx-jodit>
+<div class="position-absolute mt-3 me-3" style="top:0; right:0;">
+  <a href="https://github.com/julianpoemp/ngx-jodit"><i class="bi bi-github" style="font-size:1.5rem;"></i></a>
+</div>
+<h1>ngx-jodit <a href="https://www.npmjs.com/package/ngx-jodit"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit"></a></h1>
+<p>Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 12.</p>
+
+<ngx-jodit [(value)]="value" [options]="options"></ngx-jodit>
+
+<h2>Options</h2>
+<p>All <a href="https://xdsoft.net/jodit/docs/classes/config.Config.html">options</a> from Jodit are supported.
+  The options are set via two-way data-binding. Insert your options as JSON to test it.
+</p>
+<p>For example you can insert <code>&#123;"disabled": true}</code> to test it</p>
+<textarea [(ngModel)]="optionsStr" name="options"></textarea>
+
+<h2>Installation</h2>
+
+<ol>
+  <li><code>npm install ngx-jodit --save</code></li>
+  <li>Add <code>node_modules/jodit/build/jodit.min.css</code> to your app's assets in angular.json (or project.json for
+    Nx)
+  </li>
+  <li>Add <code>NgxJoditModule</code> to the <code>imports</code> array in your app.module.ts</li>
+  <li>Add <code>"skipLibCheck": true</code> to compilerOptions in your tsconfig.app.json. This is needed because the
+    check fails to typing errors of the jodit package. If you know any other solution, let me know :).
+  </li>
+  <li>Now you can use the component<br/><code>&lt;ngx-jodit [(value)]="value"
+    [(options)]="options">&lt;/ngx-jodit></code></li>
+</ol>
+
+<h3>Options for ngx-jodit</h3>
+
+<table class="table table-sm table-striped table-bordered">
+  <thead>
+  <tr>
+    <td class="fw-bold">Name</td>
+    <td class="fw-bold">Type</td>
+    <td class="fw-bold">Description</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>value</td>
+    <td>two-way data-binding</td>
+    <td>Updates as soon as HTML value of the editor changed. You can set your value, too.</td>
+  </tr>
+  <tr>
+    <td>options</td>
+    <td>one-way data-binding</td>
+    <td>Sets options for Jodit</td>
+  </tr>
+  </tbody>
+</table>
+
+<h3>Events for ngx-jodit</h3>
+<p>
+  You can bind events using the Angular way, e.g.:<br/><code>&lt;ngx-jodit (joditChange)="onChange($event)">&lt;/ngx-jodit></code>
+</p>
+<table class="table table-sm table-striped table-bordered">
+  <thead>
+  <tr>
+    <td class="fw-bold">Name</td>
+    <td class="fw-bold">Description</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>joditChange</td>
+    <td>Triggers as soon as something of the HTML value changes.</td>
+  </tr>
+  <tr>
+    <td>joditKeyDown</td>
+    <td>Triggers as soon as a key is pressed down.</td>
+  </tr>
+  <tr>
+    <td>joditMousedown</td>
+    <td>Triggers as soon as the left mouse button is pressed.</td>
+  </tr>
+  <tr>
+    <td>joditClick</td>
+    <td>Triggers as soon as the user clicks on the editor.</td>
+  </tr>
+  <tr>
+    <td>joditFocus</td>
+    <td>Triggers as soon as Jodit gets focus.</td>
+  </tr>
+  <tr>
+    <td>joditPaste</td>
+    <td>Triggers as soon as something is pasted.</td>
+  </tr>
+  <tr>
+    <td>joditResize</td>
+    <td>Triggers as soon as the editor resizes.</td>
+  </tr>
+  <tr>
+    <td>joditBeforeEnter</td>
+    <td>Triggers as soon as enter key is pressed.</td>
+  </tr>
+  <tr>
+    <td>joditBeforeCommand</td>
+    <td>Triggers before a command is executed.</td>
+  </tr>
+  <tr>
+    <td>joditAfterExec</td>
+    <td>Triggers after a command is executed.</td>
+  </tr>
+  <tr>
+    <td>joditAfterPaste</td>
+    <td>Triggers after something pasted.</td>
+  </tr>
+  <tr>
+    <td>joditChangeSelection</td>
+    <td>Triggers as soon as selection is changed.</td>
+  </tr>
+  </tbody>
+</table>

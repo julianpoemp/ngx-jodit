@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Config} from 'jodit/src/config';
 
 @Component({
   selector: 'jodit-root',
@@ -6,5 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'demo';
+  value = 'Some text';
+  _optionsStr = '';
+
+  get optionsStr(): string {
+    return this._optionsStr;
+  }
+
+  set optionsStr(value: string) {
+    this._optionsStr = value;
+    try {
+      this.options = JSON.parse(value);
+    } catch (e) {
+      // ignore
+    }
+  }
+
+  options: Partial<Config> = {};
 }

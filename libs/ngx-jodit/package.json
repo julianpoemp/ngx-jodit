@@ -1,11 +1,38 @@
 {
-  "name": "@julianpoemp/ngx-jodit",
-  "version": "0.0.1",
+  "name": "ngx-jodit",
+  "description": "Angular wrapper for jodit WYSIWYG editor",
+  "version": "1.0.0",
   "peerDependencies": {
-    "@angular/common": "^13.3.0",
-    "@angular/core": "^13.3.0"
+    "@angular/common": "^12.0.0",
+    "@angular/core": "^12.0.0",
+    "jodit": "^3.7.2"
   },
+  "author": {
+    "name": "Julian Poemp"
+  },
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "angular",
+    "jodit",
+    "html",
+    "text",
+    "editor",
+    "wysisyg",
+    "rich editor",
+    "rich text editor",
+    "rte",
+    "typescript"
+  ],
+  "bugs": {
+    "url": "https://github.com/julianpoemp/ngx-jodit/issues"
+  },
+  "homepage": "https://github.com/julianpoemp/ngx-jodit#readme",
   "dependencies": {
     "tslib": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julianpoemp/ngx-jodit.git"
   }
 }

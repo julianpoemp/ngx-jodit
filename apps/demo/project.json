@@ -16,6 +16,8 @@
         "inlineStyleLanguage": "scss",
         "assets": ["apps/demo/src/favicon.ico", "apps/demo/src/assets"],
         "styles": [
+          "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+          "node_modules/bootstrap/dist/css/bootstrap.min.css",
           "node_modules/jodit/build/jodit.min.css",
           "apps/demo/src/styles.scss"
         ],
