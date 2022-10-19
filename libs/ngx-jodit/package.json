@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/julianpoemp/ngx-jodit/issues"
   },
-  "homepage": "https://github.com/julianpoemp/ngx-jodit#readme",
+  "homepage": "https://julianpoemp.github.io/ngx-jodit/",
   "dependencies": {
     "tslib": "^2.3.0"
   },
