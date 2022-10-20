@@ -2,26 +2,58 @@
 
 Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 12.
 
-<a href="https://julianpoemp.github.io/ngx-jodit/">Demo</a>
+[Demo](https://julianpoemp.github.io/ngx-jodit/)
 
 ## Options
 
-All <a href="https://xdsoft.net/jodit/docs/classes/config.Config.html">options</a> from Jodit are supported.
+All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jodit are supported.
 
 ## Installation
 
-<ol>
-  <li><code>npm install ngx-jodit --save</code></li>
-  <li>Add <code>node_modules/jodit/build/jodit.min.css</code> to your app's styles in angular.json (or project.json for
-    Nx)
-  </li>
-  <li>Add <code>NgxJoditModule</code> to the <code>imports</code> array in your app.module.ts</li>
-  <li>Add <code>"skipLibCheck": true</code> to compilerOptions in your tsconfig.app.json. This is needed because the
-    check fails to typing errors of the jodit package. If you know any other solution, let me know :).
-  </li>
-  <li>Now you can use the component<br/><code>&lt;ngx-jodit [(value)]="value"
-    [(options)]="options">&lt;/ngx-jodit></code></li>
-</ol>
+1. Make sure that jodit is installed:
+   ```
+   npm install jodit --save
+   ```
+2. ```
+   npm install ngx-jodit --save
+   ```
+3. Add `node_modules/jodit/build/jodit.min.css` to your app's styles in angular.json (or project.json for
+   Nx):
+   ```
+   ...
+    ,
+    "styles": [
+      "node_modules/jodit/build/jodit.min.css",
+      ...
+    ],
+   ...
+   ```
+4. Add `NgxJoditModule` to the `imports` array in your app.module.ts:
+   ```
+   @NgModule({
+    ...
+    imports: [
+      ...,
+      NgxJoditModule
+    ],
+    ...
+    })
+   ```
+5. Add `"skipLibCheck": true` to compilerOptions in your `tsconfig.app.json`. This is needed because the
+   check fails to typing errors of the jodit package. If you know any other solution, let me know :):
+   ```
+   ...
+     "compilerOptions": {
+       ...,
+       "skipLibCheck": true
+     }
+   ...
+   ```
+6. Now you can use the component
+   
+   ```angular2html
+     <ngx-jodit [(value)]="value" [(options)]="options"></ngx-jodit>
+   ```
 
 
 ## Options for ngx-jodit
