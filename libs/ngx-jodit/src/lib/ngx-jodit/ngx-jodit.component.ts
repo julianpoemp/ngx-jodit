@@ -12,7 +12,7 @@ import {
   ViewChild
 } from '@angular/core';
 import {Jodit} from 'jodit';
-import {Config} from 'jodit/src/config';
+import {Config} from 'jodit/config';
 
 @Component({
   selector: 'ngx-jodit',
