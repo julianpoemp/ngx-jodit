@@ -32,10 +32,10 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
 
 1. Make sure that jodit is installed:
    ```
-   npm install jodit@latest --save
+   npm install jodit@beta --save
    ```
 2. ```
-   npm install ngx-jodit@^3 --save
+   npm install ngx-jodit@3.0.0-beta.4 --save
    ```
 3. Add jodit stylesheet  to your app's styles in angular.json (or project.json for
    Nx).
