@@ -2,7 +2,26 @@
 
 Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 12. For Jodit v4 support go to [README of v2.x branch](https://github.com/julianpoemp/ngx-jodit/tree/v2.x).
 
-[Demo](https://julianpoemp.github.io/ngx-jodit/)
+## Compatibility table
+
+<table>
+<thead><tr><th>Ngx-jodit</th><th>Jodit</th><th>Angular</th><th>Type</th><th></th></tr></thead>
+<tbody>
+<tr>
+<td>1.x</td><td>v3</td><td>>= v12</td><td>Module</td><td><a href="https://github.com/julianpoemp/ngx-jodit/">more Information</a></td>
+</tr>
+<tr>
+<td>2.x</td><td>>= v4</td><td>>= v12</td><td>Module</td><td><a href="https://github.com/julianpoemp/ngx-jodit/tree/v2.x">more Information</a></td>
+</tr>
+<tr>
+<td>3.x</td><td>>= v4</td><td>>= v16</td><td>Standalone</td><td><a href="https://github.com/julianpoemp/ngx-jodit/tree/v3.x">more Information</a></td>
+</tr>
+</tbody>
+</table>
+
+## Demo
+
+You can find a demo [here](https://julianpoemp.github.io/ngx-jodit/).
 
 ## Options
 
@@ -10,9 +29,9 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
 
 ## Installation
 
-1. Make sure that jodit is installed:
+1. Make sure that jodit@^3 is installed (v4 is still in beta and supported only with ngx-jodit >= v2, see compatibility table):
    ```
-   npm install jodit --save
+   npm install jodit@^3 --save
    ```
 2. ```
    npm install ngx-jodit --save
