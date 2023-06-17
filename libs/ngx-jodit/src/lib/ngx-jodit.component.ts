@@ -9,17 +9,22 @@ import {
   OnInit,
   Output,
   SimpleChanges,
-  ViewChild
+  ViewChild,
 } from '@angular/core';
-import {Jodit} from 'jodit';
-import {Config} from 'jodit/config';
+import { CommonModule } from '@angular/common';
+import { Jodit } from 'jodit';
+import { Config } from 'jodit/config';
 
 @Component({
   selector: 'ngx-jodit',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './ngx-jodit.component.html',
   styleUrls: ['./ngx-jodit.component.scss'],
 })
-export class NgxJoditComponent implements OnInit, AfterViewInit, OnDestroy, OnChanges {
+export class NgxJoditComponent
+  implements OnInit, AfterViewInit, OnDestroy, OnChanges
+{
   @ViewChild('joditContainer') joditContainer!: ElementRef;
   jodit?: Jodit;
 
@@ -47,11 +52,9 @@ export class NgxJoditComponent implements OnInit, AfterViewInit, OnDestroy, OnCh
   @Output() joditAfterPaste = new EventEmitter<ClipboardEvent>();
   @Output() joditChangeSelection = new EventEmitter<void>();
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['options']) {

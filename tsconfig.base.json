@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@jodit/ngx-jodit": ["libs/ngx-jodit/src/index.ts"]
+      "@jodit/ngx-jodit": ["libs/ngx-jodit/src/index.ts"],
+      "@julianpoemp/ngx-jodit2": ["libs/ngx-jodit2/src/index.ts"],
+      "ngx-jodit": ["libs/ngx-jodit/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
