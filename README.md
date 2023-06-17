@@ -1,8 +1,28 @@
 # ngx-jodit <a href="https://www.npmjs.com/package/ngx-jodit"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit"></a></h1>
 
-Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 12 and jodit >=4.0.0-beta. **Jodit v4 is still in development. PLEASE have a look an the installation instructions, there are some breaking changes in jodit v4.**
+Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 16 and jodit >=4.0.0-beta.
+<br/>**Jodit v4 is still in development. PLEASE have a look an the installation instructions, there are some breaking changes in jodit v4.**
 
-[Demo](https://julianpoemp.github.io/ngx-jodit/)
+Compatibility table
+
+<table>
+<thead><tr><th>Ngx-jodit</th><th>Jodit</th><th>Angular</th><th>Type</th><th></th></tr></thead>
+<tbody>
+<tr>
+<td>1.x</td><td>3</td><td>&gt= 12</td><td>Module</td><td><a href="https://github.com/julianpoemp/ngx-jodit/">more Information</a></td>
+</tr>
+<tr>
+<td>2.x</td><td>&gt;= v4</td><td>&gt= 12</td><td>Module</td><td><a href="https://github.com/julianpoemp/ngx-jodit/tree/v2.x">more Information</a></td>
+</tr>
+<tr>
+<td>3.x</td><td>&gt;= v4</td><td>&gt= 16</td><td>Standalone</td><td><a href="https://github.com/julianpoemp/ngx-jodit/tree/v3.x">more Information</a></td>
+</tr>
+</tbody>
+</table>
+
+## Demo
+
+You can find a demo [here](https://julianpoemp.github.io/ngx-jodit/).
 
 ## Options
 
