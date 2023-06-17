@@ -1,8 +1,27 @@
-# ngx-jodit <a href="https://www.npmjs.com/package/ngx-jodit"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit"></a></h1>
+# ngx-jodit v2.x <a href="https://www.npmjs.com/package/ngx-jodit"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit"></a></h1>
 
 Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 12 and jodit >=4.0.0-beta. **Jodit v4 is still in development. PLEASE have a look an the installation instructions, there are some breaking changes in jodit v4.**
 
-[Demo](https://julianpoemp.github.io/ngx-jodit/)
+## Compatibility table
+
+<table>
+<thead><tr><th>Ngx-jodit</th><th>Jodit</th><th>Angular</th><th>Type</th><th></th></tr></thead>
+<tbody>
+<tr>
+<td>1.x</td><td>v3</td><td>>= v12</td><td>Module</td><td><a href="https://github.com/julianpoemp/ngx-jodit/">more Information</a></td>
+</tr>
+<tr>
+<td>2.x</td><td>>= v4</td><td>>= v12</td><td>Module</td><td><a href="https://github.com/julianpoemp/ngx-jodit/tree/v2.x">more Information</a></td>
+</tr>
+<tr>
+<td>3.x</td><td>>= v4</td><td>>= v16</td><td>Standalone</td><td><a href="https://github.com/julianpoemp/ngx-jodit/tree/v3.x">more Information</a></td>
+</tr>
+</tbody>
+</table>
+
+## Demo
+
+You can find a demo [here](https://julianpoemp.github.io/ngx-jodit/).
 
 ## Options
 
@@ -12,10 +31,10 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
 
 1. Make sure that jodit is installed:
    ```
-   npm install jodit@latest --save
+   npm install jodit@beta --save
    ```
 2. ```
-   npm install ngx-jodit@beta --save
+   npm install ngx-jodit@2.0.0-beta.2 --save
    ```
 3. Add jodit stylesheet  to your app's styles in angular.json (or project.json for
    Nx).
