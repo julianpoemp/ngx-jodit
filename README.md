@@ -9,13 +9,13 @@ Compatibility table
 <thead><tr><th>Ngx-jodit</th><th>Jodit</th><th>Angular</th><th>Type</th><th></th></tr></thead>
 <tbody>
 <tr>
-<td>1.x</td><td>3</td><td>&gt= 12</td><td>Module</td><td><a href="https://github.com/julianpoemp/ngx-jodit/">more Information</a></td>
+<td>1.x</td><td>v3</td><td>&gt= v12</td><td>Module</td><td><a href="https://github.com/julianpoemp/ngx-jodit/">more Information</a></td>
 </tr>
 <tr>
-<td>2.x</td><td>&gt;= v4</td><td>&gt= 12</td><td>Module</td><td><a href="https://github.com/julianpoemp/ngx-jodit/tree/v2.x">more Information</a></td>
+<td>2.x</td><td>>= v4</td><td>&gt= v12</td><td>Module</td><td><a href="https://github.com/julianpoemp/ngx-jodit/tree/v2.x">more Information</a></td>
 </tr>
 <tr>
-<td>3.x</td><td>&gt;= v4</td><td>&gt= 16</td><td>Standalone</td><td><a href="https://github.com/julianpoemp/ngx-jodit/tree/v3.x">more Information</a></td>
+<td>3.x</td><td>>= v4</td><td>&gt= v16</td><td>Standalone</td><td><a href="https://github.com/julianpoemp/ngx-jodit/tree/v3.x">more Information</a></td>
 </tr>
 </tbody>
 </table>
