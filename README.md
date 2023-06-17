@@ -1,4 +1,4 @@
-# ngx-jodit <a href="https://www.npmjs.com/package/ngx-jodit"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit"></a></h1>
+# ngx-jodit v3.x <a href="https://www.npmjs.com/package/ngx-jodit"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit"></a></h1>
 
 Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 16 and jodit >=4.0.0-beta.
 <br/>**Jodit v4 is still in development. PLEASE have a look an the installation instructions, there are some breaking changes in jodit v4.**
