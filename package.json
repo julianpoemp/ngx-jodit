@@ -8,7 +8,7 @@
     "start": "nx serve demo",
     "start:pro": "nx serve demo-pro",
     "build": "nx build",
-    "build:lib": "nx build ngx-jodit && cp -f ./README.md ./dist/libs/ngx-jodit/README.md && cp ./LICENSE ./dist/libs/ngx-jodit/LICENSE",
+    "build:lib": "nx build ngx-jodit && cp -f ./README.md ./dist/libs/ngx-jodit/README.md && cp libs/ngx-jodit/LICENSE ./dist/libs/ngx-jodit/LICENSE",
     "build:lib:pro": "nx build ngx-jodit-pro",
     "build:docs": "nx build demo && mv -f ./dist/apps/demo/* ./docs",
     "test": "nx test"

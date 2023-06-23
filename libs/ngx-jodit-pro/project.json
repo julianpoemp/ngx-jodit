@@ -5,7 +5,7 @@
   "prefix": "ngx",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:package",
+      "executor": "@nrwl/angular:ng-packagr-lite",
       "outputs": ["dist/libs/ngx-jodit-pro"],
       "options": {
         "project": "libs/ngx-jodit-pro/ng-package.json"

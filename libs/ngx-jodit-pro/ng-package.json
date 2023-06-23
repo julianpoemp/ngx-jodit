@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../../dist/libs/ngx-jodit-pro",
+  "dest": "../../dist/libs/ngx-jodit-pro",
   "lib": {
     "entryFile": "src/index.ts"
   }
