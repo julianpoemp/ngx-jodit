@@ -1,0 +1,100 @@
+{
+  "projectType": "application",
+  "root": "apps/demo-pro",
+  "sourceRoot": "apps/demo-pro/src",
+  "prefix": "jodit",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/demo-pro",
+        "index": "apps/demo-pro/src/index.html",
+        "main": "apps/demo-pro/src/main.ts",
+        "polyfills": "apps/demo-pro/src/polyfills.ts",
+        "tsConfig": "apps/demo-pro/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/demo-pro/src/favicon.ico", "apps/demo-pro/src/assets", "apps/demo-pro/src/config.js"],
+        "styles": [
+          "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+          "node_modules/bootstrap/dist/css/bootstrap.min.css",
+          "node_modules/jodit-pro/build/jodit.css",
+          "apps/demo-pro/src/styles.scss"],
+        "scripts": [
+          "node_modules/jodit-pro/build/jodit.js"
+        ]
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "2mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/demo-pro/src/environments/environment.ts",
+              "with": "apps/demo-pro/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "demo-pro:build:production"
+        },
+        "development": {
+          "browserTarget": "demo-pro:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4201
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "demo-pro:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/demo-pro/src/**/*.ts",
+          "apps/demo-pro/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/demo-pro"],
+      "options": {
+        "jestConfig": "apps/demo-pro/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

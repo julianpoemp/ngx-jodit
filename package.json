@@ -5,10 +5,11 @@
   "scripts": {
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
-    "start": "nx serve",
+    "start": "nx serve demo",
+    "start:pro": "nx serve demo-pro",
     "build": "nx build",
     "build:lib": "nx build ngx-jodit && cp -f ./README.md ./dist/libs/ngx-jodit/README.md && cp ./LICENSE ./dist/libs/ngx-jodit/LICENSE",
-    "build:lib:pro": "nx build ngx-jodit-pro && cp -f ./README.md ./dist/libs/ngx-jodit-pro/README.md && cp ./LICENSE ./dist/libs/ngx-jodit-pro/LICENSE",
+    "build:lib:pro": "nx build ngx-jodit-pro",
     "build:docs": "nx build demo && mv -f ./dist/apps/demo/* ./docs",
     "test": "nx test"
   },
@@ -26,6 +27,7 @@
     "bootstrap": "^5.2.2",
     "bootstrap-icons": "^1.9.1",
     "jodit": "^3.24.2",
+    "jodit-pro": "^1.3.40",
     "rxjs": "~7.4.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
