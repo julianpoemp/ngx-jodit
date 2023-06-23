@@ -1,6 +1,7 @@
 ---
-name: New issue
-about: Describe this issue template's purpose here.
+name: General issue
+about: Describe your issue related to this wrapper. Issues related to Jodit package
+  should be created on the Jodit repository.
 title: ''
 labels: ''
 assignees: ''
