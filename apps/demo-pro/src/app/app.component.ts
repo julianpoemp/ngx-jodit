@@ -7,7 +7,7 @@ import {Config} from 'jodit/src/config';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  value = 'Some text';
+  value = 'Some text <b>in bold print</b>';
   _optionsStr: string = '';
 
   get optionsStr(): string {

@@ -76,7 +76,8 @@ export class NgxJoditProComponent
       if (this.jodit) {
         this.jodit.destruct();
       }
-      this.jodit = new Jodit(this.joditContainer.nativeElement, this.options);
+      this.joditContainer.nativeElement.innerHTML = this._value;
+      this.jodit = Jodit.make(this.joditContainer.nativeElement, this.options);
       this.jodit.events.on('change', (text: string) => {
         this.joditChange.emit(text);
         this.changeValue(text);
