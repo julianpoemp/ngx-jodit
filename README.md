@@ -19,6 +19,10 @@ Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG ed
 </tbody>
 </table>
 
+## Jodit Pro, Multi & OEM
+
+For Jodit Pro, Multi and OEM you have to install the jodit-pro package and another Angular library: [ngx-jodit-pro](https://github.com/julianpoemp/ngx-jodit/tree/main/libs/ngx-jodit-pro). For more information click [here](https://github.com/julianpoemp/ngx-jodit/tree/main/libs/ngx-jodit-pro).
+
 ## Demo
 
 You can find a demo [here](https://julianpoemp.github.io/ngx-jodit/).
@@ -34,7 +38,7 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
    npm install jodit@^3 --save
    ```
 2. ```
-   npm install ngx-jodit --save
+   npm install ngx-jodit@^1 --save
    ```
 3. Add `node_modules/jodit/build/jodit.min.css` to your app's styles in angular.json (or project.json for
    Nx):
