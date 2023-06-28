@@ -1,9 +1,14 @@
-# ngx-jodit-pro v2.x (beta) <a href="https://www.npmjs.com/package/ngx-jodit-pro"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro"></a></h1>
+# ngx-jodit-pro v3.x (beta) <a href="https://www.npmjs.com/package/ngx-jodit-pro"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro"></a></h1>
 
-Angular wrapper for <a href="https://xdsoft.net/jodit/pro/">Jodit PRO</a> WYSIWYG editor. It supports Angular >= 12 and jodit-pro beta. You need a license key in order to use this wrapper. <a href="https://xdsoft.net/jodit/pro/#compare">Buy here.</a>
+Angular wrapper for <a href="https://xdsoft.net/jodit/pro/">Jodit PRO</a> WYSIWYG editor. It supports Angular >= 16 and
+jodit-pro v2 beta. You need a license key in order to use this wrapper. <a href="https://xdsoft.net/jodit/pro/#compare">
+Buy here.</a>
 
 ## License
-This package does not contain the source code of Jodit Pro. You have to install it as described here (scroll down). This wrapper is licensed under MIT License, Jodit Pro is licensed seperately ([see license](https://xdsoft.net/jodit/pro/license/)).
+
+This package does not contain the source code of Jodit Pro. You have to install it as described here (scroll down). This
+wrapper is licensed under MIT License, Jodit Pro is licensed
+seperately ([see license](https://xdsoft.net/jodit/pro/license/)).
 
 ## Compatibility table
 
@@ -12,50 +17,57 @@ This package does not contain the source code of Jodit Pro. You have to install 
 <tbody>
 <tr>
 <td>1.x</td><td>v1.x</td><td>>= v12</td><td>Module</td><td><a href="https://github.com/julianpoemp/ngx-jodit/tree/main/libs/ngx-jodit-pro/README.md">more information</a></td>
-</tr><tr>
+</tr>
+<tr>
 <td>2.x</td><td>v2.x</td><td>>= v12</td><td>Module</td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/v2.x/libs/ngx-jodit-pro/README.md">more information</a></td>
+</tr>
+<tr>
+<td>3.x</td><td>v2.x</td><td>>= v16</td><td>Standalone</td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/v3.x/libs/ngx-jodit-pro/README.md">more information</a></td>
 </tr>
 </tbody>
 </table>
 
 ## Demo
 
-The demo for ngx-jodit-pro is not available. You can find a demo of ngx-jodit (not Pro!) [here](https://julianpoemp.github.io/ngx-jodit/).
+The demo for ngx-jodit-pro is not available. You can find a demo of ngx-jodit (not
+Pro!) [here](https://julianpoemp.github.io/ngx-jodit/).
 
 ## Installation
 
-1. Make sure that jodit-pro@beta is installed (v2 is still in beta and supported only with ngx-jodit-pro v2, see compatibility table):
+1. Make sure that jodit-pro@beta is installed (v2 is still in beta and supported only with ngx-jodit-pro v2, see
+   compatibility table):
    ```
    npm install jodit-pro@beta --save
    ```
 2. ```
-   npm install ngx-jodit-pro@beta --save
+   npm install ngx-jodit-pro@3.0.0-beta.0 --save
    ```
-3. Add the following paths to your app's styles in angular.json (or project.json for
-   Nx). Alternatively yu can add the JS and CSS file from one of the other builds from the jodit-pro package. The only important point is to have a JS file and a CSS file of Jodit-Pro and each plugin you want to use:
-   ```
-   ...
-    ,
-    "styles": [
-      "node_modules/jodit-pro/es2021/jodit.fat.min.css",
-      ...
-    ],
-   ...
-    ,
-    "scripts": [
-          "node_modules/jodit-pro/es2021/jodit.min.js"
-      ...
-    ],
-   ...
-   ```
-   
-4. Add `NgxJoditProModule` to the `imports` array in your app.module.ts:
+  3. Add the following paths to your app's styles in angular.json (or project.json for
+     Nx). Alternatively you can add the JS and CSS file from one of the other builds from the jodit-pro package. The only
+     important point is to have a JS file and a CSS file of Jodit-Pro and each plugin you want to use:
+     ```
+     ...
+      ,
+      "styles": [
+        "node_modules/jodit-pro/es2021/jodit.fat.min.css",
+        ...
+      ],
+     ...
+      ,
+      "scripts": [
+         "node_modules/jodit-pro/es2021/jodit.min.js"
+        ...
+      ],
+     ...
+     ```
+
+4. Add `NgxJoditProComponent` (standalone) to the `imports` array in your app.module.ts:
    ```
    @NgModule({
     ...
     imports: [
       ...,
-      NgxJoditProModule
+      NgxJoditProComponent
     ],
     ...
     })
@@ -72,20 +84,22 @@ The demo for ngx-jodit-pro is not available. You can find a demo of ngx-jodit (n
 
 ### Use Pro plugins
 
-At the moment each Pro plugin you want to use must be imported into you angular.json/project.json scripts and styles array. For example the tune-block plugin:
+At the moment each Pro plugin you want to use must be imported into you angular.json/project.json scripts and styles
+array. For example the tune-block plugin:
 
 ```json
 ...
 styles: [
-  ... (after jodit css file)...,
-  "node_modules/jodit-pro/es2021/plugins/tune-block/tune-block.min.css",
+... (after jodit css file)...,
+"node_modules/jodit-pro/es2021/plugins/tune-block/tune-block.min.css",
 ],
 scripts: [
-  ... (after jodit js file) ...,
-  "node_modules/jodit-pro/es2021/plugins/tune-block/tune-block.js",
+... (after jodit js file) ...,
+"node_modules/jodit-pro/es2021/plugins/tune-block/tune-block.js",
 ]
 ...
 ```
+
 After that change restart your angular app. Now you can apply the plugin options to ngx-jodit-pro `options` property.
 
 ### Add custom plugins
@@ -93,23 +107,27 @@ After that change restart your angular app. Now you can apply the plugin options
 You can access the initialized Jodit from the attribute "jodit" of the NgxJoditProComponent to use the Pro API:
 
 Any component.ts:
+
 ````Typescript
 import {ViewChild} from '@angular/core';
 
 //...
-@ViewChild("joditComponent") joditComponent?: NgxJoditProComponent;
+@ViewChild("joditComponent")
+joditComponent ? : NgxJoditProComponent;
 
 // in ngAfterViewInit
-if (this.joditComponent){
-   // example:
-   this.joditComponent.jodit.plugins.add("hello", ()=>{
-       alert("hello!");
-   });
+if (this.joditComponent) {
+  // example:
+  this.joditComponent.jodit.plugins.add("hello", () => {
+    alert("hello!");
+  });
 }
 ````
 
 Any component.html:
+
 ```HTML
+
 <ngx-jodit-pro #joditComponent ...></ngx-jodit-pro>
 ```
 
@@ -142,6 +160,7 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
 </table>
 
 ### Events for ngx-jodit
+
 <p>
   You can bind events using the Angular way, e.g.:<br/><code>&lt;ngx-jodit (joditChange)="onChange($event)">&lt;/ngx-jodit></code>
 </p>
