@@ -1,10 +1,10 @@
 {
   "name": "ngx-jodit-pro",
   "description": "Angular wrapper for Jodit Pro WYSIWYG editor",
-  "version": "2.0.0-beta.0",
+  "version": "3.0.0-beta.0",
   "peerDependencies": {
-    "@angular/common": ">=12.0.0",
-    "@angular/core": ">=12.0.0",
+    "@angular/common": ">=16.0.0",
+    "@angular/core": ">=16.0.0",
     "jodit-pro": "^2.0.0-beta.18"
   },
   "author": {
