@@ -3,7 +3,7 @@
 Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 16 and jodit >=4.0.0-beta.
 <br/>**Jodit v4 is still in development. PLEASE have a look an the installation instructions, there are some breaking changes in jodit v4.**
 
-Compatibility table
+## Compatibility table
 
 <table>
 <thead><tr><th>Ngx-jodit</th><th>Jodit</th><th>Angular</th><th>Type</th><th></th></tr></thead>
@@ -19,6 +19,10 @@ Compatibility table
 </tr>
 </tbody>
 </table>
+
+## Jodit Pro, Multi & OEM
+
+For Jodit Pro, Multi and OEM you have to install the jodit-pro package and another Angular library: [ngx-jodit-pro](https://github.com/julianpoemp/ngx-jodit/tree/v3.x/libs/ngx-jodit-pro). For more information click [here](https://github.com/julianpoemp/ngx-jodit/tree/v3.x/libs/ngx-jodit-pro).
 
 ## Demo
 
