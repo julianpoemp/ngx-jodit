@@ -12,8 +12,12 @@ This package does not contain the source code of Jodit Pro. You have to install 
 <tbody>
 <tr>
 <td>1.x</td><td>v1.x</td><td>>= v12</td><td>Module</td><td><a href="https://github.com/julianpoemp/ngx-jodit/tree/main/libs/ngx-jodit-pro/README.md">more information</a></td>
-</tr><tr>
+</tr>
+<tr>
 <td>2.x</td><td>v2.x</td><td>>= v12</td><td>Module</td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/v2.x/libs/ngx-jodit-pro/README.md">more information</a></td>
+</tr>
+<tr>
+<td>3.x</td><td>v2.x</td><td>>= v16</td><td>Standalone</td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/v3.x/libs/ngx-jodit-pro/README.md">more information</a></td>
 </tr>
 </tbody>
 </table>
