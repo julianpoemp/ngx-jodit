@@ -1,13 +1,14 @@
 {
   "name": "jodit",
-  "version": "2.0.0-beta.2",
-  "license": "MIT",
+  "version": "0.0.0",
   "scripts": {
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
-    "start": "nx serve",
+    "start": "nx serve demo",
+    "start:pro": "nx serve demo-pro",
     "build": "nx build",
-    "build:lib": "nx build ngx-jodit && cp -f ./README.md ./dist/libs/ngx-jodit/README.md && cp ./LICENSE ./dist/libs/ngx-jodit/LICENSE",
+    "build:lib": "nx build ngx-jodit && cp -f ./README.md ./dist/libs/ngx-jodit/README.md && cp libs/ngx-jodit/LICENSE ./dist/libs/ngx-jodit/LICENSE",
+    "build:lib:pro": "nx build ngx-jodit-pro",
     "build:docs": "nx build demo && mv -f ./dist/apps/demo/* ./docs",
     "test": "nx test"
   },
@@ -25,6 +26,7 @@
     "bootstrap": "^5.2.2",
     "bootstrap-icons": "^1.9.1",
     "jodit": "^4.0.0-beta.50",
+    "jodit-pro": "^2.0.0-beta.18",
     "rxjs": "~7.4.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"

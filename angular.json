@@ -3,6 +3,9 @@
   "projects": {
     "demo": "apps/demo",
     "demo-e2e": "apps/demo-e2e",
-    "ngx-jodit": "libs/ngx-jodit"
+    "demo-pro": "apps/demo-pro",
+    "demo-pro-e2e": "apps/demo-pro-e2e",
+    "ngx-jodit": "libs/ngx-jodit",
+    "ngx-jodit-pro": "libs/ngx-jodit-pro"
   }
 }
