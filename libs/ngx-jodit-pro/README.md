@@ -8,10 +8,12 @@ This package does not contain the source code of Jodit Pro. You have to install 
 ## Compatibility table
 
 <table>
-<thead><tr><th>Ngx-jodit-pro</th><th>Jodit Pro</th><th>Angular</th><th>Type</th></tr></thead>
+<thead><tr><th>Ngx-jodit-pro</th><th>Jodit Pro</th><th>Angular</th><th>Type</th><th></th></tr></thead>
 <tbody>
 <tr>
-<td>1.x</td><td>v1.x</td><td>>= v12</td><td>Module</td>
+<td>1.x</td><td>v1.x</td><td>>= v12</td><td>Module</td><td><a href="https://github.com/julianpoemp/ngx-jodit/tree/main/libs/ngx-jodit-pro/README.md">more information</a></td>
+</tr><tr>
+<td>2.x</td><td>v2.x</td><td>>= v12</td><td>Module</td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/v2.x/libs/ngx-jodit-pro/README.md">more information</a></td>
 </tr>
 </tbody>
 </table>
@@ -71,12 +73,27 @@ The demo for ngx-jodit-pro is not available. You can find a demo of ngx-jodit (n
 
 ## Usage
 
-
-### Options
-
-All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jodit are supported.
-
 ### Using Jodit Pro API
+
+### Use Pro plugins
+
+At the moment each Pro plugin you want to use must be imported into you angular.json/project.json scripts and styles array. For example the tune-block plugin:
+
+```json
+...
+styles: [
+  ... (after jodit css file)...,
+  "node_modules/jodit-pro/build/plugins/tune-block/tune-block.css",
+],
+scripts: [
+  ... (after jodit js file) ...,
+  "node_modules/jodit-pro/build/plugins/tune-block/tune-block.js",
+]
+...
+```
+After that change restart your angular app. Now you can apply the plugin options to ngx-jodit-pro `options` property.
+
+#### Add custom plugins
 
 You can access the initialized Jodit from the attribute "jodit" of the NgxJoditProComponent to use the Pro API:
 
@@ -100,6 +117,10 @@ Any component.html:
 ```HTML
 <ngx-jodit-pro #joditComponent ...></ngx-jodit-pro>
 ```
+
+### Options
+
+All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jodit are supported.
 
 ### Options for ngx-jodit
 
