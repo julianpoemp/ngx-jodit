@@ -11,12 +11,15 @@ import {
   SimpleChanges,
   ViewChild,
 } from '@angular/core';
+import {CommonModule} from '@angular/common';
 
 // TODO replace this with type definitions as soon as available
 declare const Jodit: any;
 
 @Component({
   selector: 'ngx-jodit-pro',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './ngx-jodit-pro.component.html',
   styleUrls: ['./ngx-jodit-pro.component.scss'],
 })

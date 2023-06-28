@@ -3,11 +3,11 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
 import {FormsModule} from '@angular/forms';
-import {NgxJoditProModule} from 'ngx-jodit-pro';
+import {NgxJoditProComponent} from 'ngx-jodit-pro';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, NgxJoditProModule, FormsModule],
+  imports: [BrowserModule, NgxJoditProComponent, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
