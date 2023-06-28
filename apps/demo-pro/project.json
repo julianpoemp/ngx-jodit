@@ -18,10 +18,13 @@
         "styles": [
           "node_modules/bootstrap-icons/font/bootstrap-icons.css",
           "node_modules/bootstrap/dist/css/bootstrap.min.css",
-          "node_modules/jodit-pro/build/jodit.css",
+          "node_modules/jodit-pro/es2021/jodit.fat.min.css",
+          "node_modules/jodit-pro/es2021/plugins/tune-block/tune-block.min.css",
           "apps/demo-pro/src/styles.scss"],
         "scripts": [
-          "node_modules/jodit-pro/build/jodit.js"
+          "node_modules/jodit-pro/es2021/jodit.min.js",
+          "node_modules/jodit-pro/es2021/plugins/tune-block/tune-block.js",
+          "node_modules/jodit-pro/es2021/plugins/page-break/page-break.min.js"
         ]
       },
       "configurations": {

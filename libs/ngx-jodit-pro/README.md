@@ -22,12 +22,12 @@ The demo for ngx-jodit-pro is not available. You can find a demo of ngx-jodit (n
 
 ## Installation
 
-1. Make sure that jodit@^3 is installed (v4 is still in beta and supported only with ngx-jodit >= v2, see compatibility table):
+1. Make sure that jodit-pro@beta is installed (v2 is still in beta and supported only with ngx-jodit-pro v2, see compatibility table):
    ```
-   npm install jodit-pro@^1 --save
+   npm install jodit-pro@beta --save
    ```
 2. ```
-   npm install ngx-jodit-pro --save
+   npm install ngx-jodit-pro@beta --save
    ```
 3. Add `node_modules/jodit-pro/build/jodit.css` to your app's styles in angular.json (or project.json for
    Nx):

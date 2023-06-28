@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {Config} from 'jodit/src/config';
 
 @Component({
   selector: 'jodit-root',
@@ -23,5 +22,5 @@ export class AppComponent {
     }
   }
 
-  options: Partial<Config> = {};
+  options: Partial<any> = {};
 }
