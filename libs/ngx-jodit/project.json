@@ -42,8 +42,7 @@
       "options": {
         "preset": "angular",
         "postTargets": ["semver:github"],
-        "baseBranch": "main",
-        "commitMessageFormat": "chore(${projectName}): release version ${version}"
+        "baseBranch": "main"
       }
     },
     "github": {
