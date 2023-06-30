@@ -46,10 +46,9 @@
       "options": {
         "preset": "angular",
         "postTargets": [
-          "semver:github"
+          "ngx-jodit-pro:github"
         ],
-        "baseBranch": "v2.x",
-        "commitMessageFormat": "chore(${projectName}): release version ${version}"
+        "baseBranch": "v2.x"
       }
     },
     "github": {
