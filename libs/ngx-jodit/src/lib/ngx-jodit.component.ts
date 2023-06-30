@@ -6,7 +6,6 @@ import {
   Input,
   OnChanges,
   OnDestroy,
-  OnInit,
   Output,
   SimpleChanges,
   ViewChild,
@@ -22,9 +21,7 @@ import { Config } from 'jodit/config';
   templateUrl: './ngx-jodit.component.html',
   styleUrls: ['./ngx-jodit.component.scss'],
 })
-export class NgxJoditComponent
-  implements OnInit, AfterViewInit, OnDestroy, OnChanges
-{
+export class NgxJoditComponent implements AfterViewInit, OnDestroy, OnChanges {
   @ViewChild('joditContainer') joditContainer!: ElementRef;
   jodit?: Jodit;
 
@@ -41,7 +38,9 @@ export class NgxJoditComponent
   //events
   @Output() joditChange = new EventEmitter<string>();
   @Output() joditKeyDown = new EventEmitter<KeyboardEvent>();
+  @Output() joditKeyUp = new EventEmitter<KeyboardEvent>();
   @Output() joditMousedown = new EventEmitter<MouseEvent>();
+  @Output() joditMouseup = new EventEmitter<MouseEvent>();
   @Output() joditClick = new EventEmitter<PointerEvent>();
   @Output() joditFocus = new EventEmitter<FocusEvent>();
   @Output() joditPaste = new EventEmitter<ClipboardEvent>();
@@ -51,10 +50,6 @@ export class NgxJoditComponent
   @Output() joditAfterExec = new EventEmitter<void>();
   @Output() joditAfterPaste = new EventEmitter<ClipboardEvent>();
   @Output() joditChangeSelection = new EventEmitter<void>();
-
-  constructor() {}
-
-  ngOnInit(): void {}
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['options']) {
@@ -86,8 +81,14 @@ export class NgxJoditComponent
       this.jodit.events.on('keydown', (a: KeyboardEvent) => {
         this.joditKeyDown.emit(a);
       });
+      this.jodit.events.on('keyup', (a: KeyboardEvent) => {
+        this.joditKeyUp.emit(a);
+      });
       this.jodit.events.on('mousedown', (a: MouseEvent) => {
         this.joditMousedown.emit(a);
+      });
+      this.jodit.events.on('mouseup', (a: MouseEvent) => {
+        this.joditMouseup.emit(a);
       });
       this.jodit.events.on('click', (a: PointerEvent) => {
         this.joditClick.emit(a);
