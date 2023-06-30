@@ -11,7 +11,7 @@ import {
   ViewChild
 } from '@angular/core';
 import {Jodit} from 'jodit';
-import {Config} from 'jodit/config';
+import {Config} from 'jodit/esm/config';
 
 @Component({
   selector: 'ngx-jodit',
