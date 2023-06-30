@@ -40,7 +40,7 @@ Pro!) [here](https://julianpoemp.github.io/ngx-jodit/).
    npm install jodit-pro@beta --save
    ```
 2. ```
-   npm install ngx-jodit-pro@3.0.0-beta.0 --save
+   npm install ngx-jodit-pro@3.0.0-beta.1 --save
    ```
   3. Add the following paths to your app's styles in angular.json (or project.json for
      Nx). Alternatively you can add the JS and CSS file from one of the other builds from the jodit-pro package. The only
