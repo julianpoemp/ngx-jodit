@@ -45,6 +45,12 @@
           "libs/ngx-jodit/**/*.html"
         ]
       }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "angular"
+      }
     }
   }
 }

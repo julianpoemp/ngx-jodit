@@ -1,6 +1,7 @@
 {
+  "name": "ngx-jodit-pro",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "root": "libs/ngx-jodit-pro",
   "sourceRoot": "libs/ngx-jodit-pro/src",
   "prefix": "ngx",
   "targets": {
@@ -42,6 +43,12 @@
           "libs/ngx-jodit-pro/src/**/*.ts",
           "libs/ngx-jodit-pro/src/**/*.html"
         ]
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "angular"
       }
     }
   }
