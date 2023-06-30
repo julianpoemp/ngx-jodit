@@ -60,6 +60,7 @@
     "jest": "27.2.3",
     "jest-preset-angular": "11.1.1",
     "ng-packagr": "^13.0.0",
+    "ngx-deploy-npm": "^3.1.9",
     "nx": "13.10.6",
     "postcss": "^8.4.5",
     "postcss-import": "^14.0.2",
