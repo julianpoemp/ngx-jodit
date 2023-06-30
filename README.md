@@ -44,3 +44,11 @@ Buy here.</a>
 </tr>
 </tbody>
 </table>
+
+## Creating issues
+
+Please create new issues here only if it's related directly to ngx-jodit or ngx-jodit-pro. Issues related to Jodit itself should be posted [here](https://github.com/xdan/jodit/issues).
+
+## Contribution
+
+This project uses [@jscutlery/semver](https://github.com/jscutlery/semver) with angular preset. All commit must meet the Angular [commit message schema](https://gist.github.com/brianclements/841ea7bffdb01346392c) requirements. There are only three permitted scopes: "ngx-jodit", "ngx-jodit-pro" and "general" (for changes outside of libraries).
