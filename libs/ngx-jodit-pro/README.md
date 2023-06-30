@@ -30,8 +30,9 @@ The demo for ngx-jodit-pro is not available. You can find a demo of ngx-jodit (n
 
 1. Make sure that jodit@^3 is installed (v4 is still in beta and supported only with ngx-jodit >= v2, see compatibility table):
    ```
-   npm install jodit-pro@^1 --save
+   npm install jodit@^3 jodit-pro@^1 --save
    ```
+   jodit@^3 is needed for typings.
 2. ```
    npm install ngx-jodit-pro --save
    ```
@@ -171,8 +172,16 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
     <td>Triggers as soon as a key is pressed down.</td>
   </tr>
   <tr>
+    <td>joditKeyUp</td>
+    <td>Triggers as soon as a key is released.</td>
+  </tr>
+  <tr>
     <td>joditMousedown</td>
     <td>Triggers as soon as the left mouse button is pressed.</td>
+  </tr>
+  <tr>
+    <td>joditMouseup</td>
+    <td>Triggers as soon as the left mouse button is released.</td>
   </tr>
   <tr>
     <td>joditClick</td>
