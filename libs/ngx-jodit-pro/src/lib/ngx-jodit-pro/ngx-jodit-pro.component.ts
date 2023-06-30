@@ -10,7 +10,7 @@ import {
   SimpleChanges,
   ViewChild,
 } from '@angular/core';
-import {Config} from 'jodit/types/config';
+import {Config} from 'jodit/esm/config';
 import {Jodit} from 'jodit';
 
 @Component({
