@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/ngx-jodit-pro"],
+      "outputs": [
+        "dist/libs/ngx-jodit-pro"
+      ],
       "options": {
         "project": "libs/ngx-jodit-pro/ng-package.json"
       },
@@ -22,7 +24,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ngx-jodit-pro"],
+      "outputs": [
+        "coverage/libs/ngx-jodit-pro"
+      ],
       "options": {
         "jestConfig": "libs/ngx-jodit-pro/jest.config.js",
         "passWithNoTests": true
@@ -40,7 +44,10 @@
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "postTargets": ["semver:github"],
+        "preset": "angular",
+        "postTargets": [
+          "semver:github"
+        ],
         "baseBranch": "v2.x",
         "commitMessageFormat": "chore(${projectName}): release version ${version}"
       }
