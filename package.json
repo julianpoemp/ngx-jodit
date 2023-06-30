@@ -8,6 +8,8 @@
     "start:pro": "nx serve demo-pro",
     "build": "nx build",
     "build:lib": "nx build ngx-jodit && cp -f ./README.md ./dist/libs/ngx-jodit/README.md && cp libs/ngx-jodit/LICENSE ./dist/libs/ngx-jodit/LICENSE",
+    "release:lib:pro": "nx run ngx-jodit-pro:version --releaseAs=patch --push",
+    "publish:lib:pro": "nx npm ngx-jodit-pro",
     "build:lib:pro": "nx build ngx-jodit-pro",
     "build:docs": "nx build demo && mv -f ./dist/apps/demo/* ./docs",
     "test": "nx test"
@@ -60,7 +62,7 @@
     "jest": "27.2.3",
     "jest-preset-angular": "11.1.1",
     "ng-packagr": "^13.0.0",
-    "ngx-deploy-npm": "^3.1.9",
+    "ngx-deploy-npm": "~4.2.0",
     "nx": "13.10.6",
     "postcss": "^8.4.5",
     "postcss-import": "^14.0.2",
