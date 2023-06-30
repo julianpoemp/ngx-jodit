@@ -1,6 +1,6 @@
 {
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "root": "libs/ngx-jodit",
   "sourceRoot": "libs/ngx-jodit/src",
   "prefix": "ngx",
   "targets": {
@@ -24,7 +24,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/ngx-jodit"],
       "options": {
-        "jestConfig": "libs/ngx-jodit/jest.config.js",
+        "jestConfig": "libs/ngx-jodit/jest.config.ts",
         "passWithNoTests": true
       }
     },

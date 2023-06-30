@@ -4,7 +4,6 @@
     "defaultBase": "main"
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular",
     "packageManager": "npm"
   },
   "implicitDependencies": {
@@ -22,14 +21,6 @@
       }
     }
   },
-  "targetDependencies": {
-    "build": [
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
-    ]
-  },
   "generators": {
     "@nrwl/angular:application": {
       "style": "scss",
@@ -45,5 +36,11 @@
       "style": "scss"
     }
   },
-  "defaultProject": "demo"
+  "defaultProject": "demo",
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"]
+    }
+  }
 }

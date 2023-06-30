@@ -1,6 +1,6 @@
 {
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "root": "apps/demo-pro",
   "sourceRoot": "apps/demo-pro/src",
   "prefix": "jodit",
   "targets": {
@@ -14,13 +14,18 @@
         "polyfills": "apps/demo-pro/src/polyfills.ts",
         "tsConfig": "apps/demo-pro/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/demo-pro/src/favicon.ico", "apps/demo-pro/src/assets", "apps/demo-pro/src/config.js"],
+        "assets": [
+          "apps/demo-pro/src/favicon.ico",
+          "apps/demo-pro/src/assets",
+          "apps/demo-pro/src/config.js"
+        ],
         "styles": [
           "node_modules/bootstrap-icons/font/bootstrap-icons.css",
           "node_modules/bootstrap/dist/css/bootstrap.min.css",
           "node_modules/jodit-pro/es2021/jodit.fat.min.css",
           "node_modules/jodit-pro/es2021/plugins/tune-block/tune-block.min.css",
-          "apps/demo-pro/src/styles.scss"],
+          "apps/demo-pro/src/styles.scss"
+        ],
         "scripts": [
           "node_modules/jodit-pro/es2021/jodit.min.js",
           "node_modules/jodit-pro/es2021/plugins/tune-block/tune-block.js",
@@ -94,7 +99,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/apps/demo-pro"],
       "options": {
-        "jestConfig": "apps/demo-pro/jest.config.js",
+        "jestConfig": "apps/demo-pro/jest.config.ts",
         "passWithNoTests": true
       }
     }

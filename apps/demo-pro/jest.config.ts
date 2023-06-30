@@ -1,6 +1,7 @@
-module.exports = {
-  displayName: 'libs-ngx-jodit-pro',
-  preset: '../../../jest.preset.js',
+/* eslint-disable */
+export default {
+  displayName: 'demo-pro',
+  preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -8,7 +9,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../coverage/libs/ngx-jodit-pro',
+  coverageDirectory: '../../coverage/apps/demo-pro',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },

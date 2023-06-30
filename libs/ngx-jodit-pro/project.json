@@ -1,14 +1,12 @@
 {
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "root": "libs/ngx-jodit-pro",
   "sourceRoot": "libs/ngx-jodit-pro/src",
   "prefix": "ngx",
   "targets": {
     "build": {
       "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": [
-        "dist/libs/ngx-jodit-pro"
-      ],
+      "outputs": ["dist/libs/ngx-jodit-pro"],
       "options": {
         "project": "libs/ngx-jodit-pro/ng-package.json"
       },
@@ -24,11 +22,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/libs/ngx-jodit-pro"
-      ],
+      "outputs": ["coverage/libs/ngx-jodit-pro"],
       "options": {
-        "jestConfig": "libs/ngx-jodit-pro/jest.config.js",
+        "jestConfig": "libs/ngx-jodit-pro/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -45,9 +41,7 @@
       "executor": "@jscutlery/semver:version",
       "options": {
         "preset": "angular",
-        "postTargets": [
-          "ngx-jodit-pro:github"
-        ],
+        "postTargets": ["ngx-jodit-pro:github"],
         "baseBranch": "v2.x"
       }
     },

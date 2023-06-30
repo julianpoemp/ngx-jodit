@@ -1,6 +1,6 @@
 {
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "root": "apps/demo",
   "sourceRoot": "apps/demo/src",
   "prefix": "jodit",
   "targets": {
@@ -84,7 +84,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/apps/demo"],
       "options": {
-        "jestConfig": "apps/demo/jest.config.js",
+        "jestConfig": "apps/demo/jest.config.ts",
         "passWithNoTests": true
       }
     }
