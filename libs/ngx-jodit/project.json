@@ -41,9 +41,8 @@
       "executor": "@jscutlery/semver:version",
       "options": {
         "preset": "angular",
-        "postTargets": ["semver:github"],
-        "baseBranch": "v2.x",
-        "commitMessageFormat": "chore(${projectName}): release version ${version}"
+        "postTargets": ["ngx-jodit:github"],
+        "baseBranch": "v2.x"
       }
     },
     "github": {
