@@ -25,8 +25,7 @@ Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG ed
 
 ## ngx-jodit-pro <a href="https://www.npmjs.com/package/ngx-jodit-pro"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro"></a></h1>
 
-Angular wrapper for <a href="https://xdsoft.net/jodit/pro/">Jodit PRO</a> WYSIWYG editor. It supports Angular >= 16 and
-jodit-pro v2 beta. You need a license key in order to use this wrapper. <a href="https://xdsoft.net/jodit/pro/#compare">
+Angular wrapper for <a href="https://xdsoft.net/jodit/pro/">Jodit PRO</a> WYSIWYG editor. You need a license key in order to use this wrapper. <a href="https://xdsoft.net/jodit/pro/#compare">
 Buy here.</a>
 
 ### Compatibility table
