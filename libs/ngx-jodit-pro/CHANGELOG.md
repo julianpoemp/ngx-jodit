@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [3.0.0-beta.2](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-pro-3.0.0-beta.1...ngx-jodit-pro-3.0.0-beta.2) (2023-07-19)
+
+
+### Bug Fixes
+
+* **ngx-jodit-pro:** no icons for toolbar buttons visible ([f606990](https://github.com/julianpoemp/ngx-jodit/commit/f60699037ab2b8892e6fb0963bdbd8444f0f14c6))
+
+
+
 # [3.0.0-beta.1](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-pro-3.0.0-beta.0...ngx-jodit-pro-3.0.0-beta.1) (2023-06-30)
 
 
