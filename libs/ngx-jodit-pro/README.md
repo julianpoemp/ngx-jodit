@@ -87,15 +87,14 @@ Pro!) [here](https://julianpoemp.github.io/ngx-jodit/).
 At the moment each Pro plugin you want to use must be imported into you angular.json/project.json scripts and styles
 array. For example the tune-block plugin:
 
-```json
-...
+```
 styles: [
-... (after jodit css file)...,
-"node_modules/jodit-pro/es2021/plugins/tune-block/tune-block.min.css",
+  // ... (after jodit css file)...,
+  "node_modules/jodit-pro/es2021/plugins/tune-block/tune-block.min.css",
 ],
 scripts: [
-... (after jodit js file) ...,
-"node_modules/jodit-pro/es2021/plugins/tune-block/tune-block.js",
+  // ... (after jodit js file) ...,
+  "node_modules/jodit-pro/es2021/plugins/tune-block/tune-block.js",
 ]
 ...
 ```
