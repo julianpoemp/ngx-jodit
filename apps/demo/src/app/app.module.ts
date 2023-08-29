@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import { NgxJoditComponent } from '@jodit/ngx-jodit';
+import { NgxJoditComponent } from 'ngx-jodit';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
