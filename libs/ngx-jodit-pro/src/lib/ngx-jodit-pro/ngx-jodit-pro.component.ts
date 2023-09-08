@@ -6,13 +6,13 @@ import {
   Input,
   OnChanges,
   OnDestroy,
-  OnInit,
   Output,
   SimpleChanges,
   ViewChild,
 } from '@angular/core';
 import {Config} from 'jodit/types/config';
-import {Jodit} from "jodit";
+
+declare const Jodit: any;
 
 @Component({
   selector: 'ngx-jodit-pro',
