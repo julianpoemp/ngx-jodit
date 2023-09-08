@@ -75,7 +75,7 @@ Pro!) [here](https://julianpoemp.github.io/ngx-jodit/).
 6. Now you can use the component
 
    ```angular2html
-     <ngx-jodit [(value)]="value" [options]="options" #joditComponent></ngx-jodit>
+     <ngx-jodit-pro [(value)]="value" [options]="options" #joditComponent></ngx-jodit-pro>
    ```
 
 ## Usage
