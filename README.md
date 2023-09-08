@@ -2,6 +2,10 @@
 
 If you want to use Jodit (free) you need to install ngx-jodit and for Jodit (Pro/Muli/OEM) you need to install ngx-jodit-pro. See the compatibility tables below for more information.
 
+## Third-party package
+
+ngx-jodit and ngx-jodit-pro are thrid-party packages. There is no affiliation with Jodit. ngx-jodit and ngx-jodit-pro are under MIT-License. Jodit and Jodit-Pro can be under another license. For more information about licenses click on "more Information" next to a version of your choice. and scroll down to "License".
+
 ## ngx-jodit <a href="https://www.npmjs.com/package/ngx-jodit"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit"></a></h1>
 
 Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor.
