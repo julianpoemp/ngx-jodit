@@ -73,7 +73,7 @@ The demo for ngx-jodit-pro is not available. You can find a demo of ngx-jodit (n
 6. Now you can use the component
 
    ```angular2html
-     <ngx-jodit [(value)]="value" [options]="options" #joditComponent></ngx-jodit>
+     <ngx-jodit-pro [(value)]="value" [options]="options" #joditComponent></ngx-jodit-pro>
    ```
 
 ## Usage
