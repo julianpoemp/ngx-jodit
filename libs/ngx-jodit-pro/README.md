@@ -1,6 +1,9 @@
 # ngx-jodit-pro v1.x <a href="https://www.npmjs.com/package/ngx-jodit-pro"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro"></a></h1>
 
-Angular wrapper for <a href="https://xdsoft.net/jodit/pro/">Jodit PRO</a> WYSIWYG editor. It supports Angular >= 12. You need a license key in order to use this wrapper. <a href="https://xdsoft.net/jodit/pro/#compare">Buy here.</a>
+**Third-party** Angular wrapper for <a href="https://xdsoft.net/jodit/pro/">Jodit PRO</a> WYSIWYG editor. It supports Angular >= 12. You need a license key in order to use this wrapper. <a href="https://xdsoft.net/jodit/pro/#compare">Buy here.</a>
+
+## Third-party-package
+This is a third-party package with no affiliation to Jodit. See License.
 
 ## License
 This package does not contain the source code of Jodit Pro. You have to install it as described here (scroll down). This wrapper is licensed under MIT License, Jodit Pro is licensed seperately ([see license](https://xdsoft.net/jodit/pro/license/)).
