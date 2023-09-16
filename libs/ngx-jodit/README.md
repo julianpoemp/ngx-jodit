@@ -124,6 +124,10 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
     <td>Triggers as soon as a key is pressed down.</td>
   </tr>
   <tr>
+    <td>joditKeyUp</td>
+    <td>Triggers as soon as a key is released.</td>
+  </tr>
+  <tr>
     <td>joditMousedown</td>
     <td>Triggers as soon as the left mouse button is pressed.</td>
   </tr>
