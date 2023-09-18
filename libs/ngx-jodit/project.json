@@ -40,7 +40,7 @@
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "preset": "angular",
+        "preset": "conventional",
         "postTargets": ["ngx-jodit:github"],
         "baseBranch": "v2.x"
       }
