@@ -41,7 +41,7 @@
       "executor": "@jscutlery/semver:version",
       "options": {
         "preset": "angular",
-        "postTargets": ["semver:github"],
+        "postTargets": ["ngx-jodit:github"],
         "baseBranch": "main"
       }
     },
