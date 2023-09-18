@@ -2,6 +2,50 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.0.0-beta.4](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-2.0.0-beta.3...ngx-jodit-2.0.0-beta.4) (2023-09-18)
+
+
+### Bug Fixes
+
+* **ngx-jodit:** ngModel [(value)] not working for outside changes ([d63a4ba](https://github.com/julianpoemp/ngx-jodit/commit/d63a4bac411761399064e925f4dfbc0fbb01064b))
+
+## [2.0.0-beta.4](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-2.0.0-beta.3...ngx-jodit-2.0.0-beta.4) (2023-09-18)
+
+
+### Bug Fixes
+
+* **ngx-jodit:** ngModel [(value)] not working for outside changes ([d63a4ba](https://github.com/julianpoemp/ngx-jodit/commit/d63a4bac411761399064e925f4dfbc0fbb01064b))
+
+## [2.0.0-beta.4](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-2.0.0-beta.3...ngx-jodit-2.0.0-beta.4) (2023-09-18)
+
+
+### Bug Fixes
+
+* **ngx-jodit:** ngModel [(value)] not working for outside changes ([d63a4ba](https://github.com/julianpoemp/ngx-jodit/commit/d63a4bac411761399064e925f4dfbc0fbb01064b))
+
+## [2.0.0-beta.4](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-2.0.0-beta.3...ngx-jodit-2.0.0-beta.4) (2023-09-18)
+
+
+### Bug Fixes
+
+* **ngx-jodit:** ngModel [(value)] not working for outside changes ([d63a4ba](https://github.com/julianpoemp/ngx-jodit/commit/d63a4bac411761399064e925f4dfbc0fbb01064b))
+
+## [2.0.0-beta.4](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-2.0.0-beta.3...ngx-jodit-2.0.0-beta.4) (2023-09-18)
+
+
+### Bug Fixes
+
+* **ngx-jodit:** ngModel [(value)] not working for outside changes ([d63a4ba](https://github.com/julianpoemp/ngx-jodit/commit/d63a4bac411761399064e925f4dfbc0fbb01064b))
+
+# [2.0.0-beta.4](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-2.0.0-beta.3...ngx-jodit-2.0.0-beta.4) (2023-09-18)
+
+
+### Bug Fixes
+
+* **ngx-jodit:** ngModel [(value)] not working for outside changes ([d63a4ba](https://github.com/julianpoemp/ngx-jodit/commit/d63a4bac411761399064e925f4dfbc0fbb01064b))
+
+
+
 # [2.0.0-beta.3](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-2.0.0-beta.2...ngx-jodit-2.0.0-beta.3) (2023-06-30)
 
 
