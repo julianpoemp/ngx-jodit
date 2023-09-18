@@ -58,8 +58,14 @@ export class NgxJoditProComponent implements AfterViewInit, OnDestroy, OnChanges
       const options = changes['options'].currentValue;
 
       if (options) {
-        console.log('changed options');
         this.initJoditContainer();
+      }
+    }
+
+    if(changes["value"]){
+      this._value = changes["value"].currentValue;
+      if(this.jodit){
+        this.jodit.value = this._value;
       }
     }
   }
