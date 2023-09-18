@@ -1,5 +1,6 @@
 import {
   AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
   ElementRef,
   EventEmitter,
@@ -10,9 +11,9 @@ import {
   SimpleChanges,
   ViewChild,
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Jodit } from 'jodit';
-import { Config } from 'jodit/esm/config';
+import {CommonModule} from '@angular/common';
+import {Jodit} from 'jodit';
+import {Config} from 'jodit/esm/config';
 
 @Component({
   selector: 'ngx-jodit',
@@ -20,6 +21,7 @@ import { Config } from 'jodit/esm/config';
   imports: [CommonModule],
   templateUrl: './ngx-jodit.component.html',
   styleUrls: ['./ngx-jodit.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgxJoditComponent implements AfterViewInit, OnDestroy, OnChanges {
   @ViewChild('joditContainer') joditContainer!: ElementRef;
@@ -55,14 +57,22 @@ export class NgxJoditComponent implements AfterViewInit, OnDestroy, OnChanges {
   @Output() joditAfterPaste = new EventEmitter<ClipboardEvent>();
   @Output() joditChangeSelection = new EventEmitter<void>();
 
+  private oldValue = '';
+
   ngOnChanges(changes: SimpleChanges) {
     if (changes['options']) {
       // options changed
       const options = changes['options'].currentValue;
 
       if (options) {
-        console.log('changed options');
         this.initJoditContainer();
+      }
+    }
+
+    if (changes['value'] && changes["value"].currentValue !== this.oldValue) {
+      if (this.jodit) {
+        this.jodit.value = this._value;
+        this.oldValue = this.jodit.value;
       }
     }
   }
@@ -79,8 +89,12 @@ export class NgxJoditComponent implements AfterViewInit, OnDestroy, OnChanges {
       this.jodit = Jodit.make(this.joditContainer.nativeElement, this.options);
       this.jodit.value = this._value;
       this.jodit.events.on('change', (text: string) => {
-        this.joditChange.emit(text);
-        this.changeValue(text);
+        setTimeout(()=> {
+          if (this.oldValue !== text) {
+            this.joditChange.emit(text);
+            this.changeValue(text);
+          }
+        }, 0)
       });
       this.jodit.events.on('keydown', (a: KeyboardEvent) => {
         this.joditKeyDown.emit(a);
@@ -125,6 +139,7 @@ export class NgxJoditComponent implements AfterViewInit, OnDestroy, OnChanges {
   }
 
   changeValue(value: string) {
+    this.oldValue = this._value;
     this._value = value;
     this.valueChange.emit(value);
   }
