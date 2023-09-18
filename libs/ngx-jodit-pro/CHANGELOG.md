@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [3.0.0-beta.3](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-pro-3.0.0-beta.2...ngx-jodit-pro-3.0.0-beta.3) (2023-09-18)
+
+
+### Bug Fixes
+
+* **ngx-jodit-pro:** ngModel [(value)] not working with outside changes ([3b6daf8](https://github.com/julianpoemp/ngx-jodit/commit/3b6daf88680ddddfe2637258aba425e980eaee24))
+
+
+
 # [3.0.0-beta.2](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-pro-3.0.0-beta.1...ngx-jodit-pro-3.0.0-beta.2) (2023-07-19)
 
 
