@@ -58,6 +58,13 @@ export class NgxJoditComponent implements AfterViewInit, OnDestroy, OnChanges {
         this.initJoditContainer();
       }
     }
+
+    if(changes["value"]){
+      this._value = changes["value"].currentValue;
+      if(this.jodit){
+        this.jodit.value = this._value;
+      }
+    }
   }
 
   ngAfterViewInit() {
