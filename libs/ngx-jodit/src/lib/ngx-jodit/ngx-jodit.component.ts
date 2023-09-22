@@ -8,10 +8,10 @@ import {
   OnDestroy,
   Output,
   SimpleChanges,
-  ViewChild
+  ViewChild,
 } from '@angular/core';
-import {Jodit} from 'jodit';
-import {Config} from 'jodit/src/config';
+import { Jodit } from 'jodit';
+import { Config } from 'jodit/src/config';
 
 @Component({
   selector: 'ngx-jodit',
@@ -48,23 +48,41 @@ export class NgxJoditComponent implements AfterViewInit, OnDestroy, OnChanges {
   @Output() joditAfterPaste = new EventEmitter<ClipboardEvent>();
   @Output() joditChangeSelection = new EventEmitter<void>();
 
+  isOutsideChange = true;
+
   ngOnChanges(changes: SimpleChanges) {
     if (changes['options']) {
       // options changed
       const options = changes['options'].currentValue;
 
       if (options) {
-        console.log('changed options');
         this.initJoditContainer();
       }
     }
 
-    if(changes["value"]){
-      this._value = changes["value"].currentValue;
-      if(this.jodit){
-        this.jodit.value = this._value;
+    if (changes['value']) {
+      if (this.jodit) {
+        this.isOutsideChange = true;
+        this.jodit.value = this.isHTML(this._value) ? this._value : `<p>${this._value}</p>`;
       }
+
+      setTimeout(() => {
+        if (this.isOutsideChange) {
+          this.isOutsideChange = false;
+        }
+      }, 0);
     }
+  }
+
+  isHTML(text: string) {
+    const elem = document.createElement('div');
+    elem.innerHTML = text;
+
+    return (
+      text &&
+      elem.childNodes.length > 0 &&
+      elem.childNodes.item(0).nodeType !== 3
+    );
   }
 
   ngAfterViewInit() {
@@ -79,8 +97,10 @@ export class NgxJoditComponent implements AfterViewInit, OnDestroy, OnChanges {
       this.jodit = Jodit.make(this.joditContainer.nativeElement, this.options);
       this.jodit.value = this._value;
       this.jodit.events.on('change', (text: string) => {
-        this.joditChange.emit(text);
-        this.changeValue(text);
+        if (!this.isOutsideChange) {
+          this.joditChange.emit(text);
+          this.changeValue(text);
+        }
       });
       this.jodit.events.on('keydown', (a: KeyboardEvent) => {
         this.joditKeyDown.emit(a);
