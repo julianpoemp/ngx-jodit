@@ -10,8 +10,8 @@ import {
   SimpleChanges,
   ViewChild,
 } from '@angular/core';
-import { Jodit } from 'jodit';
-import { Config } from 'jodit/src/config';
+import {Jodit} from 'jodit';
+import {Config} from 'jodit/src/config';
 
 @Component({
   selector: 'ngx-jodit',
@@ -48,7 +48,7 @@ export class NgxJoditComponent implements AfterViewInit, OnDestroy, OnChanges {
   @Output() joditAfterPaste = new EventEmitter<ClipboardEvent>();
   @Output() joditChangeSelection = new EventEmitter<void>();
 
-  isOutsideChange = true;
+  private isOutsideChange = true;
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['options']) {
