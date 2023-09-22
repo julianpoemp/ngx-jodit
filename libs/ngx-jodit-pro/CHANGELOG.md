@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [3.0.0-beta.4](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-pro-3.0.0-beta.3...ngx-jodit-pro-3.0.0-beta.4) (2023-09-22)
+
+
+### Bug Fixes
+
+* **ngx-jodit-pro:** [(value)] not working correctly, e.g. resets cursor ([143e238](https://github.com/julianpoemp/ngx-jodit/commit/143e2381520de9eb7b10d345a554c90c4df67e19))
+
+
+
 # [3.0.0-beta.3](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-pro-3.0.0-beta.2...ngx-jodit-pro-3.0.0-beta.3) (2023-09-18)
 
 
