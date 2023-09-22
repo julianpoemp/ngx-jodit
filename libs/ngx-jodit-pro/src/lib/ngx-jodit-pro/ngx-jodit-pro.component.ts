@@ -54,7 +54,7 @@ export class NgxJoditProComponent implements AfterViewInit, OnDestroy, OnChanges
   @Output() joditAfterPaste = new EventEmitter<ClipboardEvent>();
   @Output() joditChangeSelection = new EventEmitter<void>();
 
-  private oldValue = '';
+  private isOutsideChange = true;
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['options']) {
@@ -66,12 +66,29 @@ export class NgxJoditProComponent implements AfterViewInit, OnDestroy, OnChanges
       }
     }
 
-    if (changes['value'] && changes['value'].currentValue !== this.oldValue) {
+    if (changes['value']) {
       if (this.jodit) {
-        this.jodit.value = this._value;
-        this.oldValue = this.jodit.value;
+        this.isOutsideChange = true;
+        this.jodit.value = this.isHTML(this._value) ? this._value : `<p>${this._value}</p>`;
       }
+
+      setTimeout(() => {
+        if (this.isOutsideChange) {
+          this.isOutsideChange = false;
+        }
+      }, 0);
     }
+  }
+
+  isHTML(text: string) {
+    const elem = document.createElement('div');
+    elem.innerHTML = text;
+
+    return (
+      text &&
+      elem.childNodes.length > 0 &&
+      elem.childNodes.item(0).nodeType !== 3
+    );
   }
 
   ngAfterViewInit() {
@@ -86,12 +103,10 @@ export class NgxJoditProComponent implements AfterViewInit, OnDestroy, OnChanges
       this.jodit = Jodit.make(this.joditContainer.nativeElement, this.options);
       this.joditContainer.nativeElement.innerHTML = this._value;
       this.jodit.events.on('change', (text: string) => {
-        setTimeout(()=> {
-          if (this.oldValue !== text) {
-            this.joditChange.emit(text);
-            this.changeValue(text);
-          }
-        }, 0);
+        if (!this.isOutsideChange) {
+          this.joditChange.emit(text);
+          this.changeValue(text);
+        }
       });
       this.jodit.events.on('keydown', (a: KeyboardEvent) => {
         this.joditKeyDown.emit(a);
@@ -136,7 +151,6 @@ export class NgxJoditProComponent implements AfterViewInit, OnDestroy, OnChanges
   }
 
   changeValue(value: string) {
-    this.oldValue = this._value;
     this._value = value;
     this.valueChange.emit(value);
   }
