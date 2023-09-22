@@ -33,7 +33,7 @@ The demo for ngx-jodit-pro is not available. You can find a demo of ngx-jodit (n
    npm install jodit-pro@beta --save
    ```
 2. ```
-   npm install ngx-jodit-pro@2.x --save
+   npm install ngx-jodit-pro@2x --save
    ```
 3. Add the following paths to your app's styles in angular.json (or project.json for
    Nx). Alternatively yu can add the JS and CSS file from one of the other builds from the jodit-pro package. The only important point is to have a JS file and a CSS file of Jodit-Pro and each plugin you want to use:
