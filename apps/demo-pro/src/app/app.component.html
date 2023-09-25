@@ -4,7 +4,7 @@
 <h1>ngx-jodit pro <a href="https://www.npmjs.com/package/ngx-jodit-pro"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro"></a></h1>
 <p>Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 12. Fore more information about installation, use, options and events see <a href="https://github.com/julianpoemp/ngx-jodit#readme">Github README</a>.</p>
 
-<ngx-jodit-pro [(value)]="value" [options]="options"></ngx-jodit-pro>
+<ngx-jodit-pro [(value)]="value" [options]="options" #jodit></ngx-jodit-pro>
 <input type="text" name="value" class="form-control" [(ngModel)]="value"/>
 <h2>Options</h2>
 <p>All <a href="https://xdsoft.net/jodit/docs/classes/config.Config.html">options</a> from Jodit are supported.

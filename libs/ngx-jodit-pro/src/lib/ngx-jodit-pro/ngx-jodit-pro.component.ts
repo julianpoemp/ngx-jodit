@@ -53,7 +53,7 @@ export class NgxJoditProComponent implements AfterViewInit, OnDestroy, OnChanges
   @Output() joditAfterPaste = new EventEmitter<ClipboardEvent>();
   @Output() joditChangeSelection = new EventEmitter<void>();
 
-  private isOutsideChange = true;
+  private inputValueChange = false;
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['options']) {
@@ -65,16 +65,14 @@ export class NgxJoditProComponent implements AfterViewInit, OnDestroy, OnChanges
       }
     }
 
-    if(changes["value"]){
-      if (this.jodit) {
-        this.isOutsideChange = true;
+    if (changes['value'] && changes['value'].currentValue !== changes['value'].previousValue) {
+      if (this.jodit && !this.inputValueChange) {
+        this.inputValueChange = true;
         this.jodit.value = this.isHTML(this._value) ? this._value : `<p>${this._value}</p>`;
       }
 
       setTimeout(() => {
-        if (this.isOutsideChange) {
-          this.isOutsideChange = false;
-        }
+        this.inputValueChange = false;
       }, 0);
     }
   }
@@ -102,10 +100,11 @@ export class NgxJoditProComponent implements AfterViewInit, OnDestroy, OnChanges
       this.joditContainer.nativeElement.innerHTML = this._value;
       this.jodit = Jodit.make(this.joditContainer.nativeElement, this.options);
       this.jodit.events.on('change', (text: string) => {
-        if (!this.isOutsideChange) {
-          this.joditChange.emit(text);
+        if (!this.inputValueChange) {
+          this.inputValueChange = true;
           this.changeValue(text);
         }
+        this.joditChange.emit(text);
       });
       this.jodit.events.on('keydown', (a: KeyboardEvent) => {
         this.joditKeyDown.emit(a);
@@ -144,7 +143,6 @@ export class NgxJoditProComponent implements AfterViewInit, OnDestroy, OnChanges
   }
 
   changeValue(value: string) {
-    this._value = value;
     this.valueChange.emit(value);
   }
 
