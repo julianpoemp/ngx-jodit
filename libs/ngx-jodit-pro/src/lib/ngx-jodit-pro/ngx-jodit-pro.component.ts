@@ -109,8 +109,14 @@ export class NgxJoditProComponent implements AfterViewInit, OnDestroy, OnChanges
       this.jodit.events.on('keydown', (a: KeyboardEvent) => {
         this.joditKeyDown.emit(a);
       });
+      this.jodit.events.on('keyup', (a: KeyboardEvent) => {
+        this.joditKeyUp.emit(a);
+      });
       this.jodit.events.on('mousedown', (a: MouseEvent) => {
         this.joditMousedown.emit(a);
+      });
+      this.jodit.events.on('mouseup', (a: MouseEvent) => {
+        this.joditMouseup.emit(a);
       });
       this.jodit.events.on('click', (a: PointerEvent) => {
         this.joditClick.emit(a);
