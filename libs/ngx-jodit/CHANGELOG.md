@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [2.0.0-beta.6](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-2.0.0-beta.5...ngx-jodit-2.0.0-beta.6) (2023-09-26)
+
+
+### Bug Fixes
+
+* **ngx-jodit:** [(value)] still resets caret position ([3332b70](https://github.com/julianpoemp/ngx-jodit/commit/3332b70410c59d6621b048c039ea5ebf414ed73c))
+
 ## [2.0.0-beta.5](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-2.0.0-beta.4...ngx-jodit-2.0.0-beta.5) (2023-09-22)
 
 
