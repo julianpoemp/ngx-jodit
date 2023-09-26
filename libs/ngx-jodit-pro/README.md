@@ -1,4 +1,4 @@
-# ngx-jodit-pro v1.x</h1>
+# ngx-jodit-pro v1.x
 
 **Third-party** Angular wrapper for <a href="https://xdsoft.net/jodit/pro/">Jodit PRO</a> WYSIWYG editor. It supports Angular >= 12. You need a license key in order to use this wrapper. <a href="https://xdsoft.net/jodit/pro/#compare">Buy here.</a>
 

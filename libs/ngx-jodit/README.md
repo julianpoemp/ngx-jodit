@@ -1,4 +1,4 @@
-# ngx-jodit v1.x <a href="https://www.npmjs.com/package/ngx-jodit"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit"></a></h1>
+# ngx-jodit v1.x
 
 Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 12.
 
