@@ -7,10 +7,20 @@ assignees: ''
 
 ---
 
-<!-- Describe the issue as detailed as possible, in a way I can reproduce it easily. If your issue is related to jodit itself please open an issue on its repository.
+<!-- Describe the issue as detailed as possible, in a way I can reproduce it easily. The better the description the faster the solution.
 
-Please answer additionally:
+Did you check if the issue exists on the Jodit Demo page?
+https://xdsoft.net/jodit/
 
-- What version of the package?
-- What Angular version are you using?
+If the issue exists on the Demo page, it's an issue related with jodit package itself. Open an issue on its repository:
+https://github.com/xdan/jodit
+
+This text is a hidden comment. You can remove it or you can write your description above or under this comment.
 -->
+
+### Package versions
+
+| package       | version |
+|---------------|---------|
+| Angular       |         |
+| jodit         |         |
