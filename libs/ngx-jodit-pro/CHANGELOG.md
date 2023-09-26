@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.0.7](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-pro-1.0.6...ngx-jodit-pro-1.0.7) (2023-09-26)
+
+
+### Bug Fixes
+
+* **ngx-jodit-pro:** joditKeyUp and joditMouseup events not working ([d9beb11](https://github.com/julianpoemp/ngx-jodit/commit/d9beb11a02521acbafe3fc14c7696858352ead39))
+
+
+
 ## [1.0.6](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-pro-1.0.5...ngx-jodit-pro-1.0.6) (2023-09-25)
 
 
