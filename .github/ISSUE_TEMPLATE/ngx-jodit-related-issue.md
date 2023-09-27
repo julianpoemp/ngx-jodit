@@ -20,7 +20,7 @@ This text is a hidden comment. You can remove it or you can write your descripti
 
 ### Package versions
 
-| package       | version |
+| package          | version |
 |---------------|---------|
-| Angular       |         |
-| jodit         |         |
+| Angular           |               |
+| jodit                |                |
