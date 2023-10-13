@@ -2,6 +2,22 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [3.0.0-beta.9](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.0.0-beta.8...ngx-jodit-3.0.0-beta.9) (2023-10-13)
+
+
+### Bug Fixes
+
+* **ngx-jodit:** missing icons for toolbar buttons ([c265329](https://github.com/julianpoemp/ngx-jodit/commit/c26532988d92b3ad402d62327452d779c5ccfc81))
+
+
+### BREAKING CHANGES
+
+* **ngx-jodit:** You have to add the Jodit JS file to the list of your
+app's scripts attribute. See installation instructions for more
+information
+
+
+
 # [3.0.0-beta.8](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.0.0-beta.7...ngx-jodit-3.0.0-beta.8) (2023-09-26)
 
 
