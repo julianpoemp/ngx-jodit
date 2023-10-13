@@ -10,8 +10,9 @@ import {
   SimpleChanges,
   ViewChild
 } from '@angular/core';
-import {Jodit} from 'jodit';
-import {Config} from 'jodit/esm/config';
+import {Config} from 'jodit/types/config';
+
+declare const Jodit: any;
 
 @Component({
   selector: 'ngx-jodit',
@@ -20,7 +21,7 @@ import {Config} from 'jodit/esm/config';
 })
 export class NgxJoditComponent implements AfterViewInit, OnDestroy, OnChanges {
   @ViewChild('joditContainer') joditContainer!: ElementRef;
-  jodit?: Jodit;
+  jodit?: any;
 
   @Input() options?: Partial<Config> = {};
 
