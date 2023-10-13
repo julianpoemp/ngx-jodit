@@ -22,7 +22,9 @@
           "node_modules/jodit/es5/jodit.min.css",
           "apps/demo/src/styles.scss"
         ],
-        "scripts": []
+        "scripts": [
+          "node_modules/jodit/es5/jodit.fat.min.js"
+        ]
       },
       "configurations": {
         "production": {

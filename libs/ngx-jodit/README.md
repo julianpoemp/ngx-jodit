@@ -44,26 +44,41 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
    ```
 3. Add jodit stylesheet  to your app's styles in angular.json (or project.json for
    Nx).
-   - For ES5:
-      ```
+
+- For ES5:
+  ```
+  ...
+   ,
+   "styles": [
+     ...
+     "node_modules/jodit/es5/jodit.min.css",
+     ...
+   ],
+  ...
+  ,
+  "scripts": [
+    ...
+    "node_modules/jodit/es5/jodit.fat.min.js"
+    ...
+  ],
+  ```
+- For other (it doesn't matter which stylesheet, all for >= es2015 are the same:
+  ```
+   ...
+    ,
+    "styles": [
       ...
-       ,
-       "styles": [
-         "node_modules/jodit/es5/jodit.min.css",
-         ...
-       ],
+      "node_modules/jodit/es2015/jodit.min.css",
       ...
-      ```
-   - For other (it doesn't matter which stylesheet, all for >= es2015 are the same:
-     ```
+    ]
+   ...
+   ,
+   "scripts": [
       ...
-       ,
-       "styles": [
-         "node_modules/jodit/es2015/jodit.min.css",
-         ...
-       ],
+         "node_modules/jodit/es2015/jodit.fat.min.js"
       ...
-     ```
+   ],
+  ```
 4. Add `NgxJoditComponent` to the `imports` array in your app.module.ts. It's a standalone component:
    ```
    @NgModule({

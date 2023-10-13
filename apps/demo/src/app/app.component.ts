@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Config } from 'jodit/config';
+import {Component} from '@angular/core';
+import {Config} from 'jodit/esm/config';
 
 @Component({
   selector: 'jodit-root',
