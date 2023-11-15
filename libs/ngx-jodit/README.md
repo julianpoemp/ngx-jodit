@@ -35,51 +35,26 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
 
 ## Installation
 
-1. Make sure that jodit is installed:
+1. Make sure that the latest jodit v4 beta and ngx-jodit v2 is installed:
    ```
    npm install jodit@beta --save
    ```
 2. ```
    npm install ngx-jodit@3x --save
    ```
-3. Add jodit stylesheet  to your app's styles in angular.json (or project.json for
+3. Add jodit stylesheet to your app's styles in angular.json (or project.json for
    Nx).
-
-- For ES5:
-  ```
-  ...
-   ,
-   "styles": [
+     ```
      ...
-     "node_modules/jodit/es5/jodit.min.css",
+      ,
+      "styles": [
+        ...
+        "node_modules/jodit/es2021/jodit.min.css",
+        ...
+      ],
      ...
-   ],
-  ...
-  ,
-  "scripts": [
-    ...
-    "node_modules/jodit/es5/jodit.fat.min.js"
-    ...
-  ],
-  ```
-- For other (it doesn't matter which stylesheet, all for >= es2015 are the same:
-  ```
-   ...
-    ,
-    "styles": [
-      ...
-      "node_modules/jodit/es2015/jodit.min.css",
-      ...
-    ]
-   ...
-   ,
-   "scripts": [
-      ...
-         "node_modules/jodit/es2015/jodit.fat.min.js"
-      ...
-   ],
-  ```
-4. Add `NgxJoditComponent` to the `imports` array in your app.module.ts. It's a standalone component:
+    ```
+4. Add `NgxJoditModule` to the `imports` array in your app.module.ts:
    ```
    @NgModule({
     ...
@@ -100,11 +75,31 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
      }
    ...
    ```
-6. Now you can use the component
-   
+
+6. Each toolbar element by Jodit v4 ESM version is considered as plugin. While basic plugins are imported automatically, you have to import other plugins manually. See section "How to import plugins".
+
+7. Now you can use the component. See [example here](https://github.com/julianpoemp/ngx-jodit/blob/v3.x/apps/demo/src/app/app.component.ts).
+
    ```angular2html
      <ngx-jodit [(value)]="value" [options]="options"></ngx-jodit>
    ```
+
+## How to import plugins
+
+Jodit v4 automatically imports a [basic set of plugins](https://github.com/xdan/jodit/blob/main/tools/utils/resolve-alias-imports.ts#L59) and the English language. If you want to use more you have to import it separately. For example:
+
+```typescript
+import {Jodit} from "jodit";
+import 'jodit/esm/plugins/add-new-line/add-new-line.js';
+import 'jodit/esm/plugins/fullsize/fullsize.js';
+import de from 'jodit/esm/langs/de.js'; // <-- make sure "compilerOptions.allowSyntheticDefaultImports" is set to "true" in tsconfig.json
+
+Jodit.lang.de = de;
+
+//..
+```
+
+You can import your plugins wherever you want, e.g. in a global ts file that's imported anyway like index.ts or main.ts files.
 
 
 ## Options for ngx-jodit
@@ -132,9 +127,14 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
 </table>
 
 ## Events for ngx-jodit
-<p>
-  You can bind events using the Angular way, e.g.:<br/><code>&lt;ngx-jodit (joditChange)="onChange($event)">&lt;/ngx-jodit></code>
-</p>
+
+You can bind events using the Angular way, e.g.:
+
+```angular2html
+
+<ngx-jodit (joditChange)="onChange($event)"></ngx-jodit>
+```
+
 <table class="table table-sm table-striped table-bordered">
   <thead>
   <tr>

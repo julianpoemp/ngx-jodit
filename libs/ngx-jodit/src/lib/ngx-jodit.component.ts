@@ -9,12 +9,11 @@ import {
   OnDestroy,
   Output,
   SimpleChanges,
-  ViewChild,
+  ViewChild
 } from '@angular/core';
+import {Config} from 'jodit/types/config';
+import {Jodit} from 'jodit';
 import {CommonModule} from '@angular/common';
-import {Config} from 'jodit/esm/config';
-
-declare const Jodit: any;
 
 @Component({
   selector: 'ngx-jodit',
@@ -26,10 +25,10 @@ declare const Jodit: any;
 })
 export class NgxJoditComponent implements AfterViewInit, OnDestroy, OnChanges {
   @ViewChild('joditContainer') joditContainer!: ElementRef;
-  jodit?: any;
+  jodit?: Jodit;
 
   /**
-   * options for jodit pro. It's of type partial because Config is imported from jodit packge and doesn't contain jodit-pro options.
+   * options for jodit.
    * You can add more supported options even Typescript doesn't suggest the options.
    */
   @Input() options?: Partial<Config> = {};
