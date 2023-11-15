@@ -1,7 +1,7 @@
 {
   "name": "ngx-jodit",
   "description": "Angular wrapper for jodit WYSIWYG editor",
-  "version": "3.0.0-beta.9",
+  "version": "3.0.0-beta.10",
   "peerDependencies": {
     "@angular/common": ">=16.0.0",
     "@angular/core": ">=16.0.0",

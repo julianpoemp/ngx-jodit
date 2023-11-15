@@ -2,6 +2,23 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [3.0.0-beta.10](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.0.0-beta.9...ngx-jodit-3.0.0-beta.10) (2023-11-15)
+
+
+### Features
+
+* **ngx-jodit:** ngx-jodit uses the ESM version of Jodit ([d8b06d7](https://github.com/julianpoemp/ngx-jodit/commit/d8b06d7fdb34320bda58b9b95bcd3ee24d4aa8c5)), closes [#18](https://github.com/julianpoemp/ngx-jodit/issues/18)
+
+
+### BREAKING CHANGES
+
+* **ngx-jodit:** ngx-jodit v3 now uses the ESM version of jodit. That's
+why there are some breaking changes because the way to import the module
+and jodit plugins changed. Please have a look on the new installation
+instructions.
+
+
+
 # [3.0.0-beta.9](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.0.0-beta.8...ngx-jodit-3.0.0-beta.9) (2023-10-13)
 
 
