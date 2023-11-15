@@ -29,7 +29,7 @@
     "@nrwl/angular": "13.10.6",
     "bootstrap": "^5.2.2",
     "bootstrap-icons": "^1.9.1",
-    "jodit": "^4.0.0-beta.87",
+    "jodit": "^4.0.0-beta.105",
     "jodit-pro": "^2.0.0-beta.18",
     "rxjs": "~7.4.0",
     "tslib": "^2.0.0",
