@@ -35,7 +35,7 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
 
 ## Installation
 
-1. Make sure that the latest jodit v4 beta and ngx-jodit v2 is installed:
+1. Make sure that the latest jodit v4 beta and ngx-jodit v3 is installed:
    ```
    npm install jodit@beta --save
    ```
