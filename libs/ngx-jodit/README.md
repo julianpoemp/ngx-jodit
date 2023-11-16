@@ -54,7 +54,7 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
       ],
      ...
     ```
-4. Add `NgxJoditModule` to the `imports` array in your app.module.ts:
+4. Add `NgxJoditComponent` to the `imports` array in your app.module.ts (it's standalone):
    ```
    @NgModule({
     ...
