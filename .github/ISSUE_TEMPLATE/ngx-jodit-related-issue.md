@@ -22,5 +22,6 @@ This text is a hidden comment. You can remove it or you can write your descripti
 
 | package          | version |
 |---------------|---------|
-| Angular           |               |
-| jodit                |                |
+| Angular           |                |
+| ngx-jodit        |                 |
+| jodit                |                 |
