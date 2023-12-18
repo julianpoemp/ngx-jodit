@@ -28,15 +28,15 @@ The demo for ngx-jodit-pro is not available. You can find a demo of ngx-jodit (n
 
 ## Installation
 
-1. Make sure that jodit-pro@beta is installed (v2 is still in beta and supported only with ngx-jodit-pro v2, see compatibility table):
+1. Make sure that jodit-pro@beta AND jodit@beta is installed:
    ```
-   npm install jodit-pro@beta --save
+   npm install jodit-pro@beta jodit@beta --save
    ```
 2. ```
    npm install ngx-jodit-pro@2x --save
    ```
-3. Add the following paths to your app's styles in angular.json (or project.json for
-   Nx). Alternatively yu can add the JS and CSS file from one of the other builds from the jodit-pro package. The only important point is to have a JS file and a CSS file of Jodit-Pro and each plugin you want to use:
+3. Add the following path to your app's styles in angular.json (or project.json for
+   Nx):
    ```
    ...
     ,
@@ -45,14 +45,8 @@ The demo for ngx-jodit-pro is not available. You can find a demo of ngx-jodit (n
       ...
     ],
    ...
-    ,
-    "scripts": [
-          "node_modules/jodit-pro/es2021/jodit.min.js"
-      ...
-    ],
-   ...
    ```
-   
+
 4. Add `NgxJoditProModule` to the `imports` array in your app.module.ts:
    ```
    @NgModule({
@@ -74,23 +68,33 @@ The demo for ngx-jodit-pro is not available. You can find a demo of ngx-jodit (n
 
 ### Using Jodit Pro API
 
-### Use Pro plugins
+### Use (Pro) plugins
 
-At the moment each Pro plugin you want to use must be imported into you angular.json/project.json scripts and styles array. For example the tune-block plugin:
+You can install plugins from Jodit and Jodit Pro. For more information about Jodit Pro plugins see [Jodit Pro Docs](https://xdsoft.net/jodit/pro/docs/).
 
-```json
-...
-styles: [
-  ... (after jodit css file)...,
-  "node_modules/jodit-pro/es2021/plugins/tune-block/tune-block.min.css",
-],
-scripts: [
-  ... (after jodit js file) ...,
-  "node_modules/jodit-pro/es2021/plugins/tune-block/tune-block.js",
-]
-...
+1. Open folder "node_modules/jodit-pro" or "node_modules/jodit" depending on if you want to add jodit oder jodit-pro plugins.
+2. Open the plugin folder in "esm/plugins", e.g. "tune-block" in "jodit-pro".
+3. Look for the main file named like the plugin e.g. "tune-block.js".
+4. Import "jodit" and the path to this file in a Typescript file of your application. E.g. the Angular component that includes ngx-jodit-pro. For example:
+
+```typescript
+import "jodit";
+import "node_modules/jodit-pro/esm/plugins/tune-block/tune-block.js";
 ```
-After that change restart your angular app. Now you can apply the plugin options to ngx-jodit-pro `options` property.
+
+Now you can apply the plugin options to ngx-jodit-pro `options` property. For example:
+
+```typescript
+import {JoditProConfig} from 'ngx-jodit-pro';
+
+options:JoditProConfig = {
+  tuneBlock: {
+    popup: {
+      p: Jodit.atom(['align', 'tune.up', 'tune.remove', 'tune.down'])
+    }
+  }
+}
+```
 
 ### Add custom plugins
 
@@ -105,10 +109,10 @@ import {ViewChild} from '@angular/core';
 
 // in ngAfterViewInit
 if (this.joditComponent){
-   // example:
-   this.joditComponent.jodit.plugins.add("hello", ()=>{
-       alert("hello!");
-   });
+  // example:
+  this.joditComponent.jodit.plugins.add("hello", ()=>{
+    alert("hello!");
+  });
 }
 ````
 
@@ -119,7 +123,7 @@ Any component.html:
 
 ### Options
 
-All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jodit are supported.
+All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jodit AND JoditPro are supported. Use type "JoditProConfig" for options.
 
 ### Options for ngx-jodit
 

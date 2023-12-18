@@ -11,7 +11,9 @@ import {
   ViewChild,
 } from '@angular/core';
 import {Config} from 'jodit/esm/config';
-import {Jodit} from 'jodit';
+import {Jodit} from 'jodit-pro';
+
+export type JoditProConfig = Record<string, any> & Partial<Config>;
 
 @Component({
   selector: 'ngx-jodit-pro',
@@ -26,7 +28,7 @@ export class NgxJoditProComponent implements AfterViewInit, OnDestroy, OnChanges
    * options for jodit pro. It's of type partial because Config is imported from jodit packge and doesn't contain jodit-pro options.
    * You can add more supported options even Typescript doesn't suggest the options.
    */
-  @Input() options?: Partial<Config>;
+  @Input() options?: JoditProConfig;
 
   // value property
   _value = '';

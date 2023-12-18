@@ -31,7 +31,7 @@
     "bootstrap-icons": "^1.9.1",
     "jodit": "^4.0.0-beta.105",
     "jodit-pro": "^2.0.0-beta.18",
-    "rxjs": "~7.4.0",
+    "rxjs": "~6.5.3",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
   },
@@ -58,6 +58,7 @@
     "@typescript-eslint/eslint-plugin": "5.60.1",
     "@typescript-eslint/parser": "5.60.1",
     "cypress": "^9.1.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
@@ -76,5 +77,10 @@
     "ts-jest": "28.0.8",
     "ts-node": "10.9.1",
     "typescript": "4.6.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Config} from 'jodit/esm/config';
+import {JoditProConfig} from 'ngx-jodit-pro';
 
 @Component({
   selector: 'jodit-root',
@@ -23,5 +23,5 @@ export class AppComponent {
     }
   }
 
-  options: Partial<Config> = {};
+  options: JoditProConfig = {};
 }
