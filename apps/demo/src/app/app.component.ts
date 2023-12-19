@@ -33,10 +33,7 @@ export class AppComponent {
     }
   }
 
-  options: Partial<Config> = {
-    buttons: ['bold', 'underline', 'font'],
-    language: 'de'
-  };
+  options: Partial<Config> = { };
 
   constructor() {
   }
