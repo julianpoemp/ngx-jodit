@@ -2,6 +2,22 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [2.0.0-beta.7](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-pro-2.0.0-beta.6...ngx-jodit-pro-2.0.0-beta.7) (2023-12-19)
+
+
+### Features
+
+* **ngx-jodit-pro:** introducing ESM version of jodit-pro ([88e6658](https://github.com/julianpoemp/ngx-jodit/commit/88e66586a390704d0540e2dfccd8712607f808c4))
+
+
+### BREAKING CHANGES
+
+* **ngx-jodit-pro:** Due introducing ESM version of jodit-pro the installation instructions have been
+changed. Please have a look on the new instructions. Furthermore, you should remove imported jodit
+JS and CSS files from angular.json or package.json (NX).
+
+
+
 # [2.0.0-beta.6](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-pro-2.0.0-beta.5...ngx-jodit-pro-2.0.0-beta.6) (2023-09-26)
 
 
