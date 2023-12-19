@@ -1,14 +1,17 @@
 <div class="position-absolute mt-3 me-3" style="top:0; right:0;">
   <a href="https://github.com/julianpoemp/ngx-jodit"><i class="bi bi-github" style="font-size:1.5rem;"></i></a>
 </div>
-<h1>ngx-jodit pro <a href="https://www.npmjs.com/package/ngx-jodit-pro"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro"></a></h1>
-<p>Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 12. Fore more information about installation, use, options and events see <a href="https://github.com/julianpoemp/ngx-jodit#readme">Github README</a>.</p>
+<h1>ngx-jodit pro 1.x <a href="https://www.npmjs.com/package/ngx-jodit-pro"><img alt="npm"
+                                                                                 src="https://img.shields.io/npm/v/ngx-jodit-pro"></a>
+</h1>
+<p>Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 12. Fore
+  more information about installation, use, options and events see <a
+    href="https://github.com/julianpoemp/ngx-jodit/tree/main/libs/ngx-jodit-pro#readme">Github README</a>.</p>
 
 <ngx-jodit-pro [(value)]="value" [options]="options" #jodit></ngx-jodit-pro>
-<input type="text" name="value" class="form-control" [(ngModel)]="value"/>
 <h2>Options</h2>
 <p>All <a href="https://xdsoft.net/jodit/docs/classes/config.Config.html">options</a> from Jodit are supported.
   The options are set via two-way data-binding. Insert your options as JSON to test it.
 </p>
-<p>For example you can insert <code>&#123;"disabled": true}</code> to test it</p>
+<p>For example you can insert <code>&#123;"disabled": true}</code></p>
 <textarea [(ngModel)]="optionsStr" name="options"></textarea>

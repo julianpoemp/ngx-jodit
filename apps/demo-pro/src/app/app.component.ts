@@ -1,6 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
 import {Config} from 'jodit/types/config';
-import {timer} from 'rxjs';
 import {NgxJoditProComponent} from 'ngx-jodit-pro';
 
 @Component({
@@ -28,9 +27,6 @@ export class AppComponent {
   }
 
   constructor() {
-    timer(3000).subscribe(() => {
-      this.value = 'Some text <b>in bold print ok klappt</b>'
-    })
   }
   options: Partial<Config> = {};
 }
