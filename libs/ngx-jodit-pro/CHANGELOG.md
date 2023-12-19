@@ -2,6 +2,20 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [3.0.0-beta.6](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-pro-3.0.0-beta.5...ngx-jodit-pro-3.0.0-beta.6) (2023-12-19)
+
+
+### Features
+
+* **ngx-jodit-pro:** introducing ESM version of jodit-pro package ([7c0c91a](https://github.com/julianpoemp/ngx-jodit/commit/7c0c91a8374b0035d9dd8a0fb079530aec71eab1))
+
+
+### BREAKING CHANGES
+
+* **ngx-jodit-pro:** Du introducing ESM version of jodit package the way of importing jodit-pro changed. See new installation instructions.
+
+
+
 # [3.0.0-beta.5](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-pro-3.0.0-beta.4...ngx-jodit-pro-3.0.0-beta.5) (2023-09-26)
 
 
