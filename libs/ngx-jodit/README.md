@@ -1,7 +1,6 @@
-# ngx-jodit v3.x (beta)
+# ngx-jodit v3.x
 
-Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 16 and jodit >=4.0.0-beta.
-<br/>**Jodit v4 is still in development. PLEASE have a look an the installation instructions, there are some breaking changes in jodit v4.**
+Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 16 and jodit v4.
 
 ## Compatibility table
 
@@ -34,12 +33,12 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
 
 ## Installation
 
-1. Make sure that the latest jodit v4 beta and ngx-jodit v3 is installed:
+1. Make sure that the latest jodit v4 and ngx-jodit v3 is installed:
    ```
-   npm install jodit@beta --save
+   npm install jodit@4 --save
    ```
 2. ```
-   npm install ngx-jodit@3x --save
+   npm install ngx-jodit@3 --save
    ```
 3. Add jodit stylesheet to your app's styles in angular.json (or project.json for
    Nx).
