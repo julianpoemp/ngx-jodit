@@ -8,10 +8,10 @@
     "start:pro": "nx serve demo-pro",
     "build": "nx build",
     "build:lib": "nx build ngx-jodit",
-    "release:lib": "nx run ngx-jodit:version --push",
+    "release:lib": "nx run ngx-jodit:version --releaseAs=major --push",
     "publish:lib": "nx npm ngx-jodit --tag=2x",
     "build:lib:pro": "nx build ngx-jodit-pro",
-    "release:lib:pro": "nx run ngx-jodit-pro:version --releaseAs=major --preid=beta --push",
+    "release:lib:pro": "nx run ngx-jodit-pro:version --releaseAs=prerelease --preid=beta --push",
     "publish:lib:pro": "nx npm ngx-jodit-pro --tag=2x",
     "build:docs": "nx build demo && mv -f ./dist/apps/demo/* ./docs",
     "test": "nx test"
