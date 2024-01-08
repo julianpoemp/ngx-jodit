@@ -2,6 +2,21 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [2.0.1](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-2.0.0-beta.8...ngx-jodit-2.0.1) (2024-01-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* **ngx-jodit:** If you update from the latest beta version to the
+stable version you don't have to do anything. If you update from
+ngx-jodit v1 you should read the installation instructions of ngx-jodit
+v2 AND the breaking changes of Jodit v4:
+https://github.com/xdan/jodit/releases/tag/4.0.1
+
+### Features
+
+* **ngx-jodit:** Jodit v4 was released as stable version. ngx-jodit v2 is now stable. ([ecf9724](https://github.com/julianpoemp/ngx-jodit/commit/ecf9724c94d8aded9b8dd29bcd8acaf85ad7eaed))
+
 ## [2.0.0-beta.8](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-2.0.0-beta.7...ngx-jodit-2.0.0-beta.8) (2023-11-15)
 
 
