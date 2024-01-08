@@ -2,6 +2,10 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [1.0.9](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-1.0.8...ngx-jodit-1.0.9) (2024-01-08)
+
+
+
 ## [1.0.8](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-1.0.7...ngx-jodit-1.0.8) (2023-09-26)
 
 
