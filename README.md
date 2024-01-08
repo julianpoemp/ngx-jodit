@@ -1,3 +1,5 @@
+**!! YOU ARE ON THE v3 BRANCH. THIS BRANCH WILL BE DELETED SOON. GO TO [README ON MAIN BRANCH](https://github.com/julianpoemp/ngx-jodit). !!**
+
 # Mono-repository for ngx-jodit & ngx-jodit-pro
 
 If you want to use Jodit (free) you need to install ngx-jodit and for Jodit (Pro/Multi/OEM) you need to install ngx-jodit-pro. See the compatibility tables below for more information.
