@@ -9,7 +9,7 @@
     "build": "nx build",
     "build:lib": "nx build ngx-jodit && cp -f ./README.md ./dist/libs/ngx-jodit/README.md && cp libs/ngx-jodit/LICENSE ./dist/libs/ngx-jodit/LICENSE",
     "release:lib": "nx run ngx-jodit:version --releaseAs=patch --push",
-    "publish:lib": "nx npm ngx-jodit",
+    "publish:lib": "nx npm ngx-jodit --tag=1x",
     "release:lib:pro": "nx run ngx-jodit-pro:version --releaseAs=patch --push",
     "publish:lib:pro": "nx npm ngx-jodit-pro",
     "build:lib:pro": "nx build ngx-jodit-pro",

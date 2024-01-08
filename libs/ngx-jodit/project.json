@@ -42,7 +42,7 @@
       "options": {
         "preset": "angular",
         "postTargets": ["ngx-jodit:github"],
-        "baseBranch": "main"
+        "baseBranch": "v1.x"
       }
     },
     "github": {
