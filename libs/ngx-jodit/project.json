@@ -51,7 +51,7 @@
       "options": {
         "preset": "angular",
         "postTargets": ["ngx-jodit:github"],
-        "baseBranch": "v3.x",
+        "baseBranch": "main",
         "commitMessageFormat": "build(${projectName}): release version ${version}"
       }
     },
