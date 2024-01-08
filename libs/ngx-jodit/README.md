@@ -1,6 +1,7 @@
-# ngx-jodit v1.x
+# ngx-jodit v3.x (beta)
 
-Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 12.
+Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 16 and jodit >=4.0.0-beta.
+<br/>**Jodit v4 is still in development. PLEASE have a look an the installation instructions, there are some breaking changes in jodit v4.**
 
 ## Compatibility table
 
@@ -21,11 +22,11 @@ Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG ed
 
 ## Jodit Pro, Multi & OEM
 
-For Jodit Pro, Multi and OEM you have to install the jodit-pro package and another Angular library: [ngx-jodit-pro](https://github.com/julianpoemp/ngx-jodit/tree/main/libs/ngx-jodit-pro/README.md). For more information click [here](https://github.com/julianpoemp/ngx-jodit/tree/main/libs/ngx-jodit-pro/README.md).
+For Jodit Pro, Multi and OEM you have to install the jodit-pro package and another Angular library: [ngx-jodit-pro](https://github.com/julianpoemp/ngx-jodit/tree/v3.x/libs/ngx-jodit-pro). For more information click [here](https://github.com/julianpoemp/ngx-jodit/tree/v3.x/libs/ngx-jodit-pro).
 
 ## Demo
 
-You can find a demo [here](https://julianpoemp.github.io/ngx-jodit/).
+You can find a demo for ngx-jodit 3.x  [here](https://github.julianpoemp.com/ngx-jodit/3.x/).
 
 ## Options
 
@@ -33,37 +34,38 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
 
 ## Installation
 
-1. Make sure that jodit@^3 is installed (v4 is still in beta and supported only with ngx-jodit >= v2, see compatibility table):
+1. Make sure that the latest jodit v4 beta and ngx-jodit v3 is installed:
    ```
-   npm install jodit@^3 --save
+   npm install jodit@beta --save
    ```
 2. ```
-   npm install ngx-jodit@^1 --save
+   npm install ngx-jodit@3x --save
    ```
-3. Add `node_modules/jodit/build/jodit.min.css` to your app's styles in angular.json (or project.json for
-   Nx):
-   ```
-   ...
-    ,
-    "styles": [
-      "node_modules/jodit/build/jodit.min.css",
-      ...
-    ],
-   ...
-   ```
-4. Add `NgxJoditModule` to the `imports` array in your app.module.ts:
+3. Add jodit stylesheet to your app's styles in angular.json (or project.json for
+   Nx).
+     ```
+     ...
+      ,
+      "styles": [
+        ...
+        "node_modules/jodit/es2021/jodit.min.css",
+        ...
+      ],
+     ...
+    ```
+4. Add `NgxJoditComponent` to the `imports` array in your app.module.ts (it's standalone):
    ```
    @NgModule({
     ...
     imports: [
       ...,
-      NgxJoditModule
+      NgxJoditComponent
     ],
     ...
     })
    ```
 5. Add `"skipLibCheck": true` to compilerOptions in your `tsconfig.app.json`. This is needed because the
-   check fails to typing errors of the jodit package. If you know any other solution, let me know :):
+   check fails to typing errors of the jodit package. **This is still the issue in v4**. If you know any other solution, let me know :):
    ```
    ...
      "compilerOptions": {
@@ -72,11 +74,31 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
      }
    ...
    ```
-6. Now you can use the component
+
+6. Each toolbar element by Jodit v4 ESM version is considered as plugin. While basic plugins are imported automatically, you have to import other plugins manually. See section "How to import plugins".
+
+7. Now you can use the component. See [example here](https://github.com/julianpoemp/ngx-jodit/blob/v3.x/apps/demo/src/app/app.component.ts).
 
    ```angular2html
-     <ngx-jodit [(value)]="value" [(options)]="options"></ngx-jodit>
+     <ngx-jodit [(value)]="value" [options]="options"></ngx-jodit>
    ```
+
+## How to import plugins
+
+Jodit v4 automatically imports a [basic set of plugins](https://github.com/xdan/jodit/blob/main/tools/utils/resolve-alias-imports.ts#L59) and the English language. If you want to use more you have to import it separately. For example:
+
+```typescript
+import {Jodit} from "jodit";
+import 'jodit/esm/plugins/add-new-line/add-new-line.js';
+import 'jodit/esm/plugins/fullsize/fullsize.js';
+import de from 'jodit/esm/langs/de.js'; // <-- make sure "compilerOptions.allowSyntheticDefaultImports" is set to "true" in tsconfig.json
+
+Jodit.lang.de = de;
+
+//..
+```
+
+You can import your plugins wherever you want, e.g. in a global ts file that's imported anyway like index.ts or main.ts files.
 
 
 ## Options for ngx-jodit
@@ -98,15 +120,20 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
   <tr>
     <td>options</td>
     <td>one-way data-binding</td>
-    <td>Sets options for Jodit</td>
+    <td>Sets options for Jodit on the fly.</td>
   </tr>
   </tbody>
 </table>
 
 ## Events for ngx-jodit
-<p>
-  You can bind events using the Angular way, e.g.:<br/><code>&lt;ngx-jodit (joditChange)="onChange($event)">&lt;/ngx-jodit></code>
-</p>
+
+You can bind events using the Angular way, e.g.:
+
+```angular2html
+
+<ngx-jodit (joditChange)="onChange($event)"></ngx-jodit>
+```
+
 <table class="table table-sm table-striped table-bordered">
   <thead>
   <tr>
@@ -122,10 +149,6 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
   <tr>
     <td>joditKeyDown</td>
     <td>Triggers as soon as a key is pressed down.</td>
-  </tr>
-  <tr>
-    <td>joditKeyUp</td>
-    <td>Triggers as soon as a key is released.</td>
   </tr>
   <tr>
     <td>joditMousedown</td>

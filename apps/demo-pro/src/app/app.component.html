@@ -1,16 +1,13 @@
 <div class="position-absolute mt-3 me-3" style="top:0; right:0;">
   <a href="https://github.com/julianpoemp/ngx-jodit"><i class="bi bi-github" style="font-size:1.5rem;"></i></a>
 </div>
-<h1>ngx-jodit pro 1.x <a href="https://www.npmjs.com/package/ngx-jodit-pro"><img alt="npm"
-                                                                                 src="https://img.shields.io/npm/v/ngx-jodit-pro"></a>
-</h1>
-<p>Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 12. Fore
-  more information about installation, use, options and events see <a
-    href="https://github.com/julianpoemp/ngx-jodit/tree/main/libs/ngx-jodit-pro#readme">Github README</a>.</p>
+<h1>ngx-jodit pro 3.x <a href="https://www.npmjs.com/package/ngx-jodit-pro/v/3x"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro/3x"></a></h1>
+<p>Angular wrapper for <a href="https://xdsoft.net/jodit/pro/">JoditPro</a> WYSIWYG editor. It supports Angular >= 16. Fore more information about installation, use, options and events see <a href="https://github.com/julianpoemp/ngx-jodit/blob/v3.x/libs/ngx-jodit-pro/README.md">Github README</a>.</p>
 
-<ngx-jodit-pro [(value)]="value" [options]="options" #jodit></ngx-jodit-pro>
+<ngx-jodit-pro [(value)]="value" [options]="options"></ngx-jodit-pro>
+
 <h2>Options</h2>
-<p>All <a href="https://xdsoft.net/jodit/docs/classes/config.Config.html">options</a> from Jodit are supported.
+<p>All <a href="https://xdsoft.net/jodit/docs/classes/config.Config.html">options</a> from Jodit AND JoditPro are supported. <b>Plugins are not supported in this demo because you have to import it in your Typescript code (<a href="https://github.com/julianpoemp/ngx-jodit/blob/v3.x/libs/ngx-jodit-pro/README.md#use-pro-plugins">more information</a>).</b>
   The options are set via two-way data-binding. Insert your options as JSON to test it.
 </p>
 <p>For example you can insert <code>&#123;"disabled": true}</code></p>

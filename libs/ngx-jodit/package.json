@@ -1,11 +1,11 @@
 {
   "name": "ngx-jodit",
   "description": "Angular wrapper for jodit WYSIWYG editor",
-  "version": "1.0.8",
+  "version": "3.0.0-beta.10",
   "peerDependencies": {
-    "@angular/common": ">=12.0.0",
-    "@angular/core": ">=12.0.0",
-    "jodit": ">=3.7.2"
+    "@angular/common": ">=16.0.0",
+    "@angular/core": ">=16.0.0",
+    "jodit": ">=4.0.0-beta"
   },
   "author": {
     "name": "Julian Poemp"
@@ -34,5 +34,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/julianpoemp/ngx-jodit.git"
-  }
+  },
+  "sideEffects": false
 }

@@ -1,6 +1,7 @@
 {
+  "name": "demo",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "root": "apps/demo",
   "sourceRoot": "apps/demo/src",
   "prefix": "jodit",
   "targets": {
@@ -18,10 +19,11 @@
         "styles": [
           "node_modules/bootstrap-icons/font/bootstrap-icons.css",
           "node_modules/bootstrap/dist/css/bootstrap.min.css",
-          "node_modules/jodit/build/jodit.min.css",
+          "node_modules/jodit/es2021/jodit.min.css",
           "apps/demo/src/styles.scss"
         ],
-        "scripts": []
+        "scripts": [
+        ]
       },
       "configurations": {
         "production": {
@@ -75,16 +77,16 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["apps/demo/src/**/*.ts", "apps/demo/src/**/*.html"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/demo"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/demo"],
       "options": {
-        "jestConfig": "apps/demo/jest.config.js",
+        "jestConfig": "apps/demo/jest.config.ts",
         "passWithNoTests": true
       }
     }

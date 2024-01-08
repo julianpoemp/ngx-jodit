@@ -1,6 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
-import {Config} from 'jodit/types/config';
-import {NgxJoditProComponent} from 'ngx-jodit-pro';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'jodit-root',
@@ -9,8 +7,6 @@ import {NgxJoditProComponent} from 'ngx-jodit-pro';
 })
 export class AppComponent {
   value = 'Some text <b>in bold print</b>';
-  @ViewChild('jodit') jodit!: NgxJoditProComponent;
-
   _optionsStr: string = '';
 
   get optionsStr(): string {
@@ -26,7 +22,5 @@ export class AppComponent {
     }
   }
 
-  constructor() {
-  }
-  options: Partial<Config> = {};
+  options: Partial<any> = {};
 }

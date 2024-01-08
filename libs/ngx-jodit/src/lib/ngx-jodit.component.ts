@@ -1,5 +1,6 @@
 import {
   AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
   ElementRef,
   EventEmitter,
@@ -10,18 +11,26 @@ import {
   SimpleChanges,
   ViewChild,
 } from '@angular/core';
+import {Config} from 'jodit/types/config';
 import {Jodit} from 'jodit';
-import {Config} from 'jodit/src/config';
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'ngx-jodit',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './ngx-jodit.component.html',
   styleUrls: ['./ngx-jodit.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgxJoditComponent implements AfterViewInit, OnDestroy, OnChanges {
   @ViewChild('joditContainer') joditContainer!: ElementRef;
   jodit?: Jodit;
 
+  /**
+   * options for jodit.
+   * You can add more supported options even Typescript doesn't suggest the options.
+   */
   @Input() options?: Partial<Config> = {};
 
   // value property

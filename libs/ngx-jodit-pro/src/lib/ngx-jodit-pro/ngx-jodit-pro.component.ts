@@ -1,5 +1,6 @@
 import {
   AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
   ElementRef,
   EventEmitter,
@@ -10,24 +11,29 @@ import {
   SimpleChanges,
   ViewChild,
 } from '@angular/core';
-import {Config} from 'jodit/types/config';
+import {CommonModule} from '@angular/common';
 
-declare const Jodit: any;
+import {Config} from 'jodit/esm/config';
+import {Jodit} from 'jodit-pro';
+export type JoditProConfig = Record<string, any> & Partial<Config>;
 
 @Component({
   selector: 'ngx-jodit-pro',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './ngx-jodit-pro.component.html',
   styleUrls: ['./ngx-jodit-pro.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgxJoditProComponent implements AfterViewInit, OnDestroy, OnChanges {
   @ViewChild('joditContainer') joditContainer!: ElementRef;
-  jodit?: any;
+  jodit?: Jodit;
 
   /**
    * options for jodit pro. It's of type partial because Config is imported from jodit packge and doesn't contain jodit-pro options.
    * You can add more supported options even Typescript doesn't suggest the options.
    */
-  @Input() options?: Partial<Config>;
+  @Input() options?: JoditProConfig;
 
   // value property
   _value = '';
@@ -97,8 +103,8 @@ export class NgxJoditProComponent implements AfterViewInit, OnDestroy, OnChanges
       if (this.jodit) {
         this.jodit.destruct();
       }
+      this.jodit = Jodit.make(this.joditContainer.nativeElement, this.options) as Jodit;
       this.joditContainer.nativeElement.innerHTML = this._value;
-      this.jodit = Jodit.make(this.joditContainer.nativeElement, this.options);
       this.jodit.events.on('change', (text: string) => {
         if (!this.inputValueChange) {
           this.inputValueChange = true;
@@ -149,6 +155,7 @@ export class NgxJoditProComponent implements AfterViewInit, OnDestroy, OnChanges
   }
 
   changeValue(value: string) {
+    this._value = value;
     this.valueChange.emit(value);
   }
 

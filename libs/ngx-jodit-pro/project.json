@@ -1,12 +1,13 @@
 {
+  "name": "ngx-jodit-pro",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "root": "libs/ngx-jodit-pro",
   "sourceRoot": "libs/ngx-jodit-pro/src",
   "prefix": "ngx",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:ng-packagr-lite",
-      "outputs": ["dist/libs/ngx-jodit-pro"],
+      "executor": "@nx/angular:package",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
         "project": "libs/ngx-jodit-pro/ng-package.json"
       },
@@ -21,15 +22,22 @@
       "defaultConfiguration": "production"
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ngx-jodit-pro"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/ngx-jodit-pro/jest.config.js",
+        "jestConfig": "libs/ngx-jodit/jest.config.ts",
         "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
           "libs/ngx-jodit-pro/src/**/*.ts",
@@ -42,7 +50,8 @@
       "options": {
         "preset": "angular",
         "postTargets": ["ngx-jodit-pro:github"],
-        "baseBranch": "main"
+        "baseBranch": "v3.x",
+        "commitMessageFormat": "build(${projectName}): release version ${version}"
       }
     },
     "github": {

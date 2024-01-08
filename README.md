@@ -1,10 +1,10 @@
 # Mono-repository for ngx-jodit & ngx-jodit-pro
 
-If you want to use Jodit (free) you need to install ngx-jodit and for Jodit (Pro/Multi/OEM) you need to install ngx-jodit-pro. See the compatibility tables below for more information.
+If you want to use Jodit (free) you need to install ngx-jodit and for Jodit (Pro/Muli/OEM) you need to install ngx-jodit-pro. See the compatibility tables below for more information.
 
-## About this repository
+## Third-party package
 
-There is no affiliation with Jodit. ngx-jodit and ngx-jodit-pro are under MIT-License. Jodit and Jodit-Pro can be under another license. For more information about licenses click on "more Information" next to a version of your choice. and scroll down to "License".
+ngx-jodit and ngx-jodit-pro are third-party packages. There is no affiliation with Jodit. ngx-jodit and ngx-jodit-pro are under MIT-License. Jodit and Jodit-Pro can be under another license. For more information about licenses click on "more Information" next to a version of your choice. and scroll down to "License".
 
 ## ngx-jodit</h1>
 
@@ -34,7 +34,6 @@ Buy here.</a>
 
 ### Compatibility table
 
-
 <table>
 <thead><tr><th>Ngx-jodit-pro</th><th>Jodit Pro</th><th>Angular</th><th>Type</th><th>Demo</th><th>Readme</th></tr></thead>
 <tbody>
@@ -56,4 +55,4 @@ Please create new issues here only if it's related directly to ngx-jodit or ngx-
 
 ## Contribution
 
-This project uses [@jscutlery/semver](https://github.com/jscutlery/semver) with Angular preset. All commit must meet the Angular [commit message schema](https://gist.github.com/brianclements/841ea7bffdb01346392c) requirements. There are only three permitted scopes: "ngx-jodit", "ngx-jodit-pro" and "general" (for changes outside of libraries).
+This project uses [@jscutlery/semver](https://github.com/jscutlery/semver) with angular preset. All commit must meet the Angular [commit message schema](https://gist.github.com/brianclements/841ea7bffdb01346392c) requirements. There are only three permitted scopes: "ngx-jodit", "ngx-jodit-pro" and "general" (for changes outside of libraries).

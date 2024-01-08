@@ -1,5 +1,13 @@
-import {Component} from '@angular/core';
-import {Config} from 'jodit/src/config';
+import {Component, ViewChild} from '@angular/core';
+import {NgxJoditComponent} from 'ngx-jodit';
+import {Config} from 'jodit/esm/config';
+import 'jodit/esm/plugins/bold/bold.js';
+import 'jodit/esm/plugins/add-new-line/add-new-line.js';
+import 'jodit/esm/plugins/fullsize/fullsize.js';
+import de from 'jodit/esm/langs/de.js';
+import {Jodit} from 'jodit';
+
+Jodit.lang.de = de;
 
 @Component({
   selector: 'jodit-root',
@@ -9,6 +17,8 @@ import {Config} from 'jodit/src/config';
 export class AppComponent {
   value = 'Some text';
   _optionsStr = '';
+
+  @ViewChild('ngxJodit') ngxJodit?: NgxJoditComponent;
 
   get optionsStr(): string {
     return this._optionsStr;
@@ -24,4 +34,7 @@ export class AppComponent {
   }
 
   options: Partial<Config> = {};
+
+  constructor() {
+  }
 }

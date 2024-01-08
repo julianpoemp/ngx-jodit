@@ -1,16 +1,26 @@
-<div class="position-absolute mt-3 me-3" style="top:0; right:0;">
-  <a href="https://github.com/julianpoemp/ngx-jodit"><i class="bi bi-github" style="font-size:1.5rem;"></i></a>
+<div class="position-absolute mt-3 me-3" style="top: 0; right: 0">
+  <a href="https://github.com/julianpoemp/ngx-jodit"
+    ><i class="bi bi-github" style="font-size: 1.5rem"></i
+  ></a>
 </div>
-<h1>ngx-jodit 1.x <a href="https://www.npmjs.com/package/ngx-jodit"><img alt="npm"
-                                                                         src="https://img.shields.io/npm/v/ngx-jodit"></a>
+<h1>
+  ngx-jodit 3.x <a href="https://www.npmjs.com/package/ngx-jodit/v/3x"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit/3x"></a>
 </h1>
-<p>Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 12. Fore more information about installation, use, options and events see <a href="https://github.com/julianpoemp/ngx-jodit#readme">Github README</a>.</p>
-
-<ngx-jodit [(value)]="value" [options]="options"></ngx-jodit>
-
-<h2>Options</h2>
-<p>All <a href="https://xdsoft.net/jodit/docs/classes/config.Config.html">options</a> from Jodit are supported.
-  The options are set via two-way data-binding. Insert your options as JSON to test it.
+<p>
+  Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG
+  editor. It supports Angular >= 16. Fore more information about installation,
+  use, options and events see <a href="https://github.com/julianpoemp/ngx-jodit/blob/v3.x/libs/ngx-jodit/README.md">Github README</a>.
 </p>
-<p>For example you can insert <code>&#123;"disabled": true}</code> to test it</p>
+
+<ngx-jodit [(value)]="value" [options]="options" #ngxJodit></ngx-jodit>
+<h2>Options</h2>
+<p>
+  All
+  <a href="https://xdsoft.net/jodit/docs/classes/config.Config.html">options</a>
+  from Jodit are supported. <b>Plugins are not supported in this demo because you have to import it in your Typescript code (<a href="https://github.com/julianpoemp/ngx-jodit/blob/v3.x/libs/ngx-jodit/README.md">more information</a>).</b> The options are set via two-way data-binding. Insert
+  your options as JSON to test it.
+</p>
+<p>
+  For example you can insert <code>&#123;"disabled": true}</code>
+</p>
 <textarea [(ngModel)]="optionsStr" name="options"></textarea>
