@@ -16,13 +16,13 @@ Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG ed
 <thead><tr><th>Ngx-jodit</th><th>Jodit</th><th>Angular</th><th>Type</th><th>Demo</th><th>Readme</th></tr></thead>
 <tbody>
 <tr>
-<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit"></a></td><td>v3</td><td>>= v12</td><td>Module</td><td><a href="https://github.julianpoemp.com/ngx-jodit/1.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/main/libs/ngx-jodit/README.md">Readme</a></td>
+<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit"></a></td><td>v3</td><td>v12 - v15</td><td>Module</td><td><a href="https://github.julianpoemp.com/ngx-jodit/1.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/main/libs/ngx-jodit/README.md">Readme</a></td>
 </tr>
 <tr>
-<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit/v/2x"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit/2x"></a></td><td>>= v4</td><td>>= v12</td><td>Module</td><td><a href="https://github.julianpoemp.com/ngx-jodit/2.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/tree/v2.x/libs/ngx-jodit/README.md">Readme</a></td>
+<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit/v/2x"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit/2x"></a></td><td>v4</td><td>v12 - v15</td><td>Module</td><td><a href="https://github.julianpoemp.com/ngx-jodit/2.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/tree/v2.x/libs/ngx-jodit/README.md">Readme</a></td>
 </tr>
 <tr>
-<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit/v/3x"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit/3x"></a></td><td>>= v4</td><td>>= v16</td><td>Standalone</td><td><a href="https://github.julianpoemp.com/ngx-jodit/3.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/tree/v3.x/libs/ngx-jodit/README.md">Readme</a></td>
+<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit/v/3x"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit/3x"></a></td><td>v4</td><td>>= v16</td><td>Standalone</td><td><a href="https://github.julianpoemp.com/ngx-jodit/3.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/tree/v3.x/libs/ngx-jodit/README.md">Readme</a></td>
 </tr>
 </tbody>
 </table>

@@ -3,9 +3,9 @@
   "description": "Angular wrapper for jodit WYSIWYG editor",
   "version": "2.0.0-beta.8",
   "peerDependencies": {
-    "@angular/common": ">=12.0.0",
-    "@angular/core": ">=12.0.0",
-    "jodit": ">=4.0.0-beta"
+    "@angular/common": ">=12.0.0 < 16.0.0",
+    "@angular/core": ">=12.0.0 < 16.0.0",
+    "jodit": "^4.0.0"
   },
   "author": {
     "name": "Julian Poemp"
