@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [3.0.2](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.0.1...ngx-jodit-3.0.2) (2024-01-10)
+
+
+### Features
+
+* **ngx-jodit:** new type for Jodit options: JoditConfig ([5949571](https://github.com/julianpoemp/ngx-jodit/commit/5949571ca3ab29de885292e0cbf948a6fd5a658c))
+
+
+
 ## [3.0.1](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.0.0-beta.10...ngx-jodit-3.0.1) (2024-01-08)
 
 
