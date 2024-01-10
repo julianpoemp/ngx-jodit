@@ -1,9 +1,10 @@
 import {Component, ViewChild} from '@angular/core';
-import {NgxJoditComponent} from 'ngx-jodit';
-import {Config} from 'jodit/esm/config';
+import {JoditConfig, NgxJoditComponent} from 'ngx-jodit';
 import 'jodit/esm/plugins/bold/bold.js';
 import 'jodit/esm/plugins/add-new-line/add-new-line.js';
 import 'jodit/esm/plugins/fullsize/fullsize.js';
+import 'jodit/esm/plugins/source/source.js';
+import 'jodit/esm/plugins/indent/indent.js';
 import de from 'jodit/esm/langs/de.js';
 import {Jodit} from 'jodit';
 
@@ -33,7 +34,7 @@ export class AppComponent {
     }
   }
 
-  options: Partial<Config> = {};
+  options: JoditConfig = {};
 
   constructor() {
   }
