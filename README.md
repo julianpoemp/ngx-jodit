@@ -1,6 +1,6 @@
-# Mono-repository for ngx-jodit & ngx-jodit-pro
+# ngx-jodit & ngx-jodit-pro
 
-If you want to use Jodit (free) you need to install ngx-jodit and for Jodit (Pro/Multi/OEM) you need to install ngx-jodit-pro. See the compatibility tables below for more information.
+Angular wrapper for jodit and jodit-pro WYSIWYG editor supporting Angular >=12 and ESM.
 
 ## About this repository
 
@@ -8,7 +8,7 @@ There is no affiliation with Jodit. ngx-jodit and ngx-jodit-pro are under MIT-Li
 
 ## ngx-jodit</h1>
 
-Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor.
+Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor (free). If you want to use Jodit Pro/Multi/OEM see ngx-jodit-pro below.
 
 ### Compatibility table
 
