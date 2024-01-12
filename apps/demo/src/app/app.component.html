@@ -1,15 +1,34 @@
-<div class="position-absolute mt-3 me-3" style="top:0; right:0;">
-  <a href="https://github.com/julianpoemp/ngx-jodit"><i class="bi bi-github" style="font-size:1.5rem;"></i></a>
-</div>
-<h1>ngx-jodit 2.x <a href="https://www.npmjs.com/package/ngx-jodit/v/2x"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit/2x"></a></h1>
-<p>Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 12 <=
-  15. For other Angular versions and more information about installation, use, options and events see <a
-    href="https://github.com/julianpoemp/ngx-jodit/blob/v2.x/libs/ngx-jodit/README.md">Github README</a>.</p>
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+  <a href="/" class="d-flex align-items-center mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+    <span class="fs-4 ms-3">ngx-jodit v2</span> <a href="https://www.npmjs.com/package/ngx-jodit/v/2x"
+                                                   class="ms-2 nav-link me-3">
+    <img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit/2x">
+  </a>
+  </a>
 
-<ngx-jodit [(value)]="value" [options]="options" #ngxJodit></ngx-jodit>
-<h2>Options</h2>
-<p>All <a href="https://xdsoft.net/jodit/docs/classes/config.Config.html">options</a> from Jodit are supported. <b>Plugins are not supported in this demo because you have to import it in your Typescript code (<a href="https://github.com/julianpoemp/ngx-jodit/blob/v2.x/libs/ngx-jodit/README.md">more information</a>).</b>
-  The options are set via two-way data-binding. Insert your options as JSON to test it.
-</p>
-<p>For example you can insert <code>&#123;"disabled": true}</code></p>
-<textarea [(ngModel)]="optionsStr" name="options"></textarea>
+  <ul class="nav nav-pills">
+    <li class="nav-item"><a href="https://github.julianpoemp.com/ngx-jodit/3.x/" class="nav-link"
+                            aria-current="page">v3</a></li>
+    <li class="nav-item"><a href="https://github.julianpoemp.com/ngx-jodit/2.x/" class="nav-link active">v2</a></li>
+    <li class="nav-item"><a href="https://github.julianpoemp.com/ngx-jodit/1.x/" class="nav-link">v1</a></li>
+    <li class="nav-item"><a href="https://github.com/julianpoemp/ngx-jodit" class="nav-link"><i class="bi bi-github"
+                                                                                                style="font-size: 1.5rem"></i></a>
+    </li>
+  </ul>
+</header>
+
+<main class="p-3 p-md-5 py-md-3">
+  <p>Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 12 <=
+    15. For other Angular versions and more information about installation, use, options and events see <a
+      href="https://github.com/julianpoemp/ngx-jodit/blob/v2.x/libs/ngx-jodit/README.md">Github README</a>.</p>
+
+  <ngx-jodit [(value)]="value" [options]="options" #ngxJodit></ngx-jodit>
+  <h3 class="pt-3">Options</h3>
+  <p>All <a href="https://xdsoft.net/jodit/docs/classes/config.Config.html">options</a> from Jodit are supported. <b>Plugins
+    are not supported in this demo because you have to import it in your Typescript code (<a
+      href="https://github.com/julianpoemp/ngx-jodit/blob/v2.x/libs/ngx-jodit/README.md">more information</a>).</b>
+    The options are set via two-way data-binding. Insert your options as JSON to test it.
+  </p>
+  <p>For example you can insert <code>&#123;"disabled": true}</code></p>
+  <textarea [(ngModel)]="optionsStr" name="options"></textarea>
+</main>
