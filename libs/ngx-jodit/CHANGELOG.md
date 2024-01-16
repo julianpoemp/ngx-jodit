@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [3.1.0](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.0.2...ngx-jodit-3.1.0) (2024-01-16)
+
+
+### Features
+
+* **ngx-jodit:** ngx-jodit can be used like a Forms component [(ngModel)] support ([a1e3fa1](https://github.com/julianpoemp/ngx-jodit/commit/a1e3fa104c2624c2f8da02be4d9d56b56c0c7af5))
+
+
+
 ## [3.0.2](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.0.1...ngx-jodit-3.0.2) (2024-01-10)
 
 
