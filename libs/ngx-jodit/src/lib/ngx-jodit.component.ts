@@ -4,6 +4,7 @@ import {
   Component,
   ElementRef,
   EventEmitter,
+  forwardRef,
   Input,
   OnChanges,
   OnDestroy,
@@ -14,16 +15,22 @@ import {
 import {Jodit} from 'jodit';
 import {CommonModule} from '@angular/common';
 import {JoditConfig} from './types';
+import {ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR} from '@angular/forms';
 
 @Component({
   selector: 'ngx-jodit',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './ngx-jodit.component.html',
+  providers: [{
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: forwardRef(() => NgxJoditComponent),
+    multi: true
+  }],
   styleUrls: ['./ngx-jodit.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NgxJoditComponent implements AfterViewInit, OnDestroy, OnChanges {
+export class NgxJoditComponent implements ControlValueAccessor, AfterViewInit, OnDestroy, OnChanges {
   @ViewChild('joditContainer') joditContainer!: ElementRef;
   jodit?: Jodit;
 
@@ -109,6 +116,7 @@ export class NgxJoditComponent implements AfterViewInit, OnDestroy, OnChanges {
           this.changeValue(text);
         }
         this.joditChange.emit(text);
+        this.onChange(text);
       });
       this.jodit.events.on('keydown', (a: KeyboardEvent) => {
         this.joditKeyDown.emit(a);
@@ -124,6 +132,7 @@ export class NgxJoditComponent implements AfterViewInit, OnDestroy, OnChanges {
       });
       this.jodit.events.on('click', (a: PointerEvent) => {
         this.joditClick.emit(a);
+        this.onTouched();
       });
       this.jodit.events.on('focus', (a: FocusEvent) => {
         this.joditFocus.emit(a);
@@ -158,5 +167,45 @@ export class NgxJoditComponent implements AfterViewInit, OnDestroy, OnChanges {
 
   ngOnDestroy() {
     this.jodit?.events.destruct();
+  }
+
+  /*
+  FUNCTIONS RELEVANT FOR ANGULAR FORMS
+   */
+
+  onChange = (text: string) => {
+    // implemented by user
+  };
+
+  onTouched = () => {
+    // implemented by user
+  };
+
+  writeValue(text: string): void {
+    if (this.jodit && !this.inputValueChange) {
+      this.inputValueChange = true;
+      this._value = text;
+      this.jodit.value = this.isHTML(this._value) ? this._value : `<p>${this._value}</p>`;
+      this.onChange(text);
+    }
+
+    setTimeout(() => {
+      this.inputValueChange = false;
+    }, 0);
+  }
+
+  registerOnChange(fn: (text: string) => void): void {
+    this.onChange = fn;
+  }
+
+  registerOnTouched(fn: () => void): void {
+    this.onTouched = fn;
+  }
+
+  setDisabledState?(isDisabled: boolean): void {
+    this.options = {
+      ...this.options,
+      disabled: isDisabled
+    };
   }
 }

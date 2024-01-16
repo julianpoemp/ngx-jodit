@@ -78,9 +78,17 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
 
 7. Now you can use the component. See [example here](https://github.com/julianpoemp/ngx-jodit/blob/v3.x/apps/demo/src/app/app.component.ts).
 
-   ```angular2html
-     <ngx-jodit [(value)]="value" [options]="options"></ngx-jodit>
-   ```
+  - Without AngularForms:
+
+       ```angular2html
+         <ngx-jodit [(value)]="value" [options]="options"></ngx-jodit>
+       ```
+
+  - With AngularForms (make sure to import AngularForms):
+
+      ```angular2html
+        <ngx-jodit [(ngModel)]="value" [options]="options"></ngx-jodit>
+      ```
 
 ## How to import plugins
 
