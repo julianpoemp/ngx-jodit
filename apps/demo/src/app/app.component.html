@@ -25,20 +25,16 @@
     README</a>.
   </p>
 
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h4>Template driven form</h4>
-        <ngx-jodit [(ngModel)]="value" [options]="options" #ngxJodit></ngx-jodit>
-        <div class="py-3">Value: {{ value | json }}</div>
-      </div>
-      <div class="col">
-        <h4>Reactive form</h4>
-        <form [formGroup]="formGroup" class="my-0">
-          <ngx-jodit [options]="options" formControlName="editor"></ngx-jodit>
-        </form>
-        <div class="py-3">Value: {{ this.formGroup.get("editor")?.value | json }}</div>
-      </div>
+  <div class="row">
+    <div class="col">
+      <h4>Template driven form</h4>
+      <ngx-jodit [(ngModel)]="value" [options]="options" #ngxJodit></ngx-jodit>
+    </div>
+    <div class="col">
+      <h4>Reactive form</h4>
+      <form [formGroup]="formGroup" class="my-0">
+        <ngx-jodit [options]="options" formControlName="editor"></ngx-jodit>
+      </form>
     </div>
   </div>
 
