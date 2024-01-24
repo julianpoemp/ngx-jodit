@@ -1,14 +1,20 @@
-import {Component, ViewChild} from '@angular/core';
-import {JoditConfig, NgxJoditComponent} from 'ngx-jodit';
-import 'jodit/esm/plugins/bold/bold.js';
 import 'jodit/esm/plugins/add-new-line/add-new-line.js';
+import 'jodit/esm/plugins/bold/bold.js';
 import 'jodit/esm/plugins/fullsize/fullsize.js';
-import 'jodit/esm/plugins/source/source.js';
 import 'jodit/esm/plugins/indent/indent.js';
+import 'jodit/esm/plugins/source/source.js';
+
+import { Component, ViewChild } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { Jodit } from 'jodit';
 import de from 'jodit/esm/langs/de.js';
-import {Jodit} from 'jodit';
+import { JoditConfig, NgxJoditComponent } from 'ngx-jodit';
 
 Jodit.lang.de = de;
+
+interface FormWithJoditEditor {
+  editor: string;
+}
 
 @Component({
   selector: 'jodit-root',
@@ -17,6 +23,9 @@ Jodit.lang.de = de;
 })
 export class AppComponent {
   value = 'Some text';
+  formGroup = this.formBuilder.group<FormWithJoditEditor>({
+    editor: 'Some text in a reactive form'
+  });
   _optionsStr = '';
 
   @ViewChild('ngxJodit') ngxJodit?: NgxJoditComponent;
@@ -36,6 +45,6 @@ export class AppComponent {
 
   options: JoditConfig = {};
 
-  constructor() {
+  constructor(private formBuilder: FormBuilder) {
   }
 }
