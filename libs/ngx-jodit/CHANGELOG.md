@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [3.1.1](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.1.0...ngx-jodit-3.1.1) (2024-01-24)
+
+
+### Bug Fixes
+
+* **ngx-jodit:** Fixed value handling for reactive forms ([5c6aa57](https://github.com/julianpoemp/ngx-jodit/commit/5c6aa574a443bb8eff2faf85072504020fce1fb3))
+
+
+
 # [3.1.0](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.0.2...ngx-jodit-3.1.0) (2024-01-16)
 
 
