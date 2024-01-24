@@ -85,9 +85,16 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
        ```
 
   - With AngularForms (make sure to import AngularForms):
+    - Template driven
 
       ```angular2html
         <ngx-jodit [(ngModel)]="value" [options]="options"></ngx-jodit>
+      ```
+    - Reactive
+      ```angular2html
+        <form [formGroup]="formGroup">
+          <ngx-jodit [options]="options" formControlName="editor"></ngx-jodit>
+        </form>
       ```
 
 ## How to import plugins
