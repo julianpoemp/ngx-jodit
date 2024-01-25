@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [3.1.2](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.1.1...ngx-jodit-3.1.2) (2024-01-25)
+
+
+### Bug Fixes
+
+* reactive form gets dirty after (value) initialization ([0761464](https://github.com/julianpoemp/ngx-jodit/commit/07614646f931448c437c10dc9cb7ca9d619e0af4))
+
+
+
 ## [3.1.1](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.1.0...ngx-jodit-3.1.1) (2024-01-24)
 
 
