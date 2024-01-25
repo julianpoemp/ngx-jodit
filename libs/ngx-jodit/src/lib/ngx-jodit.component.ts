@@ -6,15 +6,15 @@ import {
   Component,
   ElementRef,
   EventEmitter,
-  forwardRef,
   Input,
   OnDestroy,
   Output,
   ViewChild,
+  forwardRef,
 } from '@angular/core';
 import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { Jodit } from 'jodit';
-import { BehaviorSubject, combineLatest, delay, distinctUntilChanged, filter, merge, Subscription, withLatestFrom } from 'rxjs';
+import { BehaviorSubject, Subscription, combineLatest, delay, distinctUntilChanged, filter, withLatestFrom } from 'rxjs';
 
 import { JoditConfig } from './types';
 
@@ -98,7 +98,6 @@ export class NgxJoditComponent implements ControlValueAccessor, AfterViewInit, O
     ).subscribe(([[_, initialized], text]) => {
       if (this.jodit && initialized) {
         this.jodit.value = text;
-        this.onChange(text);
       }
     });
   }
