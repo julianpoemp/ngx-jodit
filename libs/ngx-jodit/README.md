@@ -78,24 +78,26 @@ All [options](https://xdsoft.net/jodit/docs/classes/config.Config.html) from Jod
 
 7. Now you can use the component. See [example here](https://github.com/julianpoemp/ngx-jodit/blob/v3.x/apps/demo/src/app/app.component.ts).
 
-  - Without AngularForms:
+- Without AngularForms:
 
-       ```angular2html
-         <ngx-jodit [(value)]="value" [options]="options"></ngx-jodit>
-       ```
+     ```angular2html
+       <ngx-jodit [(value)]="value" [options]="options"></ngx-jodit>
+     ```
 
-  - With AngularForms (make sure to import AngularForms):
-    - Template driven
+- With AngularForms (make sure to import AngularForms):
+  - Template driven
 
-      ```angular2html
-        <ngx-jodit [(ngModel)]="value" [options]="options"></ngx-jodit>
-      ```
-    - Reactive
-      ```angular2html
-        <form [formGroup]="formGroup">
-          <ngx-jodit [options]="options" formControlName="editor"></ngx-jodit>
-        </form>
-      ```
+    ```angular2html
+      <ngx-jodit [(ngModel)]="value" [options]="options"></ngx-jodit>
+    ```
+  - Reactive
+    ```angular2html
+      <form [formGroup]="formGroup">
+        <ngx-jodit [options]="options" formControlName="editor"></ngx-jodit>
+      </form>
+    ```
+
+If you are facing any issues have a look on [Troubleshooting](https://github.com/julianpoemp/ngx-jodit/blob/main/libs/ngx-jodit/README.md#troubleshooting) first. Create an issue if it's not solved.
 
 ## How to import plugins
 
@@ -113,7 +115,6 @@ Jodit.lang.de = de;
 ```
 
 You can import your plugins wherever you want, e.g. in a global ts file that's imported anyway like index.ts or main.ts files.
-
 
 ## Options for ngx-jodit
 
@@ -206,3 +207,7 @@ You can bind events using the Angular way, e.g.:
   </tr>
   </tbody>
 </table>
+
+## Troubleshooting
+
+- **Some of the buttons don't show any icon**<br/>Check your options if you used the correct button names. If yes, check the folder `node_modules/jodit/esm/plugins/` for a folder named like the button you want to use. Then import the found plugin to your app as described [here](https://github.com/julianpoemp/ngx-jodit/blob/main/libs/ngx-jodit/README.md#how-to-import-plugins). If that doesn't helpt look in the web console for an error message that indicates a missing plugin.
