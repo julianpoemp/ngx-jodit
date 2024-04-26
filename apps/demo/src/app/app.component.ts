@@ -3,12 +3,13 @@ import 'jodit/esm/plugins/bold/bold.js';
 import 'jodit/esm/plugins/fullsize/fullsize.js';
 import 'jodit/esm/plugins/indent/indent.js';
 import 'jodit/esm/plugins/source/source.js';
+import 'jodit/esm/plugins/resizer/resizer.js';
 
-import { Component, ViewChild } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { Jodit } from 'jodit';
+import {Component, ViewChild} from '@angular/core';
+import {FormBuilder} from '@angular/forms';
+import {Jodit} from 'jodit';
 import de from 'jodit/esm/langs/de.js';
-import { JoditConfig, NgxJoditComponent } from 'ngx-jodit';
+import {JoditConfig, NgxJoditComponent} from 'ngx-jodit';
 
 Jodit.lang.de = de;
 
@@ -37,13 +38,23 @@ export class AppComponent {
   set optionsStr(value: string) {
     this._optionsStr = value;
     try {
-      this.options = JSON.parse(value);
+      const parsed = JSON.parse(value);
+      this.options = {
+        ...parsed,
+        uploader: {
+          insertImageAsBase64URI: true
+        } as any
+      }
     } catch (e) {
       // ignore
     }
   }
 
-  options: JoditConfig = {};
+  options: JoditConfig = {
+    uploader: {
+      insertImageAsBase64URI: true
+    } as any
+  };
 
   constructor(private formBuilder: FormBuilder) {
   }
