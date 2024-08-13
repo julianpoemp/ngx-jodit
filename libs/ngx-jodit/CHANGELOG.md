@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [3.1.3](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.1.2...ngx-jodit-3.1.3) (2024-08-13)
+
+
+### Bug Fixes
+
+* **ngx-jodit:** databinding using [(value)] resets cursor on change ([021a34f](https://github.com/julianpoemp/ngx-jodit/commit/021a34f5494a0fc71ad27e46f2de812cc537fbb6))
+
+
+
 ## [3.1.2](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.1.1...ngx-jodit-3.1.2) (2024-01-25)
 
 
