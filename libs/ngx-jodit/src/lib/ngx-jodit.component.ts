@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import {CommonModule} from '@angular/common';
 import {
   AfterViewInit,
   ChangeDetectionStrategy,
@@ -6,17 +6,17 @@ import {
   Component,
   ElementRef,
   EventEmitter,
+  forwardRef,
   Input,
   OnDestroy,
   Output,
   ViewChild,
-  forwardRef,
 } from '@angular/core';
-import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { Jodit } from 'jodit';
-import { BehaviorSubject, Subscription, combineLatest, delay, distinctUntilChanged, filter, withLatestFrom } from 'rxjs';
+import {ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR} from '@angular/forms';
+import {Jodit} from 'jodit';
+import {BehaviorSubject, combineLatest, delay, distinctUntilChanged, filter, Subscription, withLatestFrom} from 'rxjs';
 
-import { JoditConfig } from './types';
+import {JoditConfig} from './types';
 
 @Component({
   selector: 'ngx-jodit',
@@ -50,9 +50,14 @@ export class NgxJoditComponent implements ControlValueAccessor, AfterViewInit, O
 
   // value property (subject)
   private valueSubject: BehaviorSubject<string> = new BehaviorSubject<string>('');
+
   @Input() set value(value: string) {
     const sanitizedText = this.prepareText(value);
-    this.valueSubject.next(sanitizedText);
+    if (!this.internValueChange) {
+      this.valueSubject.next(sanitizedText);
+    } else {
+      this.internValueChange = false;
+    }
     this.onChange(sanitizedText);
   }
 
@@ -81,6 +86,7 @@ export class NgxJoditComponent implements ControlValueAccessor, AfterViewInit, O
   // Used for delay value assignment to wait for jodit to be initialized
   private joditInitializedSubject: BehaviorSubject<boolean> = new BehaviorSubject(false);
   private valueSubscription?: Subscription;
+  private internValueChange = false;
 
   constructor(
     private readonly cdr: ChangeDetectorRef,
@@ -131,6 +137,7 @@ export class NgxJoditComponent implements ControlValueAccessor, AfterViewInit, O
       this.jodit = Jodit.make(this.joditContainer.nativeElement, this._options);
       this.jodit.value = this.valueSubject.getValue();
       this.jodit.events.on('change', (text: string) => {
+        this.internValueChange = true;
         this.changeValue(text);
         this.joditChange.emit(text);
         this.onChange(text);
