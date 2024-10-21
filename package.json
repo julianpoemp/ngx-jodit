@@ -29,8 +29,8 @@
     "@nx/angular": "16.3.2",
     "bootstrap": "^5.2.2",
     "bootstrap-icons": "^1.9.1",
-    "jodit": "^4.0.0-beta.119",
-    "jodit-pro": "^2.0.0-beta.76",
+    "jodit": "^4.2.35",
+    "jodit-pro": "^4.2.35",
     "rxjs": "7.8.1",
     "tslib": "^2.3.0",
     "zone.js": "0.13.1"

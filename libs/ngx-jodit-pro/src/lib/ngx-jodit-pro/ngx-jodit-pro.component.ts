@@ -12,10 +12,12 @@ import {
   ViewChild,
 } from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {IViewOptionsPro} from 'jodit-pro/types/types/view';
+import {IViewOptions} from 'jodit/types/types';
+import {IJodit} from 'jodit/types/types/jodit';
 
-import {Config} from 'jodit/esm/config';
-import {Jodit} from 'jodit-pro';
-export type JoditProConfig = Record<string, any> & Partial<Config>;
+declare const Jodit: any;
+export type JoditProConfig = Partial<IViewOptions & IViewOptionsPro & Record<string, any>>;
 
 @Component({
   selector: 'ngx-jodit-pro',
@@ -27,7 +29,9 @@ export type JoditProConfig = Record<string, any> & Partial<Config>;
 })
 export class NgxJoditProComponent implements AfterViewInit, OnDestroy, OnChanges {
   @ViewChild('joditContainer') joditContainer!: ElementRef;
-  jodit?: Jodit;
+  jodit?: IJodit & {
+    license?: string;
+  };
 
   /**
    * options for jodit pro. It's of type partial because Config is imported from jodit packge and doesn't contain jodit-pro options.
@@ -103,7 +107,7 @@ export class NgxJoditProComponent implements AfterViewInit, OnDestroy, OnChanges
       if (this.jodit) {
         this.jodit.destruct();
       }
-      this.jodit = Jodit.make(this.joditContainer.nativeElement, this.options) as Jodit;
+      this.jodit = Jodit.make(this.joditContainer.nativeElement, this.options) as IJodit;
       this.joditContainer.nativeElement.innerHTML = this._value;
       this.jodit.events.on('change', (text: string) => {
         if (!this.inputValueChange) {

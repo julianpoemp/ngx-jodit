@@ -35,18 +35,23 @@ You can find a demo of ngx-jodit-pro 3.x [here](https://github.julianpoemp.com/n
 
 1. Make sure that jodit-pro@beta AND jodit@beta is installed:
    ```
-   npm install jodit-pro@beta jodit@beta --save
+   npm install jodit-pro@4 jodit@4 --save
    ```
 2. ```
    npm install ngx-jodit-pro@3x --save
    ```
-3. Add the following path to your app's styles in angular.json (or project.json for
-   Nx):
+3. Add the following path to your app's styles and scripts in angular.json (or project.json for
+   Nx). **ESM for Jodit Pro is currently not supported see [Issue 34](https://github.com/julianpoemp/ngx-jodit/issues/34)** :
    ```
    ...
     ,
     "styles": [
       "node_modules/jodit-pro/es2021/jodit.fat.min.css",
+      ...
+    ],
+    ,
+    "scripts": [
+      "node_modules/jodit-pro/es2021/jodit.fat.min.js",
       ...
     ],
    ...
@@ -83,14 +88,15 @@ You can install plugins from Jodit and Jodit Pro. For more information about Jod
 4. Import "jodit" and the path to this file in a Typescript file of your application. E.g. the Angular component that includes ngx-jodit-pro. For example:
 
 ```typescript
-import "jodit";
-import "node_modules/jodit-pro/esm/plugins/tune-block/tune-block.js";
+import "jodit-pro/es2021/plugins/tune-block/tune-block.js";
 ```
 
 Now you can apply the plugin options to ngx-jodit-pro `options` property. For example:
 
 ```typescript
 import {JoditProConfig} from 'ngx-jodit-pro';
+
+declare const Jodit: any; // needed because TS issues with Jodit-Pro. See issue 34
 
 options:JoditProConfig = {
   tuneBlock: {

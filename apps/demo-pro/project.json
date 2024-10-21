@@ -24,7 +24,7 @@
           "node_modules/jodit-pro/es2021/plugins/tune-block/tune-block.min.css",
           "apps/demo-pro/src/styles.scss"],
         "scripts": [
-          "node_modules/jodit-pro/es2021/jodit.min.js",
+          "node_modules/jodit-pro/es2021/jodit.fat.min.js",
           "node_modules/jodit-pro/es2021/plugins/tune-block/tune-block.js",
           "node_modules/jodit-pro/es2021/plugins/page-break/page-break.min.js"
         ]
