@@ -1,11 +1,12 @@
 import {Component, ViewChild} from '@angular/core';
-import {JoditProConfig} from 'ngx-jodit-pro';
-import {NgxJoditComponent} from 'ngx-jodit';
+import {JoditProConfig, NgxJoditProComponent} from 'ngx-jodit-pro';
 import {FormBuilder} from '@angular/forms';
 
 interface FormWithJoditEditor {
   editor: string;
 }
+
+declare const Jodit: any;
 
 @Component({
   selector: 'jodit-root',
@@ -19,7 +20,7 @@ export class AppComponent {
   });
   _optionsStr = '';
 
-  @ViewChild('ngxJodit') ngxJodit?: NgxJoditComponent;
+  @ViewChild('ngxJodit') ngxJodit?: NgxJoditProComponent;
 
   get optionsStr(): string {
     return this._optionsStr;
@@ -34,7 +35,13 @@ export class AppComponent {
     }
   }
 
-  options: JoditProConfig = {};
+  options: JoditProConfig = {
+    tuneBlock: {
+      popup: {
+        p: Jodit.atom(['align', 'tune.up', 'tune.remove', 'tune.down'])
+      }
+    }
+  };
 
   constructor(private formBuilder: FormBuilder) {
   }
