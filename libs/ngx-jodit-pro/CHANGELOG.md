@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## 3.0.0 (2024-10-24)
+
+* chore(project): migrate ngx-deploy-npm to v8 ([9e4765f](https://github.com/julianpoemp/ngx-jodit/commit/9e4765f))
+* chore(project): migrate to Nx 19 ([09c1caf](https://github.com/julianpoemp/ngx-jodit/commit/09c1caf))
+* docs(project): update README.md ([3c98334](https://github.com/julianpoemp/ngx-jodit/commit/3c98334))
+* feat(ngx-jodit-pro): support for jodit-pro v4 ([45cad3b](https://github.com/julianpoemp/ngx-jodit/commit/45cad3b))
+* feat(ngx-jodit-pro): support for template-driven and reactive forms ([f363ff4](https://github.com/julianpoemp/ngx-jodit/commit/f363ff4)), closes [#35](https://github.com/julianpoemp/ngx-jodit/issues/35)
+* refactor(ngx-jodit): v3 branch is now main branch ([7610712](https://github.com/julianpoemp/ngx-jodit/commit/7610712))
+
+
+
 # [3.0.0-beta.6](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-pro-3.0.0-beta.5...ngx-jodit-pro-3.0.0-beta.6) (2023-12-19)
 
 
