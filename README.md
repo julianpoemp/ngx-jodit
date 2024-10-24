@@ -38,13 +38,13 @@ Buy here.</a>
 <thead><tr><th>Ngx-jodit-pro</th><th>Jodit Pro</th><th>Angular</th><th>Type</th><th>Demo</th><th>Readme</th></tr></thead>
 <tbody>
 <tr>
-<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit-pro"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro"></a></td><td>v1.x</td><td>>= v12</td><td>Module</td><td><a href="https://github.julianpoemp.com/ngx-jodit-pro/1.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/tree/main/libs/ngx-jodit-pro/README.md">Readme</a></td>
+<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit-pro"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro"></a></td><td>v4.x</td><td>>= v16</td><td>Standalone</td><td><a href="https://github.julianpoemp.com/ngx-jodit-pro/3.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/main/libs/ngx-jodit-pro/README.md">Readme</a></td>
 </tr>
 <tr>
 <td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit-pro/v/2x"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro/2x"></a></td><td>v2.x</td><td>>= v12</td><td>Module</td><td><a href="https://github.julianpoemp.com/ngx-jodit-pro/2.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/v2.x/libs/ngx-jodit-pro/README.md">Readme</a></td>
 </tr>
 <tr>
-<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit-pro/v/3x"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro/3x"></a></td><td>v2.x</td><td>>= v16</td><td>Standalone</td><td><a href="https://github.julianpoemp.com/ngx-jodit-pro/3.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/v3.x/libs/ngx-jodit-pro/README.md">Readme</a></td>
+<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit-pro/v1x"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro"></a></td><td>v1.x</td><td>>= v12</td><td>Module</td><td><a href="https://github.julianpoemp.com/ngx-jodit-pro/1.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/tree/main/libs/ngx-jodit-pro/README.md">Readme</a></td>
 </tr>
 </tbody>
 </table>
