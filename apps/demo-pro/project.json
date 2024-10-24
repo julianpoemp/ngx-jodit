@@ -2,9 +2,9 @@
   "name": "demo-pro",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "root": "apps/demo-pro",
   "sourceRoot": "apps/demo-pro/src",
   "prefix": "jodit",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
@@ -16,13 +16,18 @@
         "polyfills": "apps/demo-pro/src/polyfills.ts",
         "tsConfig": "apps/demo-pro/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/demo-pro/src/favicon.ico", "apps/demo-pro/src/assets", "apps/demo-pro/src/config.js"],
+        "assets": [
+          "apps/demo-pro/src/favicon.ico",
+          "apps/demo-pro/src/assets",
+          "apps/demo-pro/src/config.js"
+        ],
         "styles": [
           "node_modules/bootstrap-icons/font/bootstrap-icons.css",
           "node_modules/bootstrap/dist/css/bootstrap.min.css",
           "node_modules/jodit-pro/es2021/jodit.fat.min.css",
           "node_modules/jodit-pro/es2021/plugins/tune-block/tune-block.min.css",
-          "apps/demo-pro/src/styles.scss"],
+          "apps/demo-pro/src/styles.scss"
+        ],
         "scripts": [
           "node_modules/jodit-pro/es2021/jodit.min.js",
           "node_modules/jodit-pro/es2021/plugins/tune-block/tune-block.min.js",
@@ -66,10 +71,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "demo-pro:build:production"
+          "buildTarget": "demo-pro:build:production"
         },
         "development": {
-          "browserTarget": "demo-pro:build:development"
+          "buildTarget": "demo-pro:build:development"
         }
       },
       "defaultConfiguration": "development",
@@ -80,26 +85,18 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "demo-pro:build"
+        "buildTarget": "demo-pro:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "apps/demo-pro/src/**/*.ts",
-          "apps/demo-pro/src/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/demo"],
       "options": {
-        "jestConfig": "apps/demo-pro/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "apps/demo-pro/jest.config.ts"
       }
     }
-  },
-  "tags": []
+  }
 }
