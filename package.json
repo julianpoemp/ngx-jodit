@@ -11,7 +11,7 @@
     "release:lib": "nx run ngx-jodit:version --releaseAs=patch --push",
     "publish:lib": "nx npm ngx-jodit",
     "build:lib:pro": "nx build ngx-jodit-pro",
-    "release:lib:pro": "nx run ngx-jodit-pro:version --releaseAs=minor --push",
+    "release:lib:pro": "nx run ngx-jodit-pro:version --releaseAs=patch --push",
     "publish:lib:pro": "nx npm ngx-jodit-pro",
     "build:docs": "nx build demo && mv -f ./dist/apps/demo/* ./docs",
     "test": "nx test"
