@@ -5,7 +5,8 @@
   "peerDependencies": {
     "@angular/common": ">=12.0.0",
     "@angular/core": ">=12.0.0",
-    "jodit-pro": "^2.0.0-beta.18"
+    "jodit-pro": "^4.2.35",
+    "jodit": "^4.2.38"
   },
   "author": {
     "name": "Julian Poemp"

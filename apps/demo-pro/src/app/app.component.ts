@@ -1,5 +1,12 @@
-import {Component} from '@angular/core';
-import {JoditProConfig} from 'ngx-jodit-pro';
+import {Component, ViewChild} from '@angular/core';
+import {JoditProConfig, NgxJoditProComponent} from 'ngx-jodit-pro';
+import {FormBuilder} from '@angular/forms';
+
+interface FormWithJoditEditor {
+  editor: string;
+}
+
+declare const Jodit: any;
 
 @Component({
   selector: 'jodit-root',
@@ -7,8 +14,13 @@ import {JoditProConfig} from 'ngx-jodit-pro';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  value = 'Some text <b>in bold print</b>';
-  _optionsStr: string = '';
+  value = 'Some text';
+  formGroup = this.formBuilder.group({
+    editor: 'Some text in a reactive form',
+  });
+  _optionsStr = '';
+
+  @ViewChild('ngxJodit') ngxJodit?: NgxJoditProComponent;
 
   get optionsStr(): string {
     return this._optionsStr;
@@ -23,5 +35,14 @@ export class AppComponent {
     }
   }
 
-  options: JoditProConfig = {};
+  options: JoditProConfig = {
+    tuneBlock: {
+      popup: {
+        p: Jodit.atom(['align', 'tune.up', 'tune.remove', 'tune.down'])
+      }
+    }
+  };
+
+  constructor(private formBuilder: FormBuilder) {
+  }
 }
