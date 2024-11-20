@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## <small>3.0.1 (2024-11-20)</small>
+
+* fix: await jodit ready ([3ff4376](https://github.com/julianpoemp/ngx-jodit/commit/3ff4376))
+* fix: reactive form patch and inner value ([a550c98](https://github.com/julianpoemp/ngx-jodit/commit/a550c98))
+
+
+
 ## 3.0.0 (2024-10-24)
 
 * chore(project): migrate ngx-deploy-npm to v8 ([9e4765f](https://github.com/julianpoemp/ngx-jodit/commit/9e4765f))
