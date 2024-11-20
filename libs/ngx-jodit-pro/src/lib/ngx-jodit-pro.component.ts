@@ -47,7 +47,7 @@ export class NgxJoditProComponent implements ControlValueAccessor, AfterViewInit
     this._options = value;
 
     if (value) {
-      this.initJoditContainer();
+      this.initJoditContainer().then();
     }
   }
 
@@ -105,8 +105,8 @@ export class NgxJoditProComponent implements ControlValueAccessor, AfterViewInit
       // Prevent ExpressionChangedAfterItHasBeenCheckedError
       delay(0)
     ).subscribe(([[_, initialized], text]) => {
-      if (this.joditContainer?.nativeElement && initialized) {
-        this.joditContainer.nativeElement.innerHTML = text;
+      if (this.jodit && initialized) {
+        this.jodit.setEditorValue(text);
       }
     });
   }
@@ -122,8 +122,8 @@ export class NgxJoditProComponent implements ControlValueAccessor, AfterViewInit
     );
   }
 
-  ngAfterViewInit() {
-    this.initJoditContainer();
+  async ngAfterViewInit() {
+    await this.initJoditContainer();
   }
 
   ngOnDestroy() {
@@ -131,14 +131,15 @@ export class NgxJoditProComponent implements ControlValueAccessor, AfterViewInit
     this.jodit?.events.destruct();
   }
 
-  initJoditContainer() {
+  async initJoditContainer() {
     if (this.joditContainer?.nativeElement) {
       if (this.jodit) {
         this.jodit.destruct();
         this.joditInitializedSubject.next(false);
       }
       this.jodit = Jodit.make(this.joditContainer.nativeElement, this._options) as IJodit;
-      this.joditContainer.nativeElement.innerHTML = this.valueSubject.getValue();
+      await this.jodit.waitForReady();
+      this.jodit.setEditorValue(this.valueSubject.getValue());
 
       this.jodit.events.on('change', (text: string) => {
         this.internValueChange = true;
