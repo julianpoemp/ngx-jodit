@@ -105,8 +105,9 @@ export class NgxJoditProComponent implements ControlValueAccessor, AfterViewInit
       // Prevent ExpressionChangedAfterItHasBeenCheckedError
       delay(0)
     ).subscribe(([[_, initialized], text]) => {
-      if (this.joditContainer?.nativeElement && initialized) {
+      if (this.jodit && initialized) {
         this.joditContainer.nativeElement.innerHTML = text;
+        this.jodit.setEditorValue(text);
       }
     });
   }
