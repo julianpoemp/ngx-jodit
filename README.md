@@ -10,7 +10,7 @@ There is no affiliation with Jodit. ngx-jodit and ngx-jodit-pro are under MIT-Li
 
 Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor (free). If you want to use Jodit Pro/Multi/OEM see ngx-jodit-pro below.
 
-### Compatibility table
+### Compatibility
 
 <table>
 <thead><tr><th>Ngx-jodit</th><th>Jodit</th><th>Angular</th><th>Type</th><th>Demo</th><th>Readme</th></tr></thead>
@@ -32,7 +32,7 @@ Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG ed
 Angular wrapper for <a href="https://xdsoft.net/jodit/pro/">Jodit PRO</a> WYSIWYG editor. You need a license key in order to use this wrapper. <a href="https://xdsoft.net/jodit/pro/#compare">
 Buy here.</a>
 
-### Compatibility table
+### Compatibility
 
 <table>
 <thead><tr><th>Ngx-jodit-pro</th><th>Jodit Pro</th><th>Angular</th><th>Type</th><th>Demo</th><th>Readme</th></tr></thead>
