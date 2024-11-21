@@ -2,7 +2,7 @@
 
 Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG editor. It supports Angular >= 16 and jodit v4.
 
-## Compatibility table
+## Compatibility
 
 <table>
 <thead><tr><th>Ngx-jodit</th><th>Jodit</th><th>Angular</th><th>Type</th><th>Demo</th><th>Readme</th></tr></thead>
