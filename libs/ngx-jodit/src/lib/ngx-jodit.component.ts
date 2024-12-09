@@ -125,7 +125,7 @@ export class NgxJoditComponent implements ControlValueAccessor, AfterViewInit, O
 
   ngOnDestroy() {
     this.valueSubscription?.unsubscribe();
-    this.jodit?.events.destruct();
+    this.jodit?.destruct();
   }
 
   initJoditContainer() {

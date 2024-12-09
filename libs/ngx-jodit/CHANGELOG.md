@@ -2,11 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
-## <small>3.1.4 (2024-11-21)</small>
+## <small>3.1.5 (2024-12-09)</small>
 
-* docs(ngx-jodit): update README.md ([81c2b8b](https://github.com/julianpoemp/ngx-jodit/commit/81c2b8b))
-* chore(project): migrate ngx-deploy-npm to v8 ([9e4765f](https://github.com/julianpoemp/ngx-jodit/commit/9e4765f))
-* chore(project): migrate to Nx 19 ([09c1caf](https://github.com/julianpoemp/ngx-jodit/commit/09c1caf))
 
 
 
