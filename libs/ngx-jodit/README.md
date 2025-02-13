@@ -21,7 +21,7 @@ Angular wrapper for <a href="https://github.com/xdan/jodit">Jodit</a> WYSIWYG ed
 
 ## Jodit Pro, Multi & OEM
 
-For Jodit Pro, Multi and OEM you have to install the jodit-pro package and another Angular library: [ngx-jodit-pro](https://github.com/julianpoemp/ngx-jodit/tree/v3.x/libs/ngx-jodit-pro). For more information click [here](https://github.com/julianpoemp/ngx-jodit/tree/v3.x/libs/ngx-jodit-pro).
+For Jodit Pro, Multi and OEM you have to install the jodit-pro package and another Angular library: [ngx-jodit-pro](https://github.com/julianpoemp/ngx-jodit/blob/main/libs/ngx-jodit-pro/README.md). For more information click [here](https://github.com/julianpoemp/ngx-jodit/tree/v3.x/libs/ngx-jodit-pro).
 
 ## Demo
 
