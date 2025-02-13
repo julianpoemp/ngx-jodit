@@ -2,8 +2,11 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
-## <small>3.1.5 (2024-12-09)</small>
+## 3.2.0 (2025-02-13)
 
+* build(ngx-jodit): change peer dependency to Jodit ^4.5.0 ([08a8423](https://github.com/julianpoemp/ngx-jodit/commit/08a8423))
+* feat(ngx-jodit): include IViewOptions in JoditConfig ([6216069](https://github.com/julianpoemp/ngx-jodit/commit/6216069)), closes [#32](https://github.com/julianpoemp/ngx-jodit/issues/32)
+* docs(ngx-jodit): change README.md ([91e4a05](https://github.com/julianpoemp/ngx-jodit/commit/91e4a05))
 
 
 
