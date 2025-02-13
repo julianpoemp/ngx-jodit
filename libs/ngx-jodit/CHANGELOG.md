@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## <small>3.2.1 (2025-02-13)</small>
+
+* fix(ngx-jodit): some attributes of JoditConfig are readonly ([16fa3f4](https://github.com/julianpoemp/ngx-jodit/commit/16fa3f4))
+
+
+
 ## 3.2.0 (2025-02-13)
 
 * build(ngx-jodit): change peer dependency to Jodit ^4.5.0 ([08a8423](https://github.com/julianpoemp/ngx-jodit/commit/08a8423))
