@@ -6,7 +6,7 @@
     "@angular/common": ">=16.0.0",
     "@angular/core": ">=16.0.0",
     "@angular/forms": ">=16.0.0",
-    "jodit": "^4.0.0"
+    "jodit": "^4.5.0"
   },
   "author": {
     "name": "Julian Poemp"
