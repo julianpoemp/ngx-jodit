@@ -2,9 +2,9 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
-## <small>3.2.1 (2025-02-13)</small>
+## <small>3.2.2 (2025-03-18)</small>
 
-* fix(ngx-jodit): some attributes of JoditConfig are readonly ([16fa3f4](https://github.com/julianpoemp/ngx-jodit/commit/16fa3f4))
+* fix(ngx-jodit): try to fox IViewOptions issue ref #37 ([bbb08b1](https://github.com/julianpoemp/ngx-jodit/commit/bbb08b1)), closes [#37](https://github.com/julianpoemp/ngx-jodit/issues/37)
 
 
 
