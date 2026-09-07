@@ -8,21 +8,24 @@ Buy here.</a>
 
 This package does not contain the source code of Jodit Pro. You have to install it as described here (scroll down). This
 wrapper is licensed under MIT License, Jodit Pro is licensed
-seperately ([see license](https://xdsoft.net/jodit/pro/license/)).
+separately ([see license](https://xdsoft.net/jodit/pro/license/)).
 
 ## Compatibility
 
 <table>
-<thead><tr><th>Ngx-jodit-pro</th><th>Jodit Pro</th><th>Angular</th><th>Type</th><th>Demo</th><th>Readme</th></tr></thead>
+<thead><tr><th>Ngx-jodit-pro</th><th>Jodit Pro</th><th>Angular</th><th>Type</th><th>ESM</th><th>Demo</th><th>Readme</th></tr></thead>
 <tbody>
 <tr>
-<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit-pro"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro"></a></td><td>v4.x</td><td>>= v16</td><td>Standalone</td><td><a href="https://github.julianpoemp.com/ngx-jodit-pro/3.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/main/libs/ngx-jodit-pro/README.md">Readme</a></td>
+<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit-pro"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro"></a></td><td>v4.x</td><td>>= v16</td><td>Standalone</td><td>Yes</td><td><a href="https://github.julianpoemp.com/ngx-jodit-pro/4.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/main/libs/ngx-jodit-pro/README.md">Readme</a></td>
 </tr>
 <tr>
-<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit-pro/v/2x"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro/2x"></a></td><td>v4.x</td><td>v12 - v15</td><td>Module</td><td><a href="https://github.julianpoemp.com/ngx-jodit-pro/2.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/v2.x/libs/ngx-jodit-pro/README.md">Readme</a></td>
+<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit-pro/v/3x"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro/3x"></a></td><td>v4.x</td><td>>= v16</td><td>Standalone</td><td>No</td><td><a href="https://github.julianpoemp.com/ngx-jodit-pro/3.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/v3.x/libs/ngx-jodit-pro/README.md">Readme</a></td>
 </tr>
 <tr>
-<td style="text-align:center;">v1.x <i>(deprecated)</i></td><td>v1.x</td><td>v12 - v15</td><td>Module</td><td><a href="https://github.julianpoemp.com/ngx-jodit-pro/1.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/v1.x/libs/ngx-jodit-pro/README.md">Readme</a></td>
+<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit-pro/v/2x"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro/2x"></a></td><td>v4.x</td><td>v12 - v15</td><td>Module</td><td>No</td><td><a href="https://github.julianpoemp.com/ngx-jodit-pro/2.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/v2.x/libs/ngx-jodit-pro/README.md">Readme</a></td>
+</tr>
+<tr>
+<td style="text-align:center;">v1.x <i>(deprecated)</i></td><td>v1.x</td><td>v12 - v15</td><td>Module</td><td>No</td><td><a href="https://github.julianpoemp.com/ngx-jodit-pro/1.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/v1.x/libs/ngx-jodit-pro/README.md">Readme</a></td>
 </tr>
 </tbody>
 </table>
@@ -33,7 +36,7 @@ You can find a demo of ngx-jodit-pro 3.x [here](https://github.julianpoemp.com/n
 
 ## Remarks
 
-ESM for Jodit-Pro is not currently working. See [issue 34](https://github.com/julianpoemp/ngx-jodit/issues/34). You have to include the es2021 build (see installation).
+ESM does not work with ngx-jodit-pro v3. Use v4.
 
 ## Installation
 
@@ -42,7 +45,7 @@ ESM for Jodit-Pro is not currently working. See [issue 34](https://github.com/ju
    npm install jodit-pro@4 jodit@4 --save
    ```
 2. ```
-   npm install ngx-jodit-pro --save
+   npm install ngx-jodit-pro@3x --save
    ```
 3. Add the following paths to your app's styles and scripts in angular.json (or project.json for
    Nx):
