@@ -7,14 +7,15 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "executor": "@angular/build:application",
+      "outputs": ["{options.outputPath.base}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/demo-pro",
+        "outputPath": {
+          "base": "dist/apps/demo-pro"
+        },
         "index": "apps/demo-pro/src/index.html",
-        "main": "apps/demo-pro/src/main.ts",
-        "polyfills": "apps/demo-pro/src/polyfills.ts",
+        "polyfills": ["apps/demo-pro/src/polyfills.ts"],
         "tsConfig": "apps/demo-pro/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
@@ -28,8 +29,8 @@
           "node_modules/jodit-pro/es2021/jodit.fat.min.css",
           "apps/demo-pro/src/styles.scss"
         ],
-        "scripts": [
-        ]
+        "scripts": [],
+        "browser": "apps/demo-pro/src/main.ts"
       },
       "configurations": {
         "production": {
@@ -54,9 +55,7 @@
           "outputHashing": "all"
         },
         "development": {
-          "buildOptimizer": false,
           "optimization": false,
-          "vendorChunk": true,
           "extractLicenses": false,
           "sourceMap": true,
           "namedChunks": true

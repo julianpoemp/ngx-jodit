@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "22.1.7",
+    "@angular/build": "22.1.7",
     "@angular-devkit/core": "22.1.7",
     "@angular-devkit/schematics": "22.1.7",
     "@angular-eslint/eslint-plugin": "22.4.0",

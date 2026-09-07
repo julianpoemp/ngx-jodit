@@ -7,14 +7,15 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "executor": "@angular/build:application",
+      "outputs": ["{options.outputPath.base}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/demo",
+        "outputPath": {
+          "base": "dist/apps/demo"
+        },
         "index": "apps/demo/src/index.html",
-        "main": "apps/demo/src/main.ts",
-        "polyfills": "apps/demo/src/polyfills.ts",
+        "polyfills": ["apps/demo/src/polyfills.ts"],
         "tsConfig": "apps/demo/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": ["apps/demo/src/favicon.ico", "apps/demo/src/assets"],
@@ -24,7 +25,8 @@
           "node_modules/jodit/es2021/jodit.min.css",
           "apps/demo/src/styles.scss"
         ],
-        "scripts": []
+        "scripts": [],
+        "browser": "apps/demo/src/main.ts"
       },
       "configurations": {
         "production": {
@@ -49,9 +51,7 @@
           "outputHashing": "all"
         },
         "development": {
-          "buildOptimizer": false,
           "optimization": false,
-          "vendorChunk": true,
           "extractLicenses": false,
           "sourceMap": true,
           "namedChunks": true
