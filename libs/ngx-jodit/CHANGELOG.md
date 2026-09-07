@@ -2,9 +2,11 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
-## <small>3.2.2 (2025-03-18)</small>
+## <small>3.2.3 (2026-09-07)</small>
 
-* fix(ngx-jodit): try to fox IViewOptions issue ref #37 ([bbb08b1](https://github.com/julianpoemp/ngx-jodit/commit/bbb08b1)), closes [#37](https://github.com/julianpoemp/ngx-jodit/issues/37)
+* chore(ngx-jodit): update Angular to v20, still backwards compatible ([435067a](https://github.com/julianpoemp/ngx-jodit/commit/435067a))
+* chore(project): update compatibility tables on README files ([9e2b8b7](https://github.com/julianpoemp/ngx-jodit/commit/9e2b8b7))
+* deps(project): update Nx to v22.7.1 ([3200a4e](https://github.com/julianpoemp/ngx-jodit/commit/3200a4e))
 
 
 
