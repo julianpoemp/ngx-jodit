@@ -2,10 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
-## <small>3.0.1 (2024-11-20)</small>
+## <small>3.0.2 (2026-09-07)</small>
 
-* fix: await jodit ready ([3ff4376](https://github.com/julianpoemp/ngx-jodit/commit/3ff4376))
-* fix: reactive form patch and inner value ([a550c98](https://github.com/julianpoemp/ngx-jodit/commit/a550c98))
+* chore(ngx-jodit-pro): fix title ([bd643ad](https://github.com/julianpoemp/ngx-jodit/commit/bd643ad))
+* chore(ngx-jodit-pro): update Angular to v20, still backwards compatible ([ee9d2b1](https://github.com/julianpoemp/ngx-jodit/commit/ee9d2b1))
+* chore(ngx-jodit-pro): update README ([9d2dfa0](https://github.com/julianpoemp/ngx-jodit/commit/9d2dfa0))
+* chore(project): update compatibility tables on README files ([9e2b8b7](https://github.com/julianpoemp/ngx-jodit/commit/9e2b8b7))
+* deps(project): update Nx to v22.7.1 ([3200a4e](https://github.com/julianpoemp/ngx-jodit/commit/3200a4e))
+* docs(ngx-jodit-pro): update README.md ([7cf111c](https://github.com/julianpoemp/ngx-jodit/commit/7cf111c))
+* feat(ngx-jodit-pro): support for Jodit-Pro >= 4 ([f21e3d3](https://github.com/julianpoemp/ngx-jodit/commit/f21e3d3))
 
 
 
