@@ -5,7 +5,7 @@ import 'jodit/esm/plugins/indent/indent.js';
 import 'jodit/esm/plugins/source/source.js';
 import 'jodit/esm/plugins/resizer/resizer.js';
 
-import {Component, ViewChild} from '@angular/core';
+import {Component, ViewChild, ChangeDetectionStrategy} from '@angular/core';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {Jodit} from 'jodit';
 import de from 'jodit/esm/langs/de.js';
@@ -21,6 +21,7 @@ interface FormWithJoditEditor {
   selector: 'jodit-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     NgxJoditComponent,
     FormsModule,

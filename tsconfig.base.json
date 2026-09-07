@@ -18,7 +18,12 @@
     "paths": {
       "ngx-jodit": ["libs/ngx-jodit/src/index.ts"],
       "ngx-jodit-pro": ["libs/ngx-jodit-pro/src/index.ts"]
-    }
+    },
+    "strict": false,
+    "noUncheckedSideEffectImports": false,
+    "types": ["*"],
+    "esModuleInterop": false,
+    "ignoreDeprecations": "6.0"
   },
   "exclude": ["node_modules", "tmp"]
 }
