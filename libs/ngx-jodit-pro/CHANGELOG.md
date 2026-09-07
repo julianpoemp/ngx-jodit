@@ -2,12 +2,21 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
-## <small>3.0.1 (2024-11-20)</small>
+## 4.0.0 (2026-09-07)
 
-* fix: await jodit ready ([3ff4376](https://github.com/julianpoemp/ngx-jodit/commit/3ff4376))
-* fix: reactive form patch and inner value ([a550c98](https://github.com/julianpoemp/ngx-jodit/commit/a550c98))
+* chore(ngx-jodit-pro): update Angular to v20, still backwards compatible ([ee9d2b1](https://github.com/julianpoemp/ngx-jodit/commit/ee9d2b1))
+* chore(project): cleanup test files ([f53d93a](https://github.com/julianpoemp/ngx-jodit/commit/f53d93a))
+* chore(project): update Nx to v23.2.0 ([49c573e](https://github.com/julianpoemp/ngx-jodit/commit/49c573e))
+* chore(project): update README ([b700692](https://github.com/julianpoemp/ngx-jodit/commit/b700692))
+* feat(ngx-jodit-pro): full ESM support ([6dc2899](https://github.com/julianpoemp/ngx-jodit/commit/6dc2899))
+* feat(ngx-jodit-pro): introducing ESM for ngx-jodit-pro ([39ea344](https://github.com/julianpoemp/ngx-jodit/commit/39ea344)), closes [#34](https://github.com/julianpoemp/ngx-jodit/issues/34)
+* deps(project): update Nx to v22.7.1 ([3200a4e](https://github.com/julianpoemp/ngx-jodit/commit/3200a4e))
+* docs(ngx-jodit-pro): update README.md ([7cf111c](https://github.com/julianpoemp/ngx-jodit/commit/7cf111c))
 
+### BREAKING CHANGE
 
+* 1) JoditConfigOptions renamed to JoditProOptions
+  2) ESM does not need to have Jodit JS files to your application's scripts. Remove it.
 
 ## 3.0.0 (2024-10-24)
 
