@@ -1,7 +1,12 @@
 {
-  "root": "apps/demo-pro-e2e",
+  "name": "demo-pro-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/demo-pro-e2e/src",
   "projectType": "application",
+  "tags": [],
+  "implicitDependencies": [
+    "demo-pro"
+  ],
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
@@ -22,7 +27,5 @@
         "lintFilePatterns": ["apps/demo-pro-e2e/**/*.{js,ts}"]
       }
     }
-  },
-  "tags": [],
-  "implicitDependencies": ["demo-pro"]
+  }
 }

@@ -4,20 +4,20 @@
   "projectType": "library",
   "sourceRoot": "libs/ngx-jodit-pro/src",
   "prefix": "ngx",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "project": "libs/ngx-jodit-pro/ng-package.json"
+        "project": "libs/ngx-jodit-pro/ng-package.json",
+        "tsConfig": "libs/ngx-jodit-pro/tsconfig.lib.json"
       },
       "configurations": {
         "production": {
           "tsConfig": "libs/ngx-jodit-pro/tsconfig.lib.prod.json"
         },
-        "development": {
-          "tsConfig": "libs/ngx-jodit-pro/tsconfig.lib.json"
-        }
+        "development": {}
       },
       "defaultConfiguration": "production"
     },
@@ -26,32 +26,19 @@
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "libs/ngx-jodit/jest.config.ts",
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
+        "tsConfig": "libs/ngx-jodit-pro/tsconfig.spec.json"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "libs/ngx-jodit-pro/src/**/*.ts",
-          "libs/ngx-jodit-pro/src/**/*.html"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {
         "preset": "angular",
         "postTargets": ["ngx-jodit-pro:github"],
-        "baseBranch": "v3.x",
-        "commitMessageFormat": "build(${projectName}): release version ${version}"
+        "baseBranch": "main",
+        "commitMessageFormat": "build({projectName}): release version ${version}"
       }
     },
     "github": {
@@ -64,9 +51,9 @@
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public"
+        "access": "public",
+        "distFolderPath": "dist/libs/ngx-jodit-pro"
       }
     }
-  },
-  "tags": []
+  }
 }

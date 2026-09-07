@@ -2,6 +2,120 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## <small>3.2.2 (2025-03-18)</small>
+
+* fix(ngx-jodit): try to fox IViewOptions issue ref #37 ([bbb08b1](https://github.com/julianpoemp/ngx-jodit/commit/bbb08b1)), closes [#37](https://github.com/julianpoemp/ngx-jodit/issues/37)
+
+
+
+## 3.2.0 (2025-02-13)
+
+* build(ngx-jodit): change peer dependency to Jodit ^4.5.0 ([08a8423](https://github.com/julianpoemp/ngx-jodit/commit/08a8423))
+* feat(ngx-jodit): include IViewOptions in JoditConfig ([6216069](https://github.com/julianpoemp/ngx-jodit/commit/6216069)), closes [#32](https://github.com/julianpoemp/ngx-jodit/issues/32)
+* docs(ngx-jodit): change README.md ([91e4a05](https://github.com/julianpoemp/ngx-jodit/commit/91e4a05))
+
+
+
+## [3.1.3](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.1.2...ngx-jodit-3.1.3) (2024-08-13)
+
+
+### Bug Fixes
+
+* **ngx-jodit:** databinding using [(value)] resets cursor on change ([021a34f](https://github.com/julianpoemp/ngx-jodit/commit/021a34f5494a0fc71ad27e46f2de812cc537fbb6))
+
+
+
+## [3.1.2](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.1.1...ngx-jodit-3.1.2) (2024-01-25)
+
+
+### Bug Fixes
+
+* reactive form gets dirty after (value) initialization ([0761464](https://github.com/julianpoemp/ngx-jodit/commit/07614646f931448c437c10dc9cb7ca9d619e0af4))
+
+
+
+## [3.1.1](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.1.0...ngx-jodit-3.1.1) (2024-01-24)
+
+
+### Bug Fixes
+
+* **ngx-jodit:** Fixed value handling for reactive forms ([5c6aa57](https://github.com/julianpoemp/ngx-jodit/commit/5c6aa574a443bb8eff2faf85072504020fce1fb3))
+
+
+
+# [3.1.0](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.0.2...ngx-jodit-3.1.0) (2024-01-16)
+
+
+### Features
+
+* **ngx-jodit:** ngx-jodit can be used like a Forms component [(ngModel)] support ([a1e3fa1](https://github.com/julianpoemp/ngx-jodit/commit/a1e3fa104c2624c2f8da02be4d9d56b56c0c7af5))
+
+
+
+## [3.0.2](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.0.1...ngx-jodit-3.0.2) (2024-01-10)
+
+
+### Features
+
+* **ngx-jodit:** new type for Jodit options: JoditConfig ([5949571](https://github.com/julianpoemp/ngx-jodit/commit/5949571ca3ab29de885292e0cbf948a6fd5a658c))
+
+
+
+## [3.0.1](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.0.0-beta.10...ngx-jodit-3.0.1) (2024-01-08)
+
+
+### Features
+
+* **ngx-jodit:** Jodit v4 was released as stable version. ngx-jodit v3 now stable. ([503db2a](https://github.com/julianpoemp/ngx-jodit/commit/503db2adea178177551160863715b4baa2f28c9c))
+
+
+### BREAKING CHANGES
+
+* **ngx-jodit:** If you update from the latest beta version to the
+stable version you don't have to do anything. If you update from
+ngx-jodit v1 you should read the installation instructions of ngx-jodit
+v2 AND the breaking changes of Jodit v4:
+https://github.com/xdan/jodit/releases/tag/4.0.1
+
+
+
+## [1.0.8](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.0.0-beta.7...ngx-jodit-1.0.8) (2023-09-26)
+
+
+### Bug Fixes
+
+* **ngx-jodit:** [(value)] still resets caret position ([1b3a7a0](https://github.com/julianpoemp/ngx-jodit/commit/1b3a7a0a4e47faa491c3fe4c2f98d7abb8c7fa44))
+
+
+
+## [1.0.7](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.0.0-beta.6...ngx-jodit-1.0.7) (2023-09-22)
+
+
+### Bug Fixes
+
+* **ngx-jodit-pro:** [(value)] not working correctly, e.g. resets cursor ([bf4a223](https://github.com/julianpoemp/ngx-jodit/commit/bf4a223dabeda5dc91cb1b1456804296da9aeefa))
+* **ngx-jodit:** [(value)] not working correctly, e.g. resets cursor ([1821283](https://github.com/julianpoemp/ngx-jodit/commit/182128372ffb21b4be5b7b6907b063800e71a9ce))
+
+
+
+## [1.0.6](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-1.0.5...ngx-jodit-1.0.6) (2023-09-18)
+
+
+
+## [1.0.5](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.0.0-beta.5...ngx-jodit-1.0.5) (2023-09-18)
+
+
+### Bug Fixes
+
+* **ngx-jodit:** add missing joditKeyUp event ([32cf560](https://github.com/julianpoemp/ngx-jodit/commit/32cf560452a623543ad178bc1f2dd93357ecd9ca))
+* **ngx-jodit:** ngModel [(value)] not working for outside changes ([35f0e59](https://github.com/julianpoemp/ngx-jodit/commit/35f0e5906781fd9b1665d875485a1e9c6811ab47))
+
+
+
+## 1.0.4 (2023-06-17)
+
+
+
 # [3.0.0-beta.10](https://github.com/julianpoemp/ngx-jodit/compare/ngx-jodit-3.0.0-beta.9...ngx-jodit-3.0.0-beta.10) (2023-11-15)
 
 

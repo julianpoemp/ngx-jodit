@@ -1,4 +1,3 @@
-
 import {
   AfterViewInit,
   ChangeDetectionStrategy,
@@ -12,50 +11,48 @@ import {
   Output,
   ViewChild,
 } from '@angular/core';
-import {ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR,} from '@angular/forms';
-import {Jodit} from 'jodit';
-import {BehaviorSubject, combineLatest, delay, distinctUntilChanged, filter, Subscription, withLatestFrom,} from 'rxjs';
 
-import {JoditConfig} from './types';
+import {IViewOptionsPro} from 'jodit-pro/types/types/view';
+import {IViewOptions} from 'jodit/types/types';
+import {IJodit} from 'jodit/types/types/jodit';
+import {ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR} from '@angular/forms';
+import {BehaviorSubject, combineLatest, delay, distinctUntilChanged, filter, Subscription, withLatestFrom} from 'rxjs';
+
+declare const Jodit: any;
+export type JoditProConfig = Partial<IViewOptions & IViewOptionsPro & Record<string, any>>;
 
 @Component({
-  selector: 'ngx-jodit',
+  selector: 'ngx-jodit-pro',
   standalone: true,
   imports: [FormsModule],
-  templateUrl: './ngx-jodit.component.html',
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => NgxJoditComponent),
-      multi: true,
-    },
-  ],
-  styleUrls: ['./ngx-jodit.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  templateUrl: './ngx-jodit-pro.component.html',
+  providers: [{
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: forwardRef(() => NgxJoditProComponent),
+    multi: true
+  }],
+  styleUrls: ['./ngx-jodit-pro.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NgxJoditComponent
-  implements ControlValueAccessor, AfterViewInit, OnDestroy {
-  @ViewChild('joditContainer') joditContainer!: ElementRef;
-  jodit?: Jodit;
+export class NgxJoditProComponent implements ControlValueAccessor, AfterViewInit, OnDestroy {
+  @ViewChild('joditContainer', {static: false}) joditContainer!: ElementRef;
+  jodit?: IJodit;
 
   /**
-   * options for jodit.
+   * options for jodit pro. It's of type partial because Config is imported from jodit packge and doesn't contain jodit-pro options.
    * You can add more supported options even Typescript doesn't suggest the options.
    */
-  private _options?: JoditConfig;
-
-  @Input() set options(value: JoditConfig) {
+  private _options?: JoditProConfig = {};
+  @Input() set options(value: JoditProConfig) {
     this._options = value;
 
     if (value) {
-      this.initJoditContainer();
+      this.initJoditContainer().then();
     }
   }
 
   // value property (subject)
-  private valueSubject: BehaviorSubject<string> = new BehaviorSubject<string>(
-    ''
-  );
+  private valueSubject: BehaviorSubject<string> = new BehaviorSubject<string>('');
 
   @Input() set value(value: string) {
     const sanitizedText = this.prepareText(value);
@@ -90,32 +87,28 @@ export class NgxJoditComponent
   @Output() joditChangeSelection = new EventEmitter<void>();
 
   // Used for delay value assignment to wait for jodit to be initialized
-  private joditInitializedSubject: BehaviorSubject<boolean> =
-    new BehaviorSubject(false);
+  private joditInitializedSubject: BehaviorSubject<boolean> = new BehaviorSubject(false);
   private valueSubscription?: Subscription;
   private internValueChange = false;
 
-  constructor(private readonly cdr: ChangeDetectorRef) {
+  constructor(
+    private readonly cdr: ChangeDetectorRef,
+  ) {
     this.valueSubscription = combineLatest([
       // Handle value changes ...
       this.valueSubject.asObservable().pipe(distinctUntilChanged()),
       // ...additionally ensuring that the value is reapplied if the editor was not initialized when value was set
-      this.joditInitializedSubject.pipe(
-        distinctUntilChanged(),
-        filter((initialized) => initialized)
-      ),
-    ])
-      .pipe(
-        // Pass through the latest value in case of editor initialization
-        withLatestFrom(this.valueSubject),
-        // Prevent ExpressionChangedAfterItHasBeenCheckedError
-        delay(0)
-      )
-      .subscribe(([[_, initialized], text]) => {
-        if (this.jodit && initialized) {
-          this.jodit.value = text;
-        }
-      });
+      this.joditInitializedSubject.pipe(distinctUntilChanged(), filter(initialized => initialized))
+    ]).pipe(
+      // Pass through the latest value in case of editor initialization
+      withLatestFrom(this.valueSubject),
+      // Prevent ExpressionChangedAfterItHasBeenCheckedError
+      delay(0)
+    ).subscribe(([[_, initialized], text]) => {
+      if (this.jodit && initialized) {
+        this.jodit.setEditorValue(text);
+      }
+    });
   }
 
   isHTML(text: string) {
@@ -129,26 +122,25 @@ export class NgxJoditComponent
     );
   }
 
-  ngAfterViewInit() {
-    this.initJoditContainer();
+  async ngAfterViewInit() {
+    await this.initJoditContainer();
   }
 
   ngOnDestroy() {
     this.valueSubscription?.unsubscribe();
-    this.jodit?.destruct();
+    this.jodit?.events.destruct();
   }
 
-  initJoditContainer() {
-    if (this.joditContainer) {
+  async initJoditContainer() {
+    if (this.joditContainer?.nativeElement) {
       if (this.jodit) {
         this.jodit.destruct();
         this.joditInitializedSubject.next(false);
       }
-      this.jodit = Jodit.make(
-        this.joditContainer.nativeElement,
-        this._options as any
-      );
-      this.jodit.value = this.valueSubject.getValue();
+      this.jodit = Jodit.make(this.joditContainer.nativeElement, this._options) as IJodit;
+      await this.jodit.waitForReady();
+      this.jodit.setEditorValue(this.valueSubject.getValue());
+
       this.jodit.events.on('change', (text: string) => {
         this.internValueChange = true;
         this.changeValue(text);
@@ -231,7 +223,7 @@ export class NgxJoditComponent
   setDisabledState?(isDisabled: boolean): void {
     this.options = {
       ...this._options,
-      disabled: isDisabled,
+      disabled: isDisabled
     };
   }
 
