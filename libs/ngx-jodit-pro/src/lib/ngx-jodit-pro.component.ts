@@ -12,14 +12,20 @@ import {
   ViewChild,
 } from '@angular/core';
 
-import {IViewOptionsPro} from 'jodit-pro/types/types/view';
-import {IViewOptions} from 'jodit/types/types';
-import {IJodit} from 'jodit/types/types/jodit';
+import { Jodit } from 'jodit-pro';
+import type {Config as JoditConfig} from 'jodit/esm/config';
+import type {Config as JoditProConfig} from 'jodit-pro/esm/config';
 import {ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR} from '@angular/forms';
 import {BehaviorSubject, combineLatest, delay, distinctUntilChanged, filter, Subscription, withLatestFrom} from 'rxjs';
 
-declare const Jodit: any;
-export type JoditProConfig = Partial<IViewOptions & IViewOptionsPro & Record<string, any>>;
+
+/**
+ * All options JoditPro may be initialized with: the base jodit `Config`
+ * intersected with the jodit-pro specific options from `jodit-pro/esm/config`
+ * (the same set `Jodit.make()` accepts). `Record<string, any>` is kept so
+ * options that Typescript doesn't suggest yet can still be passed.
+ */
+export type JoditProOptions = Partial<Record<string, any> & JoditConfig & JoditProConfig>;
 
 @Component({
   selector: 'ngx-jodit-pro',
@@ -36,14 +42,14 @@ export type JoditProConfig = Partial<IViewOptions & IViewOptionsPro & Record<str
 })
 export class NgxJoditProComponent implements ControlValueAccessor, AfterViewInit, OnDestroy {
   @ViewChild('joditContainer', {static: false}) joditContainer!: ElementRef;
-  jodit?: IJodit;
+  jodit?: Jodit;
 
   /**
-   * options for jodit pro. It's of type partial because Config is imported from jodit packge and doesn't contain jodit-pro options.
-   * You can add more supported options even Typescript doesn't suggest the options.
+   * options JoditPro is initialized with. See {@link JoditProOptions} - jodit-pro
+   * specific options are suggested too.
    */
-  private _options?: JoditProConfig = {};
-  @Input() set options(value: JoditProConfig) {
+  private _options?: JoditProOptions = {};
+  @Input() set options(value: JoditProOptions) {
     this._options = value;
 
     if (value) {
@@ -137,7 +143,7 @@ export class NgxJoditProComponent implements ControlValueAccessor, AfterViewInit
         this.jodit.destruct();
         this.joditInitializedSubject.next(false);
       }
-      this.jodit = Jodit.make(this.joditContainer.nativeElement, this._options) as IJodit;
+      this.jodit = Jodit.make(this.joditContainer.nativeElement, this._options) as Jodit;
       await this.jodit.waitForReady();
       this.jodit.setEditorValue(this.valueSubject.getValue());
 
