@@ -104,7 +104,6 @@ If you are facing any issues have a look on [Troubleshooting](https://github.com
 Jodit v4 automatically imports a [basic set of plugins](https://github.com/xdan/jodit/blob/main/tools/utils/resolve-alias-imports.ts#L59) and the English language. If you want to use more you have to import it separately. For example:
 
 ```typescript
-import {Jodit} from "jodit";
 import 'jodit/esm/plugins/add-new-line/add-new-line.js';
 import 'jodit/esm/plugins/fullsize/fullsize.js';
 import de from 'jodit/esm/langs/de.js'; // <-- make sure "compilerOptions.allowSyntheticDefaultImports" is set to "true" in tsconfig.json

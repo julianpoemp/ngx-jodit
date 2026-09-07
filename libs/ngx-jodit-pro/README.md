@@ -1,7 +1,7 @@
 # ngx-jodit-pro v3.x
 
 Angular wrapper for <a href="https://xdsoft.net/jodit/pro/">Jodit PRO</a> WYSIWYG editor. It supports Angular >= 16 and
-jodit-pro v2 beta. You need a license key in order to use this wrapper. <a href="https://xdsoft.net/jodit/pro/#compare">
+jodit-pro v4. You need a license key in order to use this wrapper. <a href="https://xdsoft.net/jodit/pro/#compare">
 Buy here.</a>
 
 ## License
@@ -13,27 +13,30 @@ seperately ([see license](https://xdsoft.net/jodit/pro/license/)).
 ## Compatibility
 
 <table>
-<thead><tr><th>Ngx-jodit-pro</th><th>Jodit Pro</th><th>Angular</th><th>Type</th><th>Demo</th><th>Readme</th></tr></thead>
+<thead><tr><th>Ngx-jodit-pro</th><th>Jodit Pro</th><th>Angular</th><th>Type</th><th>ESM</th><th>Demo</th><th>Readme</th></tr></thead>
 <tbody>
 <tr>
-<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit-pro"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro"></a></td><td>v4.x</td><td>>= v16</td><td>Standalone</td><td><a href="https://github.julianpoemp.com/ngx-jodit-pro/3.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/main/libs/ngx-jodit-pro/README.md">Readme</a></td>
+<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit-pro"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro"></a></td><td>v4.x</td><td>>= v16</td><td>Standalone</td><td>Yes</td><td><a href="https://github.julianpoemp.com/ngx-jodit-pro/4.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/main/libs/ngx-jodit-pro/README.md">Readme</a></td>
 </tr>
 <tr>
-<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit-pro/v/2x"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro/2x"></a></td><td>v4.x</td><td>v12 - v15</td><td>Module</td><td><a href="https://github.julianpoemp.com/ngx-jodit-pro/2.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/v2.x/libs/ngx-jodit-pro/README.md">Readme</a></td>
+<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit-pro/v/3x"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro/3x"></a></td><td>v4.x</td><td>>= v16</td><td>Standalone</td><td>No</td><td><a href="https://github.julianpoemp.com/ngx-jodit-pro/3.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/v3.x/libs/ngx-jodit-pro/README.md">Readme</a></td>
 </tr>
 <tr>
-<td style="text-align:center;">v1.x <i>(deprecated)</i></td><td>v1.x</td><td>v12 - v15</td><td>Module</td><td><a href="https://github.julianpoemp.com/ngx-jodit-pro/1.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/v1.x/libs/ngx-jodit-pro/README.md">Readme</a></td>
+<td style="text-align:center;"><a href="https://www.npmjs.com/package/ngx-jodit-pro/v/2x"><img alt="npm" src="https://img.shields.io/npm/v/ngx-jodit-pro/2x"></a></td><td>v4.x</td><td>v12 - v15</td><td>Module</td><td>No</td><td><a href="https://github.julianpoemp.com/ngx-jodit-pro/2.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/v2.x/libs/ngx-jodit-pro/README.md">Readme</a></td>
+</tr>
+<tr>
+<td style="text-align:center;">v1.x <i>(deprecated)</i></td><td>v1.x</td><td>v12 - v15</td><td>Module</td><td>No</td><td><a href="https://github.julianpoemp.com/ngx-jodit-pro/1.x/">Demo</a></td><td><a href="https://github.com/julianpoemp/ngx-jodit/blob/v1.x/libs/ngx-jodit-pro/README.md">Readme</a></td>
 </tr>
 </tbody>
 </table>
 
 ## Demo
 
-You can find a demo of ngx-jodit-pro 3.x [here](https://github.julianpoemp.com/ngx-jodit-pro/3.x/).
+You can find a demo of ngx-jodit-pro 4.x [here](https://github.julianpoemp.com/ngx-jodit-pro/4.x/).
 
 ## Remarks
 
-ESM for Jodit-Pro is not currently working. See [issue 34](https://github.com/julianpoemp/ngx-jodit/issues/34). You have to include the es2021 build (see installation).
+ESM fpr jodit-pro is supported since ngx-jodit-pro v4.
 
 ## Installation
 
@@ -53,12 +56,10 @@ ESM for Jodit-Pro is not currently working. See [issue 34](https://github.com/ju
       "node_modules/jodit-pro/es2021/jodit.min.css",
       ...
     ],
-    "scripts": [
-      "node_modules/jodit-pro/es2021/jodit.min.js",
-      ...
-    ],
    ...
    ```
+
+   Remark: If you upgrade from ngx-jodit-pro make sure to remove the jodit JS include!
 
 4. Add `NgxJoditProComponent` (standalone) to the `imports` array in your app.module.ts:
    ```
@@ -82,7 +83,7 @@ ESM for Jodit-Pro is not currently working. See [issue 34](https://github.com/ju
    ...
    ```
 
-6. Each toolbar element by Jodit v4 is considered as plugin. While basic plugins are imported automatically, you have to import other plugins manually. See section "How to import plugins".
+6. Each toolbar element by Jodit v4 ESM version is considered as plugin. While basic plugins are imported automatically, you have to import other plugins manually. See section "How to import plugins".
 
 7. Now you can use the component. See [example here](https://github.com/julianpoemp/ngx-jodit/tree/main/apps/demo-pro).
 
@@ -111,16 +112,15 @@ If you are facing any issues have a look on [Troubleshooting](https://github.com
 
 You can install plugins from Jodit and Jodit Pro. For more information about Jodit Pro plugins see [Jodit Pro Docs](https://xdsoft.net/jodit/pro/docs/).
 
-1. Open folder "node_modules/jodit-pro" or "node_modules/jodit" depending on if you want to add jodit oder jodit-pro plugins.
-2. Open the plugin folder in "esm/plugins", e.g. "tune-block" in "jodit-pro".
-3. Look for the main file named like the plugin e.g. "tune-block.js".
-4. Import "jodit" and the path to this file in a Typescript file of your application. E.g. the Angular component that includes ngx-jodit-pro. For example:
-
 ```typescript
-import "node_modules/jodit-pro/esm/plugins/tune-block/tune-block.js";
+import 'jodit/esm/plugins/add-new-line/add-new-line.js';
+import 'jodit/esm/plugins/fullsize/fullsize.js';
+import "jodit-pro/esm/plugins/tune-block/tune-block.js"; // you don't need to CSS for each plugin
+import de from 'jodit/esm/langs/de.js'; // <-- make sure "compilerOptions.allowSyntheticDefaultImports" is set to "true" in tsconfig.json
 
-declare const Jodit: any; // <- needed because of missing ESM, see issue 34
 Jodit.lang.de = de;
+
+//..
 ```
 
 You can import your plugins wherever you want, e.g. in a global ts file that's imported anyway like index.ts or main.ts files.
@@ -128,12 +128,11 @@ You can import your plugins wherever you want, e.g. in a global ts file that's i
 Now you can apply the plugin options to ngx-jodit-pro `options` property. For example:
 
 ```typescript
-import {JoditProConfig} from 'ngx-jodit-pro';
-import "node_modules/jodit-pro/esm/plugins/tune-block/tune-block.js";
+import {Jodit} from "jodit-pro";
+import {JoditProOptions} from 'ngx-jodit-pro';
+import "jodit-pro/esm/plugins/tune-block/tune-block.js";
 
-declare const Jodit: any; // <- needed because of missing ESM, see issue 34
-
-options: JoditProConfig = {
+options: JoditProOptions = {
   tuneBlock: {
     popup: {
       p: Jodit.atom(['align', 'tune.up', 'tune.remove', 'tune.down'])
@@ -148,12 +147,13 @@ You can access the initialized Jodit from the attribute "jodit" of the NgxJoditP
 
 Any component.ts:
 
-````Typescript
+````typescript
 import {ViewChild} from '@angular/core';
+import {NgxJoditProComponent} from 'ngx-jodit-pro';
 
 //...
 @ViewChild("joditComponent")
-joditComponent ? : NgxJoditProComponent;
+joditComponent? : NgxJoditProComponent;
 
 // in ngAfterViewInit
 if (this.joditComponent) {
